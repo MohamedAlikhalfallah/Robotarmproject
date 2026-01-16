@@ -1,0 +1,242 @@
+{
+	"configurations" : 
+	[
+		{
+			"directories" : 
+			[
+				{
+					"build" : ".",
+					"childIndexes" : 
+					[
+						1
+					],
+					"hasInstallRule" : true,
+					"jsonFile" : "directory-.-ff72c6583811a2a1e824.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.20"
+					},
+					"projectIndex" : 0,
+					"source" : ".",
+					"targetIndexes" : 
+					[
+						0,
+						1,
+						2,
+						3,
+						5,
+						6,
+						7,
+						8,
+						9,
+						10,
+						11,
+						12,
+						13,
+						14,
+						15,
+						16,
+						17,
+						18
+					]
+				},
+				{
+					"build" : "scene_graph_interfaces__py",
+					"jsonFile" : "directory-scene_graph_interfaces__py-3ebcbb1324393424c87a.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.20"
+					},
+					"parentIndex" : 0,
+					"projectIndex" : 0,
+					"source" : "/home/dali/ros2_ws/build/scene_graph_interfaces/scene_graph_interfaces__py",
+					"targetIndexes" : 
+					[
+						4
+					]
+				}
+			],
+			"name" : "",
+			"projects" : 
+			[
+				{
+					"directoryIndexes" : 
+					[
+						0,
+						1
+					],
+					"name" : "scene_graph_interfaces",
+					"targetIndexes" : 
+					[
+						0,
+						1,
+						2,
+						3,
+						4,
+						5,
+						6,
+						7,
+						8,
+						9,
+						10,
+						11,
+						12,
+						13,
+						14,
+						15,
+						16,
+						17,
+						18
+					]
+				}
+			],
+			"targets" : 
+			[
+				{
+					"directoryIndex" : 0,
+					"id" : "ament_cmake_python_build_scene_graph_interfaces_egg::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-ament_cmake_python_build_scene_graph_interfaces_egg-f0a0242314c041d1236e.json",
+					"name" : "ament_cmake_python_build_scene_graph_interfaces_egg",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "ament_cmake_python_copy_scene_graph_interfaces::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-ament_cmake_python_copy_scene_graph_interfaces-51bb4b2cd7cf081905d0.json",
+					"name" : "ament_cmake_python_copy_scene_graph_interfaces",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "scene_graph_interfaces::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-scene_graph_interfaces-7e0d60dcb0f09b30f85a.json",
+					"name" : "scene_graph_interfaces",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "scene_graph_interfaces__cpp::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-scene_graph_interfaces__cpp-93c62ef4ff2c8a526252.json",
+					"name" : "scene_graph_interfaces__cpp",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 1,
+					"id" : "scene_graph_interfaces__py::@ba8daf28177ba93befd7",
+					"jsonFile" : "target-scene_graph_interfaces__py-807e60e356cedf64e2be.json",
+					"name" : "scene_graph_interfaces__py",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "scene_graph_interfaces__rosidl_generator_c::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-scene_graph_interfaces__rosidl_generator_c-c93eb3f642e6d4b229a9.json",
+					"name" : "scene_graph_interfaces__rosidl_generator_c",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "scene_graph_interfaces__rosidl_generator_py::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-scene_graph_interfaces__rosidl_generator_py-d89ce304fe047782aaf0.json",
+					"name" : "scene_graph_interfaces__rosidl_generator_py",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "scene_graph_interfaces__rosidl_generator_type_description::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-scene_graph_interfaces__rosidl_generator_type_description-2bab52ae6977c88e3339.json",
+					"name" : "scene_graph_interfaces__rosidl_generator_type_description",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "scene_graph_interfaces__rosidl_typesupport_c::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-scene_graph_interfaces__rosidl_typesupport_c-ce32d1335f87dbe4646d.json",
+					"name" : "scene_graph_interfaces__rosidl_typesupport_c",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "scene_graph_interfaces__rosidl_typesupport_cpp::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-scene_graph_interfaces__rosidl_typesupport_cpp-7cd9ecc17828ea0a8e18.json",
+					"name" : "scene_graph_interfaces__rosidl_typesupport_cpp",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "scene_graph_interfaces__rosidl_typesupport_fastrtps_c::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-scene_graph_interfaces__rosidl_typesupport_fastrtps_c-9cfb2399c7f479be6148.json",
+					"name" : "scene_graph_interfaces__rosidl_typesupport_fastrtps_c",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "scene_graph_interfaces__rosidl_typesupport_fastrtps_cpp::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-scene_graph_interfaces__rosidl_typesupport_fastrtps_cpp-02ec047a42167c93034d.json",
+					"name" : "scene_graph_interfaces__rosidl_typesupport_fastrtps_cpp",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "scene_graph_interfaces__rosidl_typesupport_introspection_c::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-scene_graph_interfaces__rosidl_typesupport_introspection_c-d52fb34a7e5a11eefa74.json",
+					"name" : "scene_graph_interfaces__rosidl_typesupport_introspection_c",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "scene_graph_interfaces__rosidl_typesupport_introspection_cpp::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-scene_graph_interfaces__rosidl_typesupport_introspection_cpp-98821618f8df0488030a.json",
+					"name" : "scene_graph_interfaces__rosidl_typesupport_introspection_cpp",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "scene_graph_interfaces_s__rosidl_typesupport_c::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-scene_graph_interfaces_s__rosidl_typesupport_c-85efa988457ed2cde1fc.json",
+					"name" : "scene_graph_interfaces_s__rosidl_typesupport_c",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "scene_graph_interfaces_s__rosidl_typesupport_fastrtps_c::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-scene_graph_interfaces_s__rosidl_typesupport_fastrtps_c-710c5c4ffe383c02bbcf.json",
+					"name" : "scene_graph_interfaces_s__rosidl_typesupport_fastrtps_c",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "scene_graph_interfaces_s__rosidl_typesupport_introspection_c::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-scene_graph_interfaces_s__rosidl_typesupport_introspection_c-cb0615b3b94a47465098.json",
+					"name" : "scene_graph_interfaces_s__rosidl_typesupport_introspection_c",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "scene_graph_interfaces_uninstall::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-scene_graph_interfaces_uninstall-9644fec16186e1bba8b4.json",
+					"name" : "scene_graph_interfaces_uninstall",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "uninstall::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-uninstall-876779e172484fdff53b.json",
+					"name" : "uninstall",
+					"projectIndex" : 0
+				}
+			]
+		}
+	],
+	"kind" : "codemodel",
+	"paths" : 
+	{
+		"build" : "/home/dali/ros2_ws/build/scene_graph_interfaces",
+		"source" : "/home/dali/ros2_ws/src/scene_graph_interfaces"
+	},
+	"version" : 
+	{
+		"major" : 2,
+		"minor" : 6
+	}
+}

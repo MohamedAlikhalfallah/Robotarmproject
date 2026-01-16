@@ -1,0 +1,119 @@
+[0.042s] Invoking command in '/home/dali/ros2_ws/build/piper_bringup': CMAKE_PREFIX_PATH=/home/dali/ros2_ws/install/scene_graph_interfaces:/home/dali/ros2_ws/install/piper_bringup:/home/dali/ros2_ws/install/piper_moveit_config:/home/dali/ros2_ws/install/piper_description:/opt/ros/jazzy/opt/gz_sim_vendor:/opt/ros/jazzy/opt/gz_sensors_vendor:/opt/ros/jazzy/opt/gz_physics_vendor:/opt/ros/jazzy/opt/sdformat_vendor:/opt/ros/jazzy/opt/gz_gui_vendor:/opt/ros/jazzy/opt/gz_transport_vendor:/opt/ros/jazzy/opt/gz_rendering_vendor:/opt/ros/jazzy/opt/gz_plugin_vendor:/opt/ros/jazzy/opt/gz_fuel_tools_vendor:/opt/ros/jazzy/opt/gz_msgs_vendor:/opt/ros/jazzy/opt/gz_common_vendor:/opt/ros/jazzy/opt/gz_math_vendor:/opt/ros/jazzy/opt/gz_utils_vendor:/opt/ros/jazzy/opt/gz_tools_vendor:/opt/ros/jazzy/opt/gz_ogre_next_vendor:/opt/ros/jazzy/opt/gz_dartsim_vendor:/opt/ros/jazzy/opt/gz_cmake_vendor:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --build /home/dali/ros2_ws/build/piper_bringup -- -j4 -l4
+[0.479s] [ 50%] [32mBuilding CXX object CMakeFiles/moveit_pick_and_place_cpp.dir/src/moveit_pick_and_place.cpp.o[0m
+[17.942s] In file included from [01m[K/opt/ros/jazzy/include/rclcpp/rclcpp/logging.hpp:24[m[K,
+[17.943s]                  from [01m[K/opt/ros/jazzy/include/rclcpp/rclcpp/copy_all_parameter_values.hpp:27[m[K,
+[17.943s]                  from [01m[K/opt/ros/jazzy/include/rclcpp/rclcpp/rclcpp.hpp:171[m[K,
+[17.943s]                  from [01m[K/home/dali/ros2_ws/src/piper_ros2/piper_bringup/src/moveit_pick_and_place.cpp:1[m[K:
+[17.943s] [01m[K/home/dali/ros2_ws/src/piper_ros2/piper_bringup/src/moveit_pick_and_place.cpp:[m[K In member function ‘[01m[Kvoid PiperDynamicNode::[01;32m[Krun[m[K()[m[K’:
+[17.943s] [01m[K/home/dali/ros2_ws/src/piper_ros2/piper_bringup/src/moveit_pick_and_place.cpp:86:49:[m[K [01;35m[Kwarning: [m[Kzero-length gnu_printf format string [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wformat-zero-length-Wformat-zero-length]8;;[m[K]
+[17.943s]    86 |                 RCLCPP_INFO(this->get_logger(), [01;35m[K""[m[K);
+[17.943s]       |                                                 [01;35m[K^~[m[K
+[17.957s] [01m[K/home/dali/ros2_ws/src/piper_ros2/piper_bringup/src/moveit_pick_and_place.cpp:[m[K In member function ‘[01m[Kvoid PiperDynamicNode::[01;32m[Kvision_callback[m[K(scene_graph_interfaces::msg::FunObject3DBoundingBoxList_<std::allocator<void> >::SharedPtr)[m[K’:
+[17.957s] [01m[K/home/dali/ros2_ws/src/piper_ros2/piper_bringup/src/moveit_pick_and_place.cpp:189:34:[m[K [01;35m[Kwarning: [m[KC++ designated initializers only available with ‘[01m[K-std=c++20[m[K’ or ‘[01m[K-std=gnu++20[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wc++20-extensions-Wc++20-extensions]8;;[m[K]
+[17.957s]   189 |                 latest_place_ = {[01;35m[K.[m[Kclass_name = obj.name.data,
+[17.957s]       |                                  [01;35m[K^[m[K
+[17.957s] [01m[K/home/dali/ros2_ws/src/piper_ros2/piper_bringup/src/moveit_pick_and_place.cpp:190:33:[m[K [01;35m[Kwarning: [m[KC++ designated initializers only available with ‘[01m[K-std=c++20[m[K’ or ‘[01m[K-std=gnu++20[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wc++20-extensions-Wc++20-extensions]8;;[m[K]
+[17.957s]   190 |                                 [01;35m[K.[m[Kx = 0.2, .y = 0.2, .z = latest_target_.z,
+[17.957s]       |                                 [01;35m[K^[m[K
+[17.957s] [01m[K/home/dali/ros2_ws/src/piper_ros2/piper_bringup/src/moveit_pick_and_place.cpp:190:43:[m[K [01;35m[Kwarning: [m[KC++ designated initializers only available with ‘[01m[K-std=c++20[m[K’ or ‘[01m[K-std=gnu++20[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wc++20-extensions-Wc++20-extensions]8;;[m[K]
+[17.957s]   190 |                                 .x = 0.2, [01;35m[K.[m[Ky = 0.2, .z = latest_target_.z,
+[17.957s]       |                                           [01;35m[K^[m[K
+[17.957s] [01m[K/home/dali/ros2_ws/src/piper_ros2/piper_bringup/src/moveit_pick_and_place.cpp:190:53:[m[K [01;35m[Kwarning: [m[KC++ designated initializers only available with ‘[01m[K-std=c++20[m[K’ or ‘[01m[K-std=gnu++20[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wc++20-extensions-Wc++20-extensions]8;;[m[K]
+[17.957s]   190 |                                 .x = 0.2, .y = 0.2, [01;35m[K.[m[Kz = latest_target_.z,
+[17.957s]       |                                                     [01;35m[K^[m[K
+[17.957s] [01m[K/home/dali/ros2_ws/src/piper_ros2/piper_bringup/src/moveit_pick_and_place.cpp:191:33:[m[K [01;35m[Kwarning: [m[KC++ designated initializers only available with ‘[01m[K-std=c++20[m[K’ or ‘[01m[K-std=gnu++20[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wc++20-extensions-Wc++20-extensions]8;;[m[K]
+[17.957s]   191 |                                 [01;35m[K.[m[Kwidth = 0, .height = 0, .depth = 0,
+[17.957s]       |                                 [01;35m[K^[m[K
+[17.957s] [01m[K/home/dali/ros2_ws/src/piper_ros2/piper_bringup/src/moveit_pick_and_place.cpp:191:45:[m[K [01;35m[Kwarning: [m[KC++ designated initializers only available with ‘[01m[K-std=c++20[m[K’ or ‘[01m[K-std=gnu++20[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wc++20-extensions-Wc++20-extensions]8;;[m[K]
+[17.957s]   191 |                                 .width = 0, [01;35m[K.[m[Kheight = 0, .depth = 0,
+[17.957s]       |                                             [01;35m[K^[m[K
+[17.957s] [01m[K/home/dali/ros2_ws/src/piper_ros2/piper_bringup/src/moveit_pick_and_place.cpp:191:58:[m[K [01;35m[Kwarning: [m[KC++ designated initializers only available with ‘[01m[K-std=c++20[m[K’ or ‘[01m[K-std=gnu++20[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wc++20-extensions-Wc++20-extensions]8;;[m[K]
+[17.957s]   191 |                                 .width = 0, .height = 0, [01;35m[K.[m[Kdepth = 0,
+[17.957s]       |                                                          [01;35m[K^[m[K
+[17.958s] [01m[K/home/dali/ros2_ws/src/piper_ros2/piper_bringup/src/moveit_pick_and_place.cpp:192:33:[m[K [01;35m[Kwarning: [m[KC++ designated initializers only available with ‘[01m[K-std=c++20[m[K’ or ‘[01m[K-std=gnu++20[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wc++20-extensions-Wc++20-extensions]8;;[m[K]
+[17.958s]   192 |                                 [01;35m[K.[m[Kaffordance = Affordance::NONE};
+[17.958s]       |                                 [01;35m[K^[m[K
+[17.958s] [01m[K/home/dali/ros2_ws/src/piper_ros2/piper_bringup/src/moveit_pick_and_place.cpp:[m[K In member function ‘[01m[KInteractionStrategy PiperDynamicNode::[01;32m[Kselect_strategy[m[K(const DetectedObject&)[m[K’:
+[17.958s] [01m[K/home/dali/ros2_ws/src/piper_ros2/piper_bringup/src/moveit_pick_and_place.cpp:217:45:[m[K [01;35m[Kwarning: [m[Kzero-length gnu_printf format string [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wformat-zero-length-Wformat-zero-length]8;;[m[K]
+[17.958s]   217 |             RCLCPP_INFO(this->get_logger(), [01;35m[K""[m[K);
+[17.958s]       |                                             [01;35m[K^~[m[K
+[17.959s] [01m[K/home/dali/ros2_ws/src/piper_ros2/piper_bringup/src/moveit_pick_and_place.cpp:[m[K In member function ‘[01m[Kvoid PiperDynamicNode::[01;32m[Kexecute_intelligent_grasp[m[K(std::shared_ptr<moveit::planning_interface::MoveGroupInterface>, const DetectedObject&)[m[K’:
+[17.961s] [01m[K/home/dali/ros2_ws/src/piper_ros2/piper_bringup/src/moveit_pick_and_place.cpp:276:41:[m[K [01;35m[Kwarning: [m[Kzero-length gnu_printf format string [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wformat-zero-length-Wformat-zero-length]8;;[m[K]
+[17.962s]   276 |         RCLCPP_INFO(this->get_logger(), [01;35m[K""[m[K);
+[17.962s]       |                                         [01;35m[K^~[m[K
+[17.962s] [01m[K/home/dali/ros2_ws/src/piper_ros2/piper_bringup/src/moveit_pick_and_place.cpp:285:45:[m[K [01;35m[Kwarning: [m[Kzero-length gnu_printf format string [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wformat-zero-length-Wformat-zero-length]8;;[m[K]
+[17.962s]   285 |             RCLCPP_INFO(this->get_logger(), [01;35m[K""[m[K);
+[17.962s]       |                                             [01;35m[K^~[m[K
+[17.962s] [01m[K/home/dali/ros2_ws/src/piper_ros2/piper_bringup/src/moveit_pick_and_place.cpp:301:45:[m[K [01;35m[Kwarning: [m[Kzero-length gnu_printf format string [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wformat-zero-length-Wformat-zero-length]8;;[m[K]
+[17.962s]   301 |             RCLCPP_INFO(this->get_logger(), [01;35m[K""[m[K);
+[17.962s]       |                                             [01;35m[K^~[m[K
+[17.962s] [01m[K/home/dali/ros2_ws/src/piper_ros2/piper_bringup/src/moveit_pick_and_place.cpp:325:45:[m[K [01;35m[Kwarning: [m[Kzero-length gnu_printf format string [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wformat-zero-length-Wformat-zero-length]8;;[m[K]
+[17.962s]   325 |             RCLCPP_INFO(this->get_logger(), [01;35m[K""[m[K);
+[17.962s]       |                                             [01;35m[K^~[m[K
+[17.962s] [01m[K/home/dali/ros2_ws/src/piper_ros2/piper_bringup/src/moveit_pick_and_place.cpp:332:45:[m[K [01;35m[Kwarning: [m[Kzero-length gnu_printf format string [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wformat-zero-length-Wformat-zero-length]8;;[m[K]
+[17.962s]   332 |             RCLCPP_INFO(this->get_logger(), [01;35m[K""[m[K);
+[17.962s]       |                                             [01;35m[K^~[m[K
+[17.962s] [01m[K/home/dali/ros2_ws/src/piper_ros2/piper_bringup/src/moveit_pick_and_place.cpp:[m[K In member function ‘[01m[Kvoid PiperDynamicNode::[01;32m[Kexecute_push_action[m[K(std::shared_ptr<moveit::planning_interface::MoveGroupInterface>, const DetectedObject&)[m[K’:
+[17.962s] [01m[K/home/dali/ros2_ws/src/piper_ros2/piper_bringup/src/moveit_pick_and_place.cpp:356:41:[m[K [01;35m[Kwarning: [m[Kzero-length gnu_printf format string [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wformat-zero-length-Wformat-zero-length]8;;[m[K]
+[17.962s]   356 |         RCLCPP_INFO(this->get_logger(), [01;35m[K""[m[K);
+[17.962s]       |                                         [01;35m[K^~[m[K
+[17.966s] [01m[K/home/dali/ros2_ws/src/piper_ros2/piper_bringup/src/moveit_pick_and_place.cpp:[m[K In member function ‘[01m[Kvoid PiperDynamicNode::[01;32m[Kexecute_pull_action[m[K(std::shared_ptr<moveit::planning_interface::MoveGroupInterface>, const DetectedObject&)[m[K’:
+[17.966s] [01m[K/home/dali/ros2_ws/src/piper_ros2/piper_bringup/src/moveit_pick_and_place.cpp:379:41:[m[K [01;35m[Kwarning: [m[Kzero-length gnu_printf format string [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wformat-zero-length-Wformat-zero-length]8;;[m[K]
+[17.966s]   379 |         RCLCPP_INFO(this->get_logger(), [01;35m[K""[m[K);
+[17.966s]       |                                         [01;35m[K^~[m[K
+[17.966s] [01m[K/home/dali/ros2_ws/src/piper_ros2/piper_bringup/src/moveit_pick_and_place.cpp:[m[K In member function ‘[01m[Kvoid PiperDynamicNode::[01;32m[Kexecute_intelligent_place[m[K(std::shared_ptr<moveit::planning_interface::MoveGroupInterface>, const DetectedObject&)[m[K’:
+[17.967s] [01m[K/home/dali/ros2_ws/src/piper_ros2/piper_bringup/src/moveit_pick_and_place.cpp:406:41:[m[K [01;35m[Kwarning: [m[Kzero-length gnu_printf format string [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wformat-zero-length-Wformat-zero-length]8;;[m[K]
+[17.967s]   406 |         RCLCPP_INFO(this->get_logger(), [01;35m[K""[m[K);
+[17.967s]       |                                         [01;35m[K^~[m[K
+[17.969s] [01m[K/home/dali/ros2_ws/src/piper_ros2/piper_bringup/src/moveit_pick_and_place.cpp:[m[K In member function ‘[01m[Kvoid PiperDynamicNode::[01;32m[Kperform_linear_move[m[K(moveit::planning_interface::MoveGroupInterface&, double, double, double, std::string)[m[K’:
+[17.969s] [01m[K/home/dali/ros2_ws/src/piper_ros2/piper_bringup/src/moveit_pick_and_place.cpp:453:71:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Klabel[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-parameter-Wunused-parameter]8;;[m[K]
+[17.969s]   453 |                      double x, double y, double z, [01;35m[Kstd::string label[m[K) {
+[17.969s]       |                                                    [01;35m[K~~~~~~~~~~~~^~~~~[m[K
+[17.969s] 
+[17.969s] [01m[K/home/dali/ros2_ws/src/piper_ros2/piper_bringup/src/moveit_pick_and_place.cpp:[m[K In member function ‘[01m[Kbool PiperDynamicNode::[01;32m[Kplan_and_execute_standard[m[K(moveit::planning_interface::MoveGroupInterface&, double, double, double, std::string)[m[K’:
+[17.970s] [01m[K/home/dali/ros2_ws/src/piper_ros2/piper_bringup/src/moveit_pick_and_place.cpp:462:78:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Klabel[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-parameter-Wunused-parameter]8;;[m[K]
+[17.970s]   462 |                      double x, double y, double z, [01;35m[Kstd::string label[m[K) {
+[17.970s]       |                                                    [01;35m[K~~~~~~~~~~~~^~~~~[m[K
+[17.970s] 
+[34.641s] [100%] [32m[1mLinking CXX executable moveit_pick_and_place_cpp[0m
+[36.643s] [100%] Built target moveit_pick_and_place_cpp
+[36.685s] Invoked command in '/home/dali/ros2_ws/build/piper_bringup' returned '0': CMAKE_PREFIX_PATH=/home/dali/ros2_ws/install/scene_graph_interfaces:/home/dali/ros2_ws/install/piper_bringup:/home/dali/ros2_ws/install/piper_moveit_config:/home/dali/ros2_ws/install/piper_description:/opt/ros/jazzy/opt/gz_sim_vendor:/opt/ros/jazzy/opt/gz_sensors_vendor:/opt/ros/jazzy/opt/gz_physics_vendor:/opt/ros/jazzy/opt/sdformat_vendor:/opt/ros/jazzy/opt/gz_gui_vendor:/opt/ros/jazzy/opt/gz_transport_vendor:/opt/ros/jazzy/opt/gz_rendering_vendor:/opt/ros/jazzy/opt/gz_plugin_vendor:/opt/ros/jazzy/opt/gz_fuel_tools_vendor:/opt/ros/jazzy/opt/gz_msgs_vendor:/opt/ros/jazzy/opt/gz_common_vendor:/opt/ros/jazzy/opt/gz_math_vendor:/opt/ros/jazzy/opt/gz_utils_vendor:/opt/ros/jazzy/opt/gz_tools_vendor:/opt/ros/jazzy/opt/gz_ogre_next_vendor:/opt/ros/jazzy/opt/gz_dartsim_vendor:/opt/ros/jazzy/opt/gz_cmake_vendor:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --build /home/dali/ros2_ws/build/piper_bringup -- -j4 -l4
+[36.689s] Invoking command in '/home/dali/ros2_ws/build/piper_bringup': CMAKE_PREFIX_PATH=/home/dali/ros2_ws/install/scene_graph_interfaces:/home/dali/ros2_ws/install/piper_bringup:/home/dali/ros2_ws/install/piper_moveit_config:/home/dali/ros2_ws/install/piper_description:/opt/ros/jazzy/opt/gz_sim_vendor:/opt/ros/jazzy/opt/gz_sensors_vendor:/opt/ros/jazzy/opt/gz_physics_vendor:/opt/ros/jazzy/opt/sdformat_vendor:/opt/ros/jazzy/opt/gz_gui_vendor:/opt/ros/jazzy/opt/gz_transport_vendor:/opt/ros/jazzy/opt/gz_rendering_vendor:/opt/ros/jazzy/opt/gz_plugin_vendor:/opt/ros/jazzy/opt/gz_fuel_tools_vendor:/opt/ros/jazzy/opt/gz_msgs_vendor:/opt/ros/jazzy/opt/gz_common_vendor:/opt/ros/jazzy/opt/gz_math_vendor:/opt/ros/jazzy/opt/gz_utils_vendor:/opt/ros/jazzy/opt/gz_tools_vendor:/opt/ros/jazzy/opt/gz_ogre_next_vendor:/opt/ros/jazzy/opt/gz_dartsim_vendor:/opt/ros/jazzy/opt/gz_cmake_vendor:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --install /home/dali/ros2_ws/build/piper_bringup
+[36.696s] -- Install configuration: ""
+[36.697s] -- Up-to-date: /home/dali/ros2_ws/install/piper_bringup/share/piper_bringup/launch
+[36.699s] -- Up-to-date: /home/dali/ros2_ws/install/piper_bringup/share/piper_bringup/launch/piper.launch.xml
+[36.699s] -- Up-to-date: /home/dali/ros2_ws/install/piper_bringup/share/piper_bringup/launch/pick_place_launch.py
+[36.699s] -- Up-to-date: /home/dali/ros2_ws/install/piper_bringup/share/piper_bringup/launch/gazebo_piper.launch.py
+[36.699s] -- Up-to-date: /home/dali/ros2_ws/install/piper_bringup/share/piper_bringup/rviz
+[36.699s] -- Up-to-date: /home/dali/ros2_ws/install/piper_bringup/share/piper_bringup/rviz/robotmodel.rviz
+[36.699s] -- Up-to-date: /home/dali/ros2_ws/install/piper_bringup/share/piper_bringup/worlds
+[36.699s] -- Up-to-date: /home/dali/ros2_ws/install/piper_bringup/share/piper_bringup/worlds/empty_world.sdf
+[36.699s] -- Up-to-date: /home/dali/ros2_ws/install/piper_bringup/share/piper_bringup/models
+[36.699s] -- Up-to-date: /home/dali/ros2_ws/install/piper_bringup/share/piper_bringup/models/cylinder
+[36.699s] -- Up-to-date: /home/dali/ros2_ws/install/piper_bringup/share/piper_bringup/models/cylinder/model.sdf
+[36.699s] -- Up-to-date: /home/dali/ros2_ws/install/piper_bringup/share/piper_bringup/models/cylinder/model.config
+[36.699s] -- Up-to-date: /home/dali/ros2_ws/install/piper_bringup/share/piper_bringup/models/cube
+[36.699s] -- Up-to-date: /home/dali/ros2_ws/install/piper_bringup/share/piper_bringup/models/cube/model.sdf
+[36.699s] -- Up-to-date: /home/dali/ros2_ws/install/piper_bringup/share/piper_bringup/models/cube/model.config
+[36.699s] -- Up-to-date: /home/dali/ros2_ws/install/piper_bringup/lib/piper_bringup/pick_and_place.py
+[36.699s] -- Up-to-date: /home/dali/ros2_ws/install/piper_bringup/lib/piper_bringup/ik_pick_and_place.py
+[36.699s] -- Up-to-date: /home/dali/ros2_ws/install/piper_bringup/lib/piper_bringup/detection_node.py
+[36.699s] -- Installing: /home/dali/ros2_ws/install/piper_bringup/lib/piper_bringup/moveit_pick_and_place_cpp
+[36.713s] -- Set non-toolchain portion of runtime path of "/home/dali/ros2_ws/install/piper_bringup/lib/piper_bringup/moveit_pick_and_place_cpp" to ""
+[36.714s] -- Up-to-date: /home/dali/ros2_ws/install/piper_bringup/share/ament_index/resource_index/package_run_dependencies/piper_bringup
+[36.714s] -- Up-to-date: /home/dali/ros2_ws/install/piper_bringup/share/ament_index/resource_index/parent_prefix_path/piper_bringup
+[36.714s] -- Up-to-date: /home/dali/ros2_ws/install/piper_bringup/share/piper_bringup/environment/ament_prefix_path.sh
+[36.714s] -- Up-to-date: /home/dali/ros2_ws/install/piper_bringup/share/piper_bringup/environment/ament_prefix_path.dsv
+[36.714s] -- Up-to-date: /home/dali/ros2_ws/install/piper_bringup/share/piper_bringup/environment/path.sh
+[36.714s] -- Up-to-date: /home/dali/ros2_ws/install/piper_bringup/share/piper_bringup/environment/path.dsv
+[36.714s] -- Up-to-date: /home/dali/ros2_ws/install/piper_bringup/share/piper_bringup/local_setup.bash
+[36.714s] -- Up-to-date: /home/dali/ros2_ws/install/piper_bringup/share/piper_bringup/local_setup.sh
+[36.714s] -- Up-to-date: /home/dali/ros2_ws/install/piper_bringup/share/piper_bringup/local_setup.zsh
+[36.716s] -- Up-to-date: /home/dali/ros2_ws/install/piper_bringup/share/piper_bringup/local_setup.dsv
+[36.716s] -- Installing: /home/dali/ros2_ws/install/piper_bringup/share/piper_bringup/package.dsv
+[36.716s] -- Up-to-date: /home/dali/ros2_ws/install/piper_bringup/share/ament_index/resource_index/packages/piper_bringup
+[36.716s] -- Up-to-date: /home/dali/ros2_ws/install/piper_bringup/share/piper_bringup/cmake/ament_cmake_export_dependencies-extras.cmake
+[36.716s] -- Up-to-date: /home/dali/ros2_ws/install/piper_bringup/share/piper_bringup/cmake/piper_bringupConfig.cmake
+[36.717s] -- Up-to-date: /home/dali/ros2_ws/install/piper_bringup/share/piper_bringup/cmake/piper_bringupConfig-version.cmake
+[36.717s] -- Up-to-date: /home/dali/ros2_ws/install/piper_bringup/share/piper_bringup/package.xml
+[36.723s] Invoked command in '/home/dali/ros2_ws/build/piper_bringup' returned '0': CMAKE_PREFIX_PATH=/home/dali/ros2_ws/install/scene_graph_interfaces:/home/dali/ros2_ws/install/piper_bringup:/home/dali/ros2_ws/install/piper_moveit_config:/home/dali/ros2_ws/install/piper_description:/opt/ros/jazzy/opt/gz_sim_vendor:/opt/ros/jazzy/opt/gz_sensors_vendor:/opt/ros/jazzy/opt/gz_physics_vendor:/opt/ros/jazzy/opt/sdformat_vendor:/opt/ros/jazzy/opt/gz_gui_vendor:/opt/ros/jazzy/opt/gz_transport_vendor:/opt/ros/jazzy/opt/gz_rendering_vendor:/opt/ros/jazzy/opt/gz_plugin_vendor:/opt/ros/jazzy/opt/gz_fuel_tools_vendor:/opt/ros/jazzy/opt/gz_msgs_vendor:/opt/ros/jazzy/opt/gz_common_vendor:/opt/ros/jazzy/opt/gz_math_vendor:/opt/ros/jazzy/opt/gz_utils_vendor:/opt/ros/jazzy/opt/gz_tools_vendor:/opt/ros/jazzy/opt/gz_ogre_next_vendor:/opt/ros/jazzy/opt/gz_dartsim_vendor:/opt/ros/jazzy/opt/gz_cmake_vendor:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --install /home/dali/ros2_ws/build/piper_bringup

@@ -1,0 +1,44 @@
+[0.034s] Invoking command in '/home/dali/ros2_ws/build/piper_bringup': CMAKE_PREFIX_PATH=/home/dali/ros2_ws/install/scene_graph_interfaces:/home/dali/ros2_ws/install/piper_bringup:/home/dali/ros2_ws/install/piper_moveit_config:/home/dali/ros2_ws/install/piper_description:/opt/ros/jazzy/opt/gz_sim_vendor:/opt/ros/jazzy/opt/gz_sensors_vendor:/opt/ros/jazzy/opt/gz_physics_vendor:/opt/ros/jazzy/opt/sdformat_vendor:/opt/ros/jazzy/opt/gz_gui_vendor:/opt/ros/jazzy/opt/gz_transport_vendor:/opt/ros/jazzy/opt/gz_rendering_vendor:/opt/ros/jazzy/opt/gz_plugin_vendor:/opt/ros/jazzy/opt/gz_fuel_tools_vendor:/opt/ros/jazzy/opt/gz_msgs_vendor:/opt/ros/jazzy/opt/gz_common_vendor:/opt/ros/jazzy/opt/gz_math_vendor:/opt/ros/jazzy/opt/gz_utils_vendor:/opt/ros/jazzy/opt/gz_tools_vendor:/opt/ros/jazzy/opt/gz_ogre_next_vendor:/opt/ros/jazzy/opt/gz_dartsim_vendor:/opt/ros/jazzy/opt/gz_cmake_vendor:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --build /home/dali/ros2_ws/build/piper_bringup -- -j4 -l4
+[0.314s] [ 50%] [32mBuilding CXX object CMakeFiles/moveit_pick_and_place_cpp.dir/src/moveit_pick_and_place.cpp.o[0m
+[20.997s] [100%] [32m[1mLinking CXX executable moveit_pick_and_place_cpp[0m
+[22.032s] [100%] Built target moveit_pick_and_place_cpp
+[22.071s] Invoked command in '/home/dali/ros2_ws/build/piper_bringup' returned '0': CMAKE_PREFIX_PATH=/home/dali/ros2_ws/install/scene_graph_interfaces:/home/dali/ros2_ws/install/piper_bringup:/home/dali/ros2_ws/install/piper_moveit_config:/home/dali/ros2_ws/install/piper_description:/opt/ros/jazzy/opt/gz_sim_vendor:/opt/ros/jazzy/opt/gz_sensors_vendor:/opt/ros/jazzy/opt/gz_physics_vendor:/opt/ros/jazzy/opt/sdformat_vendor:/opt/ros/jazzy/opt/gz_gui_vendor:/opt/ros/jazzy/opt/gz_transport_vendor:/opt/ros/jazzy/opt/gz_rendering_vendor:/opt/ros/jazzy/opt/gz_plugin_vendor:/opt/ros/jazzy/opt/gz_fuel_tools_vendor:/opt/ros/jazzy/opt/gz_msgs_vendor:/opt/ros/jazzy/opt/gz_common_vendor:/opt/ros/jazzy/opt/gz_math_vendor:/opt/ros/jazzy/opt/gz_utils_vendor:/opt/ros/jazzy/opt/gz_tools_vendor:/opt/ros/jazzy/opt/gz_ogre_next_vendor:/opt/ros/jazzy/opt/gz_dartsim_vendor:/opt/ros/jazzy/opt/gz_cmake_vendor:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --build /home/dali/ros2_ws/build/piper_bringup -- -j4 -l4
+[22.071s] Invoking command in '/home/dali/ros2_ws/build/piper_bringup': CMAKE_PREFIX_PATH=/home/dali/ros2_ws/install/scene_graph_interfaces:/home/dali/ros2_ws/install/piper_bringup:/home/dali/ros2_ws/install/piper_moveit_config:/home/dali/ros2_ws/install/piper_description:/opt/ros/jazzy/opt/gz_sim_vendor:/opt/ros/jazzy/opt/gz_sensors_vendor:/opt/ros/jazzy/opt/gz_physics_vendor:/opt/ros/jazzy/opt/sdformat_vendor:/opt/ros/jazzy/opt/gz_gui_vendor:/opt/ros/jazzy/opt/gz_transport_vendor:/opt/ros/jazzy/opt/gz_rendering_vendor:/opt/ros/jazzy/opt/gz_plugin_vendor:/opt/ros/jazzy/opt/gz_fuel_tools_vendor:/opt/ros/jazzy/opt/gz_msgs_vendor:/opt/ros/jazzy/opt/gz_common_vendor:/opt/ros/jazzy/opt/gz_math_vendor:/opt/ros/jazzy/opt/gz_utils_vendor:/opt/ros/jazzy/opt/gz_tools_vendor:/opt/ros/jazzy/opt/gz_ogre_next_vendor:/opt/ros/jazzy/opt/gz_dartsim_vendor:/opt/ros/jazzy/opt/gz_cmake_vendor:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --install /home/dali/ros2_ws/build/piper_bringup
+[22.092s] -- Install configuration: ""
+[22.094s] -- Up-to-date: /home/dali/ros2_ws/install/piper_bringup/share/piper_bringup/launch
+[22.094s] -- Up-to-date: /home/dali/ros2_ws/install/piper_bringup/share/piper_bringup/launch/piper.launch.xml
+[22.094s] -- Up-to-date: /home/dali/ros2_ws/install/piper_bringup/share/piper_bringup/launch/pick_place_launch.py
+[22.094s] -- Up-to-date: /home/dali/ros2_ws/install/piper_bringup/share/piper_bringup/launch/gazebo_piper.launch.py
+[22.094s] -- Up-to-date: /home/dali/ros2_ws/install/piper_bringup/share/piper_bringup/rviz
+[22.094s] -- Up-to-date: /home/dali/ros2_ws/install/piper_bringup/share/piper_bringup/rviz/robotmodel.rviz
+[22.094s] -- Up-to-date: /home/dali/ros2_ws/install/piper_bringup/share/piper_bringup/worlds
+[22.094s] -- Up-to-date: /home/dali/ros2_ws/install/piper_bringup/share/piper_bringup/worlds/empty_world.sdf
+[22.094s] -- Up-to-date: /home/dali/ros2_ws/install/piper_bringup/share/piper_bringup/models
+[22.094s] -- Up-to-date: /home/dali/ros2_ws/install/piper_bringup/share/piper_bringup/models/cylinder
+[22.094s] -- Up-to-date: /home/dali/ros2_ws/install/piper_bringup/share/piper_bringup/models/cylinder/model.sdf
+[22.094s] -- Up-to-date: /home/dali/ros2_ws/install/piper_bringup/share/piper_bringup/models/cylinder/model.config
+[22.094s] -- Up-to-date: /home/dali/ros2_ws/install/piper_bringup/share/piper_bringup/models/cube
+[22.094s] -- Up-to-date: /home/dali/ros2_ws/install/piper_bringup/share/piper_bringup/models/cube/model.sdf
+[22.094s] -- Up-to-date: /home/dali/ros2_ws/install/piper_bringup/share/piper_bringup/models/cube/model.config
+[22.094s] -- Up-to-date: /home/dali/ros2_ws/install/piper_bringup/lib/piper_bringup/pick_and_place.py
+[22.094s] -- Up-to-date: /home/dali/ros2_ws/install/piper_bringup/lib/piper_bringup/ik_pick_and_place.py
+[22.094s] -- Up-to-date: /home/dali/ros2_ws/install/piper_bringup/lib/piper_bringup/detection_node.py
+[22.094s] -- Installing: /home/dali/ros2_ws/install/piper_bringup/lib/piper_bringup/moveit_pick_and_place_cpp
+[22.108s] -- Set non-toolchain portion of runtime path of "/home/dali/ros2_ws/install/piper_bringup/lib/piper_bringup/moveit_pick_and_place_cpp" to ""
+[22.108s] -- Up-to-date: /home/dali/ros2_ws/install/piper_bringup/share/ament_index/resource_index/package_run_dependencies/piper_bringup
+[22.108s] -- Up-to-date: /home/dali/ros2_ws/install/piper_bringup/share/ament_index/resource_index/parent_prefix_path/piper_bringup
+[22.108s] -- Up-to-date: /home/dali/ros2_ws/install/piper_bringup/share/piper_bringup/environment/ament_prefix_path.sh
+[22.108s] -- Up-to-date: /home/dali/ros2_ws/install/piper_bringup/share/piper_bringup/environment/ament_prefix_path.dsv
+[22.108s] -- Up-to-date: /home/dali/ros2_ws/install/piper_bringup/share/piper_bringup/environment/path.sh
+[22.108s] -- Up-to-date: /home/dali/ros2_ws/install/piper_bringup/share/piper_bringup/environment/path.dsv
+[22.108s] -- Up-to-date: /home/dali/ros2_ws/install/piper_bringup/share/piper_bringup/local_setup.bash
+[22.108s] -- Up-to-date: /home/dali/ros2_ws/install/piper_bringup/share/piper_bringup/local_setup.sh
+[22.108s] -- Up-to-date: /home/dali/ros2_ws/install/piper_bringup/share/piper_bringup/local_setup.zsh
+[22.108s] -- Up-to-date: /home/dali/ros2_ws/install/piper_bringup/share/piper_bringup/local_setup.dsv
+[22.108s] -- Installing: /home/dali/ros2_ws/install/piper_bringup/share/piper_bringup/package.dsv
+[22.108s] -- Up-to-date: /home/dali/ros2_ws/install/piper_bringup/share/ament_index/resource_index/packages/piper_bringup
+[22.108s] -- Up-to-date: /home/dali/ros2_ws/install/piper_bringup/share/piper_bringup/cmake/ament_cmake_export_dependencies-extras.cmake
+[22.108s] -- Up-to-date: /home/dali/ros2_ws/install/piper_bringup/share/piper_bringup/cmake/piper_bringupConfig.cmake
+[22.108s] -- Up-to-date: /home/dali/ros2_ws/install/piper_bringup/share/piper_bringup/cmake/piper_bringupConfig-version.cmake
+[22.108s] -- Up-to-date: /home/dali/ros2_ws/install/piper_bringup/share/piper_bringup/package.xml
+[22.114s] Invoked command in '/home/dali/ros2_ws/build/piper_bringup' returned '0': CMAKE_PREFIX_PATH=/home/dali/ros2_ws/install/scene_graph_interfaces:/home/dali/ros2_ws/install/piper_bringup:/home/dali/ros2_ws/install/piper_moveit_config:/home/dali/ros2_ws/install/piper_description:/opt/ros/jazzy/opt/gz_sim_vendor:/opt/ros/jazzy/opt/gz_sensors_vendor:/opt/ros/jazzy/opt/gz_physics_vendor:/opt/ros/jazzy/opt/sdformat_vendor:/opt/ros/jazzy/opt/gz_gui_vendor:/opt/ros/jazzy/opt/gz_transport_vendor:/opt/ros/jazzy/opt/gz_rendering_vendor:/opt/ros/jazzy/opt/gz_plugin_vendor:/opt/ros/jazzy/opt/gz_fuel_tools_vendor:/opt/ros/jazzy/opt/gz_msgs_vendor:/opt/ros/jazzy/opt/gz_common_vendor:/opt/ros/jazzy/opt/gz_math_vendor:/opt/ros/jazzy/opt/gz_utils_vendor:/opt/ros/jazzy/opt/gz_tools_vendor:/opt/ros/jazzy/opt/gz_ogre_next_vendor:/opt/ros/jazzy/opt/gz_dartsim_vendor:/opt/ros/jazzy/opt/gz_cmake_vendor:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --install /home/dali/ros2_ws/build/piper_bringup

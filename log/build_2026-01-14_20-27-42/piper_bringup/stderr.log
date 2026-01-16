@@ -1,0 +1,75 @@
+In file included from [01m[K/opt/ros/jazzy/include/rclcpp/rclcpp/logging.hpp:24[m[K,
+                 from [01m[K/opt/ros/jazzy/include/rclcpp/rclcpp/copy_all_parameter_values.hpp:27[m[K,
+                 from [01m[K/opt/ros/jazzy/include/rclcpp/rclcpp/rclcpp.hpp:171[m[K,
+                 from [01m[K/home/dali/ros2_ws/src/piper_ros2/piper_bringup/src/moveit_pick_and_place.cpp:1[m[K:
+[01m[K/home/dali/ros2_ws/src/piper_ros2/piper_bringup/src/moveit_pick_and_place.cpp:[m[K In member function ‘[01m[Kvoid PiperDynamicNode::[01;32m[Krun[m[K()[m[K’:
+[01m[K/home/dali/ros2_ws/src/piper_ros2/piper_bringup/src/moveit_pick_and_place.cpp:86:49:[m[K [01;35m[Kwarning: [m[Kzero-length gnu_printf format string [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wformat-zero-length-Wformat-zero-length]8;;[m[K]
+   86 |                 RCLCPP_INFO(this->get_logger(), [01;35m[K""[m[K);
+      |                                                 [01;35m[K^~[m[K
+[01m[K/home/dali/ros2_ws/src/piper_ros2/piper_bringup/src/moveit_pick_and_place.cpp:[m[K In member function ‘[01m[Kvoid PiperDynamicNode::[01;32m[Kvision_callback[m[K(scene_graph_interfaces::msg::FunObject3DBoundingBoxList_<std::allocator<void> >::SharedPtr)[m[K’:
+[01m[K/home/dali/ros2_ws/src/piper_ros2/piper_bringup/src/moveit_pick_and_place.cpp:189:34:[m[K [01;35m[Kwarning: [m[KC++ designated initializers only available with ‘[01m[K-std=c++20[m[K’ or ‘[01m[K-std=gnu++20[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wc++20-extensions-Wc++20-extensions]8;;[m[K]
+  189 |                 latest_place_ = {[01;35m[K.[m[Kclass_name = obj.name.data,
+      |                                  [01;35m[K^[m[K
+[01m[K/home/dali/ros2_ws/src/piper_ros2/piper_bringup/src/moveit_pick_and_place.cpp:190:33:[m[K [01;35m[Kwarning: [m[KC++ designated initializers only available with ‘[01m[K-std=c++20[m[K’ or ‘[01m[K-std=gnu++20[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wc++20-extensions-Wc++20-extensions]8;;[m[K]
+  190 |                                 [01;35m[K.[m[Kx = 0.2, .y = 0.2, .z = latest_target_.z,
+      |                                 [01;35m[K^[m[K
+[01m[K/home/dali/ros2_ws/src/piper_ros2/piper_bringup/src/moveit_pick_and_place.cpp:190:43:[m[K [01;35m[Kwarning: [m[KC++ designated initializers only available with ‘[01m[K-std=c++20[m[K’ or ‘[01m[K-std=gnu++20[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wc++20-extensions-Wc++20-extensions]8;;[m[K]
+  190 |                                 .x = 0.2, [01;35m[K.[m[Ky = 0.2, .z = latest_target_.z,
+      |                                           [01;35m[K^[m[K
+[01m[K/home/dali/ros2_ws/src/piper_ros2/piper_bringup/src/moveit_pick_and_place.cpp:190:53:[m[K [01;35m[Kwarning: [m[KC++ designated initializers only available with ‘[01m[K-std=c++20[m[K’ or ‘[01m[K-std=gnu++20[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wc++20-extensions-Wc++20-extensions]8;;[m[K]
+  190 |                                 .x = 0.2, .y = 0.2, [01;35m[K.[m[Kz = latest_target_.z,
+      |                                                     [01;35m[K^[m[K
+[01m[K/home/dali/ros2_ws/src/piper_ros2/piper_bringup/src/moveit_pick_and_place.cpp:191:33:[m[K [01;35m[Kwarning: [m[KC++ designated initializers only available with ‘[01m[K-std=c++20[m[K’ or ‘[01m[K-std=gnu++20[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wc++20-extensions-Wc++20-extensions]8;;[m[K]
+  191 |                                 [01;35m[K.[m[Kwidth = 0, .height = 0, .depth = 0,
+      |                                 [01;35m[K^[m[K
+[01m[K/home/dali/ros2_ws/src/piper_ros2/piper_bringup/src/moveit_pick_and_place.cpp:191:45:[m[K [01;35m[Kwarning: [m[KC++ designated initializers only available with ‘[01m[K-std=c++20[m[K’ or ‘[01m[K-std=gnu++20[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wc++20-extensions-Wc++20-extensions]8;;[m[K]
+  191 |                                 .width = 0, [01;35m[K.[m[Kheight = 0, .depth = 0,
+      |                                             [01;35m[K^[m[K
+[01m[K/home/dali/ros2_ws/src/piper_ros2/piper_bringup/src/moveit_pick_and_place.cpp:191:58:[m[K [01;35m[Kwarning: [m[KC++ designated initializers only available with ‘[01m[K-std=c++20[m[K’ or ‘[01m[K-std=gnu++20[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wc++20-extensions-Wc++20-extensions]8;;[m[K]
+  191 |                                 .width = 0, .height = 0, [01;35m[K.[m[Kdepth = 0,
+      |                                                          [01;35m[K^[m[K
+[01m[K/home/dali/ros2_ws/src/piper_ros2/piper_bringup/src/moveit_pick_and_place.cpp:192:33:[m[K [01;35m[Kwarning: [m[KC++ designated initializers only available with ‘[01m[K-std=c++20[m[K’ or ‘[01m[K-std=gnu++20[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wc++20-extensions-Wc++20-extensions]8;;[m[K]
+  192 |                                 [01;35m[K.[m[Kaffordance = Affordance::NONE};
+      |                                 [01;35m[K^[m[K
+[01m[K/home/dali/ros2_ws/src/piper_ros2/piper_bringup/src/moveit_pick_and_place.cpp:[m[K In member function ‘[01m[KInteractionStrategy PiperDynamicNode::[01;32m[Kselect_strategy[m[K(const DetectedObject&)[m[K’:
+[01m[K/home/dali/ros2_ws/src/piper_ros2/piper_bringup/src/moveit_pick_and_place.cpp:217:45:[m[K [01;35m[Kwarning: [m[Kzero-length gnu_printf format string [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wformat-zero-length-Wformat-zero-length]8;;[m[K]
+  217 |             RCLCPP_INFO(this->get_logger(), [01;35m[K""[m[K);
+      |                                             [01;35m[K^~[m[K
+[01m[K/home/dali/ros2_ws/src/piper_ros2/piper_bringup/src/moveit_pick_and_place.cpp:[m[K In member function ‘[01m[Kvoid PiperDynamicNode::[01;32m[Kexecute_intelligent_grasp[m[K(std::shared_ptr<moveit::planning_interface::MoveGroupInterface>, const DetectedObject&)[m[K’:
+[01m[K/home/dali/ros2_ws/src/piper_ros2/piper_bringup/src/moveit_pick_and_place.cpp:276:41:[m[K [01;35m[Kwarning: [m[Kzero-length gnu_printf format string [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wformat-zero-length-Wformat-zero-length]8;;[m[K]
+  276 |         RCLCPP_INFO(this->get_logger(), [01;35m[K""[m[K);
+      |                                         [01;35m[K^~[m[K
+[01m[K/home/dali/ros2_ws/src/piper_ros2/piper_bringup/src/moveit_pick_and_place.cpp:285:45:[m[K [01;35m[Kwarning: [m[Kzero-length gnu_printf format string [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wformat-zero-length-Wformat-zero-length]8;;[m[K]
+  285 |             RCLCPP_INFO(this->get_logger(), [01;35m[K""[m[K);
+      |                                             [01;35m[K^~[m[K
+[01m[K/home/dali/ros2_ws/src/piper_ros2/piper_bringup/src/moveit_pick_and_place.cpp:301:45:[m[K [01;35m[Kwarning: [m[Kzero-length gnu_printf format string [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wformat-zero-length-Wformat-zero-length]8;;[m[K]
+  301 |             RCLCPP_INFO(this->get_logger(), [01;35m[K""[m[K);
+      |                                             [01;35m[K^~[m[K
+[01m[K/home/dali/ros2_ws/src/piper_ros2/piper_bringup/src/moveit_pick_and_place.cpp:325:45:[m[K [01;35m[Kwarning: [m[Kzero-length gnu_printf format string [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wformat-zero-length-Wformat-zero-length]8;;[m[K]
+  325 |             RCLCPP_INFO(this->get_logger(), [01;35m[K""[m[K);
+      |                                             [01;35m[K^~[m[K
+[01m[K/home/dali/ros2_ws/src/piper_ros2/piper_bringup/src/moveit_pick_and_place.cpp:332:45:[m[K [01;35m[Kwarning: [m[Kzero-length gnu_printf format string [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wformat-zero-length-Wformat-zero-length]8;;[m[K]
+  332 |             RCLCPP_INFO(this->get_logger(), [01;35m[K""[m[K);
+      |                                             [01;35m[K^~[m[K
+[01m[K/home/dali/ros2_ws/src/piper_ros2/piper_bringup/src/moveit_pick_and_place.cpp:[m[K In member function ‘[01m[Kvoid PiperDynamicNode::[01;32m[Kexecute_push_action[m[K(std::shared_ptr<moveit::planning_interface::MoveGroupInterface>, const DetectedObject&)[m[K’:
+[01m[K/home/dali/ros2_ws/src/piper_ros2/piper_bringup/src/moveit_pick_and_place.cpp:356:41:[m[K [01;35m[Kwarning: [m[Kzero-length gnu_printf format string [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wformat-zero-length-Wformat-zero-length]8;;[m[K]
+  356 |         RCLCPP_INFO(this->get_logger(), [01;35m[K""[m[K);
+      |                                         [01;35m[K^~[m[K
+[01m[K/home/dali/ros2_ws/src/piper_ros2/piper_bringup/src/moveit_pick_and_place.cpp:[m[K In member function ‘[01m[Kvoid PiperDynamicNode::[01;32m[Kexecute_pull_action[m[K(std::shared_ptr<moveit::planning_interface::MoveGroupInterface>, const DetectedObject&)[m[K’:
+[01m[K/home/dali/ros2_ws/src/piper_ros2/piper_bringup/src/moveit_pick_and_place.cpp:379:41:[m[K [01;35m[Kwarning: [m[Kzero-length gnu_printf format string [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wformat-zero-length-Wformat-zero-length]8;;[m[K]
+  379 |         RCLCPP_INFO(this->get_logger(), [01;35m[K""[m[K);
+      |                                         [01;35m[K^~[m[K
+[01m[K/home/dali/ros2_ws/src/piper_ros2/piper_bringup/src/moveit_pick_and_place.cpp:[m[K In member function ‘[01m[Kvoid PiperDynamicNode::[01;32m[Kexecute_intelligent_place[m[K(std::shared_ptr<moveit::planning_interface::MoveGroupInterface>, const DetectedObject&)[m[K’:
+[01m[K/home/dali/ros2_ws/src/piper_ros2/piper_bringup/src/moveit_pick_and_place.cpp:406:41:[m[K [01;35m[Kwarning: [m[Kzero-length gnu_printf format string [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wformat-zero-length-Wformat-zero-length]8;;[m[K]
+  406 |         RCLCPP_INFO(this->get_logger(), [01;35m[K""[m[K);
+      |                                         [01;35m[K^~[m[K
+[01m[K/home/dali/ros2_ws/src/piper_ros2/piper_bringup/src/moveit_pick_and_place.cpp:[m[K In member function ‘[01m[Kvoid PiperDynamicNode::[01;32m[Kperform_linear_move[m[K(moveit::planning_interface::MoveGroupInterface&, double, double, double, std::string)[m[K’:
+[01m[K/home/dali/ros2_ws/src/piper_ros2/piper_bringup/src/moveit_pick_and_place.cpp:453:71:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Klabel[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-parameter-Wunused-parameter]8;;[m[K]
+  453 |                      double x, double y, double z, [01;35m[Kstd::string label[m[K) {
+      |                                                    [01;35m[K~~~~~~~~~~~~^~~~~[m[K
+
+[01m[K/home/dali/ros2_ws/src/piper_ros2/piper_bringup/src/moveit_pick_and_place.cpp:[m[K In member function ‘[01m[Kbool PiperDynamicNode::[01;32m[Kplan_and_execute_standard[m[K(moveit::planning_interface::MoveGroupInterface&, double, double, double, std::string)[m[K’:
+[01m[K/home/dali/ros2_ws/src/piper_ros2/piper_bringup/src/moveit_pick_and_place.cpp:462:78:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Klabel[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-parameter-Wunused-parameter]8;;[m[K]
+  462 |                      double x, double y, double z, [01;35m[Kstd::string label[m[K) {
+      |                                                    [01;35m[K~~~~~~~~~~~~^~~~~[m[K
+

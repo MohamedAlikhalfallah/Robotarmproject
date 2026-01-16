@@ -1,0 +1,373 @@
+[0.238s] DEBUG:colcon:Command line arguments: ['/usr/bin/colcon', 'build']
+[0.239s] DEBUG:colcon:Parsed command line arguments: Namespace(log_base=None, log_level=None, verb_name='build', build_base='build', install_base='install', merge_install=False, symlink_install=False, test_result_base=None, continue_on_error=False, executor='parallel', parallel_workers=4, event_handlers=None, ignore_user_meta=False, metas=['./colcon.meta'], base_paths=['.'], packages_ignore=None, packages_ignore_regex=None, paths=None, packages_up_to=None, packages_up_to_regex=None, packages_above=None, packages_above_and_dependencies=None, packages_above_depth=None, packages_select_by_dep=None, packages_skip_by_dep=None, packages_skip_up_to=None, packages_select_build_failed=False, packages_skip_build_finished=False, packages_select_test_failures=False, packages_skip_test_passed=False, packages_select=None, packages_skip=None, packages_select_regex=None, packages_skip_regex=None, packages_start=None, packages_end=None, allow_overriding=[], cmake_args=None, cmake_target=None, cmake_target_skip_unavailable=False, cmake_clean_cache=False, cmake_clean_first=False, cmake_force_configure=False, ament_cmake_args=None, catkin_cmake_args=None, catkin_skip_building_tests=False, mixin_files=None, mixin=None, verb_parser=<colcon_mixin.mixin.mixin_argument.MixinArgumentDecorator object at 0xeb6c7a8e6510>, verb_extension=<colcon_core.verb.build.BuildVerb object at 0xeb6c7a8e5e80>, main=<bound method BuildVerb.main of <colcon_core.verb.build.BuildVerb object at 0xeb6c7a8e5e80>>, mixin_verb=('build',))
+[0.607s] Level 1:colcon.colcon_core.package_discovery:discover_packages(colcon_meta) check parameters
+[0.607s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) check parameters
+[0.607s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) check parameters
+[0.607s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) check parameters
+[0.607s] Level 1:colcon.colcon_core.package_discovery:discover_packages(colcon_meta) discover
+[0.608s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) discover
+[0.608s] INFO:colcon.colcon_core.package_discovery:Crawling recursively for packages in '/home/dali/ros2_ws'
+[0.608s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['ignore', 'ignore_ament_install']
+[0.608s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ignore'
+[0.608s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ignore_ament_install'
+[0.608s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['colcon_pkg']
+[0.608s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'colcon_pkg'
+[0.608s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['colcon_meta']
+[0.608s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'colcon_meta'
+[0.608s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['ros']
+[0.608s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ros'
+[0.676s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['cmake', 'python']
+[0.676s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'cmake'
+[0.676s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'python'
+[0.676s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['python_setup_py']
+[0.676s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'python_setup_py'
+[0.678s] Level 1:colcon.colcon_core.package_identification:_identify(build) by extensions ['ignore', 'ignore_ament_install']
+[0.678s] Level 1:colcon.colcon_core.package_identification:_identify(build) by extension 'ignore'
+[0.678s] Level 1:colcon.colcon_core.package_identification:_identify(build) ignored
+[0.678s] Level 1:colcon.colcon_core.package_identification:_identify(install) by extensions ['ignore', 'ignore_ament_install']
+[0.678s] Level 1:colcon.colcon_core.package_identification:_identify(install) by extension 'ignore'
+[0.678s] Level 1:colcon.colcon_core.package_identification:_identify(install) ignored
+[0.678s] Level 1:colcon.colcon_core.package_identification:_identify(log) by extensions ['ignore', 'ignore_ament_install']
+[0.680s] Level 1:colcon.colcon_core.package_identification:_identify(log) by extension 'ignore'
+[0.680s] Level 1:colcon.colcon_core.package_identification:_identify(log) ignored
+[0.681s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['ignore', 'ignore_ament_install']
+[0.681s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'ignore'
+[0.681s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'ignore_ament_install'
+[0.681s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['colcon_pkg']
+[0.681s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'colcon_pkg'
+[0.681s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['colcon_meta']
+[0.681s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'colcon_meta'
+[0.681s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['ros']
+[0.681s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'ros'
+[0.681s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['cmake', 'python']
+[0.681s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'cmake'
+[0.681s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'python'
+[0.681s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['python_setup_py']
+[0.681s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'python_setup_py'
+[0.683s] Level 1:colcon.colcon_core.package_identification:_identify(src/piper_ros2) by extensions ['ignore', 'ignore_ament_install']
+[0.683s] Level 1:colcon.colcon_core.package_identification:_identify(src/piper_ros2) by extension 'ignore'
+[0.683s] Level 1:colcon.colcon_core.package_identification:_identify(src/piper_ros2) by extension 'ignore_ament_install'
+[0.683s] Level 1:colcon.colcon_core.package_identification:_identify(src/piper_ros2) by extensions ['colcon_pkg']
+[0.683s] Level 1:colcon.colcon_core.package_identification:_identify(src/piper_ros2) by extension 'colcon_pkg'
+[0.683s] Level 1:colcon.colcon_core.package_identification:_identify(src/piper_ros2) by extensions ['colcon_meta']
+[0.683s] Level 1:colcon.colcon_core.package_identification:_identify(src/piper_ros2) by extension 'colcon_meta'
+[0.683s] Level 1:colcon.colcon_core.package_identification:_identify(src/piper_ros2) by extensions ['ros']
+[0.683s] Level 1:colcon.colcon_core.package_identification:_identify(src/piper_ros2) by extension 'ros'
+[0.683s] Level 1:colcon.colcon_core.package_identification:_identify(src/piper_ros2) by extensions ['cmake', 'python']
+[0.683s] Level 1:colcon.colcon_core.package_identification:_identify(src/piper_ros2) by extension 'cmake'
+[0.683s] Level 1:colcon.colcon_core.package_identification:_identify(src/piper_ros2) by extension 'python'
+[0.683s] Level 1:colcon.colcon_core.package_identification:_identify(src/piper_ros2) by extensions ['python_setup_py']
+[0.683s] Level 1:colcon.colcon_core.package_identification:_identify(src/piper_ros2) by extension 'python_setup_py'
+[0.687s] Level 1:colcon.colcon_core.package_identification:_identify(src/piper_ros2/docs) by extensions ['ignore', 'ignore_ament_install']
+[0.687s] Level 1:colcon.colcon_core.package_identification:_identify(src/piper_ros2/docs) by extension 'ignore'
+[0.687s] Level 1:colcon.colcon_core.package_identification:_identify(src/piper_ros2/docs) by extension 'ignore_ament_install'
+[0.687s] Level 1:colcon.colcon_core.package_identification:_identify(src/piper_ros2/docs) by extensions ['colcon_pkg']
+[0.687s] Level 1:colcon.colcon_core.package_identification:_identify(src/piper_ros2/docs) by extension 'colcon_pkg'
+[0.687s] Level 1:colcon.colcon_core.package_identification:_identify(src/piper_ros2/docs) by extensions ['colcon_meta']
+[0.687s] Level 1:colcon.colcon_core.package_identification:_identify(src/piper_ros2/docs) by extension 'colcon_meta'
+[0.688s] Level 1:colcon.colcon_core.package_identification:_identify(src/piper_ros2/docs) by extensions ['ros']
+[0.688s] Level 1:colcon.colcon_core.package_identification:_identify(src/piper_ros2/docs) by extension 'ros'
+[0.688s] Level 1:colcon.colcon_core.package_identification:_identify(src/piper_ros2/docs) by extensions ['cmake', 'python']
+[0.688s] Level 1:colcon.colcon_core.package_identification:_identify(src/piper_ros2/docs) by extension 'cmake'
+[0.688s] Level 1:colcon.colcon_core.package_identification:_identify(src/piper_ros2/docs) by extension 'python'
+[0.688s] Level 1:colcon.colcon_core.package_identification:_identify(src/piper_ros2/docs) by extensions ['python_setup_py']
+[0.688s] Level 1:colcon.colcon_core.package_identification:_identify(src/piper_ros2/docs) by extension 'python_setup_py'
+[0.689s] Level 1:colcon.colcon_core.package_identification:_identify(src/piper_ros2/piper_bringup) by extensions ['ignore', 'ignore_ament_install']
+[0.689s] Level 1:colcon.colcon_core.package_identification:_identify(src/piper_ros2/piper_bringup) by extension 'ignore'
+[0.690s] Level 1:colcon.colcon_core.package_identification:_identify(src/piper_ros2/piper_bringup) by extension 'ignore_ament_install'
+[0.690s] Level 1:colcon.colcon_core.package_identification:_identify(src/piper_ros2/piper_bringup) by extensions ['colcon_pkg']
+[0.690s] Level 1:colcon.colcon_core.package_identification:_identify(src/piper_ros2/piper_bringup) by extension 'colcon_pkg'
+[0.690s] Level 1:colcon.colcon_core.package_identification:_identify(src/piper_ros2/piper_bringup) by extensions ['colcon_meta']
+[0.690s] Level 1:colcon.colcon_core.package_identification:_identify(src/piper_ros2/piper_bringup) by extension 'colcon_meta'
+[0.690s] Level 1:colcon.colcon_core.package_identification:_identify(src/piper_ros2/piper_bringup) by extensions ['ros']
+[0.690s] Level 1:colcon.colcon_core.package_identification:_identify(src/piper_ros2/piper_bringup) by extension 'ros'
+[0.704s] DEBUG:colcon.colcon_core.package_identification:Package 'src/piper_ros2/piper_bringup' with type 'ros.ament_cmake' and name 'piper_bringup'
+[0.706s] Level 1:colcon.colcon_core.package_identification:_identify(src/piper_ros2/piper_description) by extensions ['ignore', 'ignore_ament_install']
+[0.706s] Level 1:colcon.colcon_core.package_identification:_identify(src/piper_ros2/piper_description) by extension 'ignore'
+[0.706s] Level 1:colcon.colcon_core.package_identification:_identify(src/piper_ros2/piper_description) by extension 'ignore_ament_install'
+[0.706s] Level 1:colcon.colcon_core.package_identification:_identify(src/piper_ros2/piper_description) by extensions ['colcon_pkg']
+[0.706s] Level 1:colcon.colcon_core.package_identification:_identify(src/piper_ros2/piper_description) by extension 'colcon_pkg'
+[0.706s] Level 1:colcon.colcon_core.package_identification:_identify(src/piper_ros2/piper_description) by extensions ['colcon_meta']
+[0.706s] Level 1:colcon.colcon_core.package_identification:_identify(src/piper_ros2/piper_description) by extension 'colcon_meta'
+[0.706s] Level 1:colcon.colcon_core.package_identification:_identify(src/piper_ros2/piper_description) by extensions ['ros']
+[0.706s] Level 1:colcon.colcon_core.package_identification:_identify(src/piper_ros2/piper_description) by extension 'ros'
+[0.706s] DEBUG:colcon.colcon_core.package_identification:Package 'src/piper_ros2/piper_description' with type 'ros.ament_cmake' and name 'piper_description'
+[0.707s] Level 1:colcon.colcon_core.package_identification:_identify(src/piper_ros2/piper_moveit_config) by extensions ['ignore', 'ignore_ament_install']
+[0.707s] Level 1:colcon.colcon_core.package_identification:_identify(src/piper_ros2/piper_moveit_config) by extension 'ignore'
+[0.707s] Level 1:colcon.colcon_core.package_identification:_identify(src/piper_ros2/piper_moveit_config) by extension 'ignore_ament_install'
+[0.707s] Level 1:colcon.colcon_core.package_identification:_identify(src/piper_ros2/piper_moveit_config) by extensions ['colcon_pkg']
+[0.707s] Level 1:colcon.colcon_core.package_identification:_identify(src/piper_ros2/piper_moveit_config) by extension 'colcon_pkg'
+[0.707s] Level 1:colcon.colcon_core.package_identification:_identify(src/piper_ros2/piper_moveit_config) by extensions ['colcon_meta']
+[0.707s] Level 1:colcon.colcon_core.package_identification:_identify(src/piper_ros2/piper_moveit_config) by extension 'colcon_meta'
+[0.707s] Level 1:colcon.colcon_core.package_identification:_identify(src/piper_ros2/piper_moveit_config) by extensions ['ros']
+[0.707s] Level 1:colcon.colcon_core.package_identification:_identify(src/piper_ros2/piper_moveit_config) by extension 'ros'
+[0.709s] DEBUG:colcon.colcon_core.package_identification:Package 'src/piper_ros2/piper_moveit_config' with type 'ros.ament_cmake' and name 'piper_moveit_config'
+[0.709s] Level 1:colcon.colcon_core.package_identification:_identify(src/scene_graph_interfaces) by extensions ['ignore', 'ignore_ament_install']
+[0.709s] Level 1:colcon.colcon_core.package_identification:_identify(src/scene_graph_interfaces) by extension 'ignore'
+[0.709s] Level 1:colcon.colcon_core.package_identification:_identify(src/scene_graph_interfaces) by extension 'ignore_ament_install'
+[0.709s] Level 1:colcon.colcon_core.package_identification:_identify(src/scene_graph_interfaces) by extensions ['colcon_pkg']
+[0.709s] Level 1:colcon.colcon_core.package_identification:_identify(src/scene_graph_interfaces) by extension 'colcon_pkg'
+[0.709s] Level 1:colcon.colcon_core.package_identification:_identify(src/scene_graph_interfaces) by extensions ['colcon_meta']
+[0.709s] Level 1:colcon.colcon_core.package_identification:_identify(src/scene_graph_interfaces) by extension 'colcon_meta'
+[0.709s] Level 1:colcon.colcon_core.package_identification:_identify(src/scene_graph_interfaces) by extensions ['ros']
+[0.709s] Level 1:colcon.colcon_core.package_identification:_identify(src/scene_graph_interfaces) by extension 'ros'
+[0.713s] DEBUG:colcon.colcon_core.package_identification:Package 'src/scene_graph_interfaces' with type 'ros.ament_cmake' and name 'scene_graph_interfaces'
+[0.713s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) using defaults
+[0.713s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) discover
+[0.713s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) using defaults
+[0.713s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) discover
+[0.713s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) using defaults
+[0.742s] Level 1:colcon.colcon_core.package_discovery:discover_packages(prefix_path) check parameters
+[0.742s] Level 1:colcon.colcon_core.package_discovery:discover_packages(prefix_path) discover
+[0.745s] DEBUG:colcon.colcon_installed_package_information.package_discovery:Found 4 installed packages in /home/dali/ros2_ws/install
+[0.747s] DEBUG:colcon.colcon_installed_package_information.package_discovery:Found 413 installed packages in /opt/ros/jazzy
+[0.748s] Level 1:colcon.colcon_core.package_discovery:discover_packages(prefix_path) using defaults
+[0.849s] Level 5:colcon.colcon_core.verb:set package 'piper_description' build argument 'cmake_args' from command line to 'None'
+[0.849s] Level 5:colcon.colcon_core.verb:set package 'piper_description' build argument 'cmake_target' from command line to 'None'
+[0.849s] Level 5:colcon.colcon_core.verb:set package 'piper_description' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.849s] Level 5:colcon.colcon_core.verb:set package 'piper_description' build argument 'cmake_clean_cache' from command line to 'False'
+[0.849s] Level 5:colcon.colcon_core.verb:set package 'piper_description' build argument 'cmake_clean_first' from command line to 'False'
+[0.849s] Level 5:colcon.colcon_core.verb:set package 'piper_description' build argument 'cmake_force_configure' from command line to 'False'
+[0.849s] Level 5:colcon.colcon_core.verb:set package 'piper_description' build argument 'ament_cmake_args' from command line to 'None'
+[0.849s] Level 5:colcon.colcon_core.verb:set package 'piper_description' build argument 'catkin_cmake_args' from command line to 'None'
+[0.849s] Level 5:colcon.colcon_core.verb:set package 'piper_description' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.850s] DEBUG:colcon.colcon_core.verb:Building package 'piper_description' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/dali/ros2_ws/build/piper_description', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/dali/ros2_ws/install/piper_description', 'merge_install': False, 'path': '/home/dali/ros2_ws/src/piper_ros2/piper_description', 'symlink_install': False, 'test_result_base': None}
+[0.851s] Level 5:colcon.colcon_core.verb:set package 'scene_graph_interfaces' build argument 'cmake_args' from command line to 'None'
+[0.851s] Level 5:colcon.colcon_core.verb:set package 'scene_graph_interfaces' build argument 'cmake_target' from command line to 'None'
+[0.851s] Level 5:colcon.colcon_core.verb:set package 'scene_graph_interfaces' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.851s] Level 5:colcon.colcon_core.verb:set package 'scene_graph_interfaces' build argument 'cmake_clean_cache' from command line to 'False'
+[0.851s] Level 5:colcon.colcon_core.verb:set package 'scene_graph_interfaces' build argument 'cmake_clean_first' from command line to 'False'
+[0.851s] Level 5:colcon.colcon_core.verb:set package 'scene_graph_interfaces' build argument 'cmake_force_configure' from command line to 'False'
+[0.851s] Level 5:colcon.colcon_core.verb:set package 'scene_graph_interfaces' build argument 'ament_cmake_args' from command line to 'None'
+[0.851s] Level 5:colcon.colcon_core.verb:set package 'scene_graph_interfaces' build argument 'catkin_cmake_args' from command line to 'None'
+[0.851s] Level 5:colcon.colcon_core.verb:set package 'scene_graph_interfaces' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.851s] DEBUG:colcon.colcon_core.verb:Building package 'scene_graph_interfaces' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/dali/ros2_ws/build/scene_graph_interfaces', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/dali/ros2_ws/install/scene_graph_interfaces', 'merge_install': False, 'path': '/home/dali/ros2_ws/src/scene_graph_interfaces', 'symlink_install': False, 'test_result_base': None}
+[0.851s] Level 5:colcon.colcon_core.verb:set package 'piper_bringup' build argument 'cmake_args' from command line to 'None'
+[0.851s] Level 5:colcon.colcon_core.verb:set package 'piper_bringup' build argument 'cmake_target' from command line to 'None'
+[0.851s] Level 5:colcon.colcon_core.verb:set package 'piper_bringup' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.851s] Level 5:colcon.colcon_core.verb:set package 'piper_bringup' build argument 'cmake_clean_cache' from command line to 'False'
+[0.851s] Level 5:colcon.colcon_core.verb:set package 'piper_bringup' build argument 'cmake_clean_first' from command line to 'False'
+[0.851s] Level 5:colcon.colcon_core.verb:set package 'piper_bringup' build argument 'cmake_force_configure' from command line to 'False'
+[0.851s] Level 5:colcon.colcon_core.verb:set package 'piper_bringup' build argument 'ament_cmake_args' from command line to 'None'
+[0.851s] Level 5:colcon.colcon_core.verb:set package 'piper_bringup' build argument 'catkin_cmake_args' from command line to 'None'
+[0.851s] Level 5:colcon.colcon_core.verb:set package 'piper_bringup' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.851s] DEBUG:colcon.colcon_core.verb:Building package 'piper_bringup' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/dali/ros2_ws/build/piper_bringup', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/dali/ros2_ws/install/piper_bringup', 'merge_install': False, 'path': '/home/dali/ros2_ws/src/piper_ros2/piper_bringup', 'symlink_install': False, 'test_result_base': None}
+[0.851s] Level 5:colcon.colcon_core.verb:set package 'piper_moveit_config' build argument 'cmake_args' from command line to 'None'
+[0.851s] Level 5:colcon.colcon_core.verb:set package 'piper_moveit_config' build argument 'cmake_target' from command line to 'None'
+[0.851s] Level 5:colcon.colcon_core.verb:set package 'piper_moveit_config' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.851s] Level 5:colcon.colcon_core.verb:set package 'piper_moveit_config' build argument 'cmake_clean_cache' from command line to 'False'
+[0.852s] Level 5:colcon.colcon_core.verb:set package 'piper_moveit_config' build argument 'cmake_clean_first' from command line to 'False'
+[0.852s] Level 5:colcon.colcon_core.verb:set package 'piper_moveit_config' build argument 'cmake_force_configure' from command line to 'False'
+[0.852s] Level 5:colcon.colcon_core.verb:set package 'piper_moveit_config' build argument 'ament_cmake_args' from command line to 'None'
+[0.852s] Level 5:colcon.colcon_core.verb:set package 'piper_moveit_config' build argument 'catkin_cmake_args' from command line to 'None'
+[0.852s] Level 5:colcon.colcon_core.verb:set package 'piper_moveit_config' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.852s] DEBUG:colcon.colcon_core.verb:Building package 'piper_moveit_config' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/dali/ros2_ws/build/piper_moveit_config', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/dali/ros2_ws/install/piper_moveit_config', 'merge_install': False, 'path': '/home/dali/ros2_ws/src/piper_ros2/piper_moveit_config', 'symlink_install': False, 'test_result_base': None}
+[0.852s] INFO:colcon.colcon_core.executor:Executing jobs using 'parallel' executor
+[0.854s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:run_until_complete
+[0.855s] INFO:colcon.colcon_ros.task.ament_cmake.build:Building ROS package in '/home/dali/ros2_ws/src/piper_ros2/piper_description' with build type 'ament_cmake'
+[0.855s] INFO:colcon.colcon_cmake.task.cmake.build:Building CMake package in '/home/dali/ros2_ws/src/piper_ros2/piper_description'
+[0.859s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_core.shell.bat': Not used on non-Windows systems
+[0.859s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[0.859s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[0.866s] INFO:colcon.colcon_ros.task.ament_cmake.build:Building ROS package in '/home/dali/ros2_ws/src/scene_graph_interfaces' with build type 'ament_cmake'
+[0.866s] INFO:colcon.colcon_cmake.task.cmake.build:Building CMake package in '/home/dali/ros2_ws/src/scene_graph_interfaces'
+[0.867s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[0.867s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[0.890s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/dali/ros2_ws/build/piper_description': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --build /home/dali/ros2_ws/build/piper_description -- -j4 -l4
+[0.908s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/dali/ros2_ws/build/scene_graph_interfaces': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --build /home/dali/ros2_ws/build/scene_graph_interfaces -- -j4 -l4
+[0.991s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/dali/ros2_ws/build/piper_description' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --build /home/dali/ros2_ws/build/piper_description -- -j4 -l4
+[1.019s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/dali/ros2_ws/build/piper_description': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --install /home/dali/ros2_ws/build/piper_description
+[1.040s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(piper_description)
+[1.041s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/dali/ros2_ws/build/piper_description' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --install /home/dali/ros2_ws/build/piper_description
+[1.043s] Level 1:colcon.colcon_core.environment:checking '/home/dali/ros2_ws/install/piper_description' for CMake module files
+[1.043s] Level 1:colcon.colcon_core.environment:checking '/home/dali/ros2_ws/install/piper_description' for CMake config files
+[1.046s] Level 1:colcon.colcon_core.shell:create_environment_hook('piper_description', 'cmake_prefix_path')
+[1.046s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/dali/ros2_ws/install/piper_description/share/piper_description/hook/cmake_prefix_path.ps1'
+[1.047s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/dali/ros2_ws/install/piper_description/share/piper_description/hook/cmake_prefix_path.dsv'
+[1.048s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/dali/ros2_ws/install/piper_description/share/piper_description/hook/cmake_prefix_path.sh'
+[1.049s] Level 1:colcon.colcon_core.environment:checking '/home/dali/ros2_ws/install/piper_description/bin'
+[1.049s] Level 1:colcon.colcon_core.environment:checking '/home/dali/ros2_ws/install/piper_description/lib/pkgconfig/piper_description.pc'
+[1.049s] Level 1:colcon.colcon_core.environment:checking '/home/dali/ros2_ws/install/piper_description/lib/python3.12/site-packages'
+[1.050s] Level 1:colcon.colcon_core.environment:checking '/home/dali/ros2_ws/install/piper_description/bin'
+[1.050s] INFO:colcon.colcon_core.shell:Creating package script '/home/dali/ros2_ws/install/piper_description/share/piper_description/package.ps1'
+[1.051s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/dali/ros2_ws/install/piper_description/share/piper_description/package.dsv'
+[1.051s] INFO:colcon.colcon_core.shell:Creating package script '/home/dali/ros2_ws/install/piper_description/share/piper_description/package.sh'
+[1.052s] INFO:colcon.colcon_core.shell:Creating package script '/home/dali/ros2_ws/install/piper_description/share/piper_description/package.bash'
+[1.052s] INFO:colcon.colcon_core.shell:Creating package script '/home/dali/ros2_ws/install/piper_description/share/piper_description/package.zsh'
+[1.052s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/dali/ros2_ws/install/piper_description/share/colcon-core/packages/piper_description)
+[1.053s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(piper_description)
+[1.053s] Level 1:colcon.colcon_core.environment:checking '/home/dali/ros2_ws/install/piper_description' for CMake module files
+[1.054s] Level 1:colcon.colcon_core.environment:checking '/home/dali/ros2_ws/install/piper_description' for CMake config files
+[1.054s] Level 1:colcon.colcon_core.shell:create_environment_hook('piper_description', 'cmake_prefix_path')
+[1.054s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/dali/ros2_ws/install/piper_description/share/piper_description/hook/cmake_prefix_path.ps1'
+[1.054s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/dali/ros2_ws/install/piper_description/share/piper_description/hook/cmake_prefix_path.dsv'
+[1.054s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/dali/ros2_ws/install/piper_description/share/piper_description/hook/cmake_prefix_path.sh'
+[1.055s] Level 1:colcon.colcon_core.environment:checking '/home/dali/ros2_ws/install/piper_description/bin'
+[1.055s] Level 1:colcon.colcon_core.environment:checking '/home/dali/ros2_ws/install/piper_description/lib/pkgconfig/piper_description.pc'
+[1.055s] Level 1:colcon.colcon_core.environment:checking '/home/dali/ros2_ws/install/piper_description/lib/python3.12/site-packages'
+[1.056s] Level 1:colcon.colcon_core.environment:checking '/home/dali/ros2_ws/install/piper_description/bin'
+[1.056s] INFO:colcon.colcon_core.shell:Creating package script '/home/dali/ros2_ws/install/piper_description/share/piper_description/package.ps1'
+[1.056s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/dali/ros2_ws/install/piper_description/share/piper_description/package.dsv'
+[1.056s] INFO:colcon.colcon_core.shell:Creating package script '/home/dali/ros2_ws/install/piper_description/share/piper_description/package.sh'
+[1.057s] INFO:colcon.colcon_core.shell:Creating package script '/home/dali/ros2_ws/install/piper_description/share/piper_description/package.bash'
+[1.057s] INFO:colcon.colcon_core.shell:Creating package script '/home/dali/ros2_ws/install/piper_description/share/piper_description/package.zsh'
+[1.057s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/dali/ros2_ws/install/piper_description/share/colcon-core/packages/piper_description)
+[1.058s] INFO:colcon.colcon_ros.task.ament_cmake.build:Building ROS package in '/home/dali/ros2_ws/src/piper_ros2/piper_moveit_config' with build type 'ament_cmake'
+[1.058s] INFO:colcon.colcon_cmake.task.cmake.build:Building CMake package in '/home/dali/ros2_ws/src/piper_ros2/piper_moveit_config'
+[1.058s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[1.058s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[1.090s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/dali/ros2_ws/build/piper_moveit_config': CMAKE_PREFIX_PATH=/home/dali/ros2_ws/install/piper_description:/home/dali/ros2_ws/install/piper_bringup:/home/dali/ros2_ws/install/scene_graph_interfaces:/home/dali/ros2_ws/install/piper_moveit_config:/opt/ros/jazzy/opt/gz_sim_vendor:/opt/ros/jazzy/opt/gz_sensors_vendor:/opt/ros/jazzy/opt/gz_physics_vendor:/opt/ros/jazzy/opt/sdformat_vendor:/opt/ros/jazzy/opt/gz_gui_vendor:/opt/ros/jazzy/opt/gz_transport_vendor:/opt/ros/jazzy/opt/gz_rendering_vendor:/opt/ros/jazzy/opt/gz_plugin_vendor:/opt/ros/jazzy/opt/gz_fuel_tools_vendor:/opt/ros/jazzy/opt/gz_msgs_vendor:/opt/ros/jazzy/opt/gz_common_vendor:/opt/ros/jazzy/opt/gz_math_vendor:/opt/ros/jazzy/opt/gz_utils_vendor:/opt/ros/jazzy/opt/gz_tools_vendor:/opt/ros/jazzy/opt/gz_ogre_next_vendor:/opt/ros/jazzy/opt/gz_dartsim_vendor:/opt/ros/jazzy/opt/gz_cmake_vendor:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --build /home/dali/ros2_ws/build/piper_moveit_config -- -j4 -l4
+[1.218s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/dali/ros2_ws/build/piper_moveit_config' returned '0': CMAKE_PREFIX_PATH=/home/dali/ros2_ws/install/piper_description:/home/dali/ros2_ws/install/piper_bringup:/home/dali/ros2_ws/install/scene_graph_interfaces:/home/dali/ros2_ws/install/piper_moveit_config:/opt/ros/jazzy/opt/gz_sim_vendor:/opt/ros/jazzy/opt/gz_sensors_vendor:/opt/ros/jazzy/opt/gz_physics_vendor:/opt/ros/jazzy/opt/sdformat_vendor:/opt/ros/jazzy/opt/gz_gui_vendor:/opt/ros/jazzy/opt/gz_transport_vendor:/opt/ros/jazzy/opt/gz_rendering_vendor:/opt/ros/jazzy/opt/gz_plugin_vendor:/opt/ros/jazzy/opt/gz_fuel_tools_vendor:/opt/ros/jazzy/opt/gz_msgs_vendor:/opt/ros/jazzy/opt/gz_common_vendor:/opt/ros/jazzy/opt/gz_math_vendor:/opt/ros/jazzy/opt/gz_utils_vendor:/opt/ros/jazzy/opt/gz_tools_vendor:/opt/ros/jazzy/opt/gz_ogre_next_vendor:/opt/ros/jazzy/opt/gz_dartsim_vendor:/opt/ros/jazzy/opt/gz_cmake_vendor:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --build /home/dali/ros2_ws/build/piper_moveit_config -- -j4 -l4
+[1.219s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/dali/ros2_ws/build/piper_moveit_config': CMAKE_PREFIX_PATH=/home/dali/ros2_ws/install/piper_description:/home/dali/ros2_ws/install/piper_bringup:/home/dali/ros2_ws/install/scene_graph_interfaces:/home/dali/ros2_ws/install/piper_moveit_config:/opt/ros/jazzy/opt/gz_sim_vendor:/opt/ros/jazzy/opt/gz_sensors_vendor:/opt/ros/jazzy/opt/gz_physics_vendor:/opt/ros/jazzy/opt/sdformat_vendor:/opt/ros/jazzy/opt/gz_gui_vendor:/opt/ros/jazzy/opt/gz_transport_vendor:/opt/ros/jazzy/opt/gz_rendering_vendor:/opt/ros/jazzy/opt/gz_plugin_vendor:/opt/ros/jazzy/opt/gz_fuel_tools_vendor:/opt/ros/jazzy/opt/gz_msgs_vendor:/opt/ros/jazzy/opt/gz_common_vendor:/opt/ros/jazzy/opt/gz_math_vendor:/opt/ros/jazzy/opt/gz_utils_vendor:/opt/ros/jazzy/opt/gz_tools_vendor:/opt/ros/jazzy/opt/gz_ogre_next_vendor:/opt/ros/jazzy/opt/gz_dartsim_vendor:/opt/ros/jazzy/opt/gz_cmake_vendor:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --install /home/dali/ros2_ws/build/piper_moveit_config
+[1.248s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(piper_moveit_config)
+[1.248s] Level 1:colcon.colcon_core.environment:checking '/home/dali/ros2_ws/install/piper_moveit_config' for CMake module files
+[1.249s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/dali/ros2_ws/build/piper_moveit_config' returned '0': CMAKE_PREFIX_PATH=/home/dali/ros2_ws/install/piper_description:/home/dali/ros2_ws/install/piper_bringup:/home/dali/ros2_ws/install/scene_graph_interfaces:/home/dali/ros2_ws/install/piper_moveit_config:/opt/ros/jazzy/opt/gz_sim_vendor:/opt/ros/jazzy/opt/gz_sensors_vendor:/opt/ros/jazzy/opt/gz_physics_vendor:/opt/ros/jazzy/opt/sdformat_vendor:/opt/ros/jazzy/opt/gz_gui_vendor:/opt/ros/jazzy/opt/gz_transport_vendor:/opt/ros/jazzy/opt/gz_rendering_vendor:/opt/ros/jazzy/opt/gz_plugin_vendor:/opt/ros/jazzy/opt/gz_fuel_tools_vendor:/opt/ros/jazzy/opt/gz_msgs_vendor:/opt/ros/jazzy/opt/gz_common_vendor:/opt/ros/jazzy/opt/gz_math_vendor:/opt/ros/jazzy/opt/gz_utils_vendor:/opt/ros/jazzy/opt/gz_tools_vendor:/opt/ros/jazzy/opt/gz_ogre_next_vendor:/opt/ros/jazzy/opt/gz_dartsim_vendor:/opt/ros/jazzy/opt/gz_cmake_vendor:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --install /home/dali/ros2_ws/build/piper_moveit_config
+[1.249s] Level 1:colcon.colcon_core.environment:checking '/home/dali/ros2_ws/install/piper_moveit_config' for CMake config files
+[1.252s] Level 1:colcon.colcon_core.shell:create_environment_hook('piper_moveit_config', 'cmake_prefix_path')
+[1.252s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/dali/ros2_ws/install/piper_moveit_config/share/piper_moveit_config/hook/cmake_prefix_path.ps1'
+[1.252s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/dali/ros2_ws/install/piper_moveit_config/share/piper_moveit_config/hook/cmake_prefix_path.dsv'
+[1.252s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/dali/ros2_ws/install/piper_moveit_config/share/piper_moveit_config/hook/cmake_prefix_path.sh'
+[1.254s] Level 1:colcon.colcon_core.environment:checking '/home/dali/ros2_ws/install/piper_moveit_config/bin'
+[1.254s] Level 1:colcon.colcon_core.environment:checking '/home/dali/ros2_ws/install/piper_moveit_config/lib/pkgconfig/piper_moveit_config.pc'
+[1.254s] Level 1:colcon.colcon_core.environment:checking '/home/dali/ros2_ws/install/piper_moveit_config/lib/python3.12/site-packages'
+[1.254s] Level 1:colcon.colcon_core.environment:checking '/home/dali/ros2_ws/install/piper_moveit_config/bin'
+[1.254s] INFO:colcon.colcon_core.shell:Creating package script '/home/dali/ros2_ws/install/piper_moveit_config/share/piper_moveit_config/package.ps1'
+[1.254s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/dali/ros2_ws/install/piper_moveit_config/share/piper_moveit_config/package.dsv'
+[1.256s] INFO:colcon.colcon_core.shell:Creating package script '/home/dali/ros2_ws/install/piper_moveit_config/share/piper_moveit_config/package.sh'
+[1.256s] INFO:colcon.colcon_core.shell:Creating package script '/home/dali/ros2_ws/install/piper_moveit_config/share/piper_moveit_config/package.bash'
+[1.258s] INFO:colcon.colcon_core.shell:Creating package script '/home/dali/ros2_ws/install/piper_moveit_config/share/piper_moveit_config/package.zsh'
+[1.258s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/dali/ros2_ws/install/piper_moveit_config/share/colcon-core/packages/piper_moveit_config)
+[1.259s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(piper_moveit_config)
+[1.259s] Level 1:colcon.colcon_core.environment:checking '/home/dali/ros2_ws/install/piper_moveit_config' for CMake module files
+[1.259s] Level 1:colcon.colcon_core.environment:checking '/home/dali/ros2_ws/install/piper_moveit_config' for CMake config files
+[1.260s] Level 1:colcon.colcon_core.shell:create_environment_hook('piper_moveit_config', 'cmake_prefix_path')
+[1.260s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/dali/ros2_ws/install/piper_moveit_config/share/piper_moveit_config/hook/cmake_prefix_path.ps1'
+[1.260s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/dali/ros2_ws/install/piper_moveit_config/share/piper_moveit_config/hook/cmake_prefix_path.dsv'
+[1.261s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/dali/ros2_ws/install/piper_moveit_config/share/piper_moveit_config/hook/cmake_prefix_path.sh'
+[1.261s] Level 1:colcon.colcon_core.environment:checking '/home/dali/ros2_ws/install/piper_moveit_config/bin'
+[1.261s] Level 1:colcon.colcon_core.environment:checking '/home/dali/ros2_ws/install/piper_moveit_config/lib/pkgconfig/piper_moveit_config.pc'
+[1.261s] Level 1:colcon.colcon_core.environment:checking '/home/dali/ros2_ws/install/piper_moveit_config/lib/python3.12/site-packages'
+[1.262s] Level 1:colcon.colcon_core.environment:checking '/home/dali/ros2_ws/install/piper_moveit_config/bin'
+[1.262s] INFO:colcon.colcon_core.shell:Creating package script '/home/dali/ros2_ws/install/piper_moveit_config/share/piper_moveit_config/package.ps1'
+[1.263s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/dali/ros2_ws/install/piper_moveit_config/share/piper_moveit_config/package.dsv'
+[1.263s] INFO:colcon.colcon_core.shell:Creating package script '/home/dali/ros2_ws/install/piper_moveit_config/share/piper_moveit_config/package.sh'
+[1.263s] INFO:colcon.colcon_core.shell:Creating package script '/home/dali/ros2_ws/install/piper_moveit_config/share/piper_moveit_config/package.bash'
+[1.263s] INFO:colcon.colcon_core.shell:Creating package script '/home/dali/ros2_ws/install/piper_moveit_config/share/piper_moveit_config/package.zsh'
+[1.264s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/dali/ros2_ws/install/piper_moveit_config/share/colcon-core/packages/piper_moveit_config)
+[2.634s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/dali/ros2_ws/build/scene_graph_interfaces' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --build /home/dali/ros2_ws/build/scene_graph_interfaces -- -j4 -l4
+[2.636s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/dali/ros2_ws/build/scene_graph_interfaces': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --install /home/dali/ros2_ws/build/scene_graph_interfaces
+[2.852s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(scene_graph_interfaces)
+[2.852s] Level 1:colcon.colcon_core.environment:checking '/home/dali/ros2_ws/install/scene_graph_interfaces' for CMake module files
+[2.853s] Level 1:colcon.colcon_core.environment:checking '/home/dali/ros2_ws/install/scene_graph_interfaces' for CMake config files
+[2.853s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/dali/ros2_ws/build/scene_graph_interfaces' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --install /home/dali/ros2_ws/build/scene_graph_interfaces
+[2.857s] Level 1:colcon.colcon_core.shell:create_environment_hook('scene_graph_interfaces', 'cmake_prefix_path')
+[2.858s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/dali/ros2_ws/install/scene_graph_interfaces/share/scene_graph_interfaces/hook/cmake_prefix_path.ps1'
+[2.860s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/dali/ros2_ws/install/scene_graph_interfaces/share/scene_graph_interfaces/hook/cmake_prefix_path.dsv'
+[2.861s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/dali/ros2_ws/install/scene_graph_interfaces/share/scene_graph_interfaces/hook/cmake_prefix_path.sh'
+[2.863s] Level 1:colcon.colcon_core.environment:checking '/home/dali/ros2_ws/install/scene_graph_interfaces/lib'
+[2.863s] Level 1:colcon.colcon_core.shell:create_environment_hook('scene_graph_interfaces', 'ld_library_path_lib')
+[2.863s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/dali/ros2_ws/install/scene_graph_interfaces/share/scene_graph_interfaces/hook/ld_library_path_lib.ps1'
+[2.863s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/dali/ros2_ws/install/scene_graph_interfaces/share/scene_graph_interfaces/hook/ld_library_path_lib.dsv'
+[2.863s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/dali/ros2_ws/install/scene_graph_interfaces/share/scene_graph_interfaces/hook/ld_library_path_lib.sh'
+[2.864s] Level 1:colcon.colcon_core.environment:checking '/home/dali/ros2_ws/install/scene_graph_interfaces/bin'
+[2.864s] Level 1:colcon.colcon_core.environment:checking '/home/dali/ros2_ws/install/scene_graph_interfaces/lib/pkgconfig/scene_graph_interfaces.pc'
+[2.864s] Level 1:colcon.colcon_core.environment:checking '/home/dali/ros2_ws/install/scene_graph_interfaces/lib/python3.12/site-packages'
+[2.864s] Level 1:colcon.colcon_core.shell:create_environment_hook('scene_graph_interfaces', 'pythonpath')
+[2.864s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/dali/ros2_ws/install/scene_graph_interfaces/share/scene_graph_interfaces/hook/pythonpath.ps1'
+[2.864s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/dali/ros2_ws/install/scene_graph_interfaces/share/scene_graph_interfaces/hook/pythonpath.dsv'
+[2.864s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/dali/ros2_ws/install/scene_graph_interfaces/share/scene_graph_interfaces/hook/pythonpath.sh'
+[2.865s] Level 1:colcon.colcon_core.environment:checking '/home/dali/ros2_ws/install/scene_graph_interfaces/bin'
+[2.865s] INFO:colcon.colcon_core.shell:Creating package script '/home/dali/ros2_ws/install/scene_graph_interfaces/share/scene_graph_interfaces/package.ps1'
+[2.866s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/dali/ros2_ws/install/scene_graph_interfaces/share/scene_graph_interfaces/package.dsv'
+[2.866s] INFO:colcon.colcon_core.shell:Creating package script '/home/dali/ros2_ws/install/scene_graph_interfaces/share/scene_graph_interfaces/package.sh'
+[2.866s] INFO:colcon.colcon_core.shell:Creating package script '/home/dali/ros2_ws/install/scene_graph_interfaces/share/scene_graph_interfaces/package.bash'
+[2.866s] INFO:colcon.colcon_core.shell:Creating package script '/home/dali/ros2_ws/install/scene_graph_interfaces/share/scene_graph_interfaces/package.zsh'
+[2.867s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/dali/ros2_ws/install/scene_graph_interfaces/share/colcon-core/packages/scene_graph_interfaces)
+[2.867s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(scene_graph_interfaces)
+[2.867s] Level 1:colcon.colcon_core.environment:checking '/home/dali/ros2_ws/install/scene_graph_interfaces' for CMake module files
+[2.868s] Level 1:colcon.colcon_core.environment:checking '/home/dali/ros2_ws/install/scene_graph_interfaces' for CMake config files
+[2.868s] Level 1:colcon.colcon_core.shell:create_environment_hook('scene_graph_interfaces', 'cmake_prefix_path')
+[2.868s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/dali/ros2_ws/install/scene_graph_interfaces/share/scene_graph_interfaces/hook/cmake_prefix_path.ps1'
+[2.868s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/dali/ros2_ws/install/scene_graph_interfaces/share/scene_graph_interfaces/hook/cmake_prefix_path.dsv'
+[2.868s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/dali/ros2_ws/install/scene_graph_interfaces/share/scene_graph_interfaces/hook/cmake_prefix_path.sh'
+[2.869s] Level 1:colcon.colcon_core.environment:checking '/home/dali/ros2_ws/install/scene_graph_interfaces/lib'
+[2.869s] Level 1:colcon.colcon_core.shell:create_environment_hook('scene_graph_interfaces', 'ld_library_path_lib')
+[2.869s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/dali/ros2_ws/install/scene_graph_interfaces/share/scene_graph_interfaces/hook/ld_library_path_lib.ps1'
+[2.869s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/dali/ros2_ws/install/scene_graph_interfaces/share/scene_graph_interfaces/hook/ld_library_path_lib.dsv'
+[2.869s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/dali/ros2_ws/install/scene_graph_interfaces/share/scene_graph_interfaces/hook/ld_library_path_lib.sh'
+[2.870s] Level 1:colcon.colcon_core.environment:checking '/home/dali/ros2_ws/install/scene_graph_interfaces/bin'
+[2.870s] Level 1:colcon.colcon_core.environment:checking '/home/dali/ros2_ws/install/scene_graph_interfaces/lib/pkgconfig/scene_graph_interfaces.pc'
+[2.870s] Level 1:colcon.colcon_core.environment:checking '/home/dali/ros2_ws/install/scene_graph_interfaces/lib/python3.12/site-packages'
+[2.870s] Level 1:colcon.colcon_core.shell:create_environment_hook('scene_graph_interfaces', 'pythonpath')
+[2.870s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/dali/ros2_ws/install/scene_graph_interfaces/share/scene_graph_interfaces/hook/pythonpath.ps1'
+[2.870s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/dali/ros2_ws/install/scene_graph_interfaces/share/scene_graph_interfaces/hook/pythonpath.dsv'
+[2.871s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/dali/ros2_ws/install/scene_graph_interfaces/share/scene_graph_interfaces/hook/pythonpath.sh'
+[2.871s] Level 1:colcon.colcon_core.environment:checking '/home/dali/ros2_ws/install/scene_graph_interfaces/bin'
+[2.871s] INFO:colcon.colcon_core.shell:Creating package script '/home/dali/ros2_ws/install/scene_graph_interfaces/share/scene_graph_interfaces/package.ps1'
+[2.872s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/dali/ros2_ws/install/scene_graph_interfaces/share/scene_graph_interfaces/package.dsv'
+[2.872s] INFO:colcon.colcon_core.shell:Creating package script '/home/dali/ros2_ws/install/scene_graph_interfaces/share/scene_graph_interfaces/package.sh'
+[2.872s] INFO:colcon.colcon_core.shell:Creating package script '/home/dali/ros2_ws/install/scene_graph_interfaces/share/scene_graph_interfaces/package.bash'
+[2.873s] INFO:colcon.colcon_core.shell:Creating package script '/home/dali/ros2_ws/install/scene_graph_interfaces/share/scene_graph_interfaces/package.zsh'
+[2.873s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/dali/ros2_ws/install/scene_graph_interfaces/share/colcon-core/packages/scene_graph_interfaces)
+[2.874s] INFO:colcon.colcon_ros.task.ament_cmake.build:Building ROS package in '/home/dali/ros2_ws/src/piper_ros2/piper_bringup' with build type 'ament_cmake'
+[2.875s] INFO:colcon.colcon_cmake.task.cmake.build:Building CMake package in '/home/dali/ros2_ws/src/piper_ros2/piper_bringup'
+[2.875s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[2.875s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[2.909s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/dali/ros2_ws/build/piper_bringup': CMAKE_PREFIX_PATH=/home/dali/ros2_ws/install/scene_graph_interfaces:/home/dali/ros2_ws/install/piper_bringup:/home/dali/ros2_ws/install/piper_moveit_config:/home/dali/ros2_ws/install/piper_description:/opt/ros/jazzy/opt/gz_sim_vendor:/opt/ros/jazzy/opt/gz_sensors_vendor:/opt/ros/jazzy/opt/gz_physics_vendor:/opt/ros/jazzy/opt/sdformat_vendor:/opt/ros/jazzy/opt/gz_gui_vendor:/opt/ros/jazzy/opt/gz_transport_vendor:/opt/ros/jazzy/opt/gz_rendering_vendor:/opt/ros/jazzy/opt/gz_plugin_vendor:/opt/ros/jazzy/opt/gz_fuel_tools_vendor:/opt/ros/jazzy/opt/gz_msgs_vendor:/opt/ros/jazzy/opt/gz_common_vendor:/opt/ros/jazzy/opt/gz_math_vendor:/opt/ros/jazzy/opt/gz_utils_vendor:/opt/ros/jazzy/opt/gz_tools_vendor:/opt/ros/jazzy/opt/gz_ogre_next_vendor:/opt/ros/jazzy/opt/gz_dartsim_vendor:/opt/ros/jazzy/opt/gz_cmake_vendor:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --build /home/dali/ros2_ws/build/piper_bringup -- -j4 -l4
+[23.954s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/dali/ros2_ws/build/piper_bringup' returned '0': CMAKE_PREFIX_PATH=/home/dali/ros2_ws/install/scene_graph_interfaces:/home/dali/ros2_ws/install/piper_bringup:/home/dali/ros2_ws/install/piper_moveit_config:/home/dali/ros2_ws/install/piper_description:/opt/ros/jazzy/opt/gz_sim_vendor:/opt/ros/jazzy/opt/gz_sensors_vendor:/opt/ros/jazzy/opt/gz_physics_vendor:/opt/ros/jazzy/opt/sdformat_vendor:/opt/ros/jazzy/opt/gz_gui_vendor:/opt/ros/jazzy/opt/gz_transport_vendor:/opt/ros/jazzy/opt/gz_rendering_vendor:/opt/ros/jazzy/opt/gz_plugin_vendor:/opt/ros/jazzy/opt/gz_fuel_tools_vendor:/opt/ros/jazzy/opt/gz_msgs_vendor:/opt/ros/jazzy/opt/gz_common_vendor:/opt/ros/jazzy/opt/gz_math_vendor:/opt/ros/jazzy/opt/gz_utils_vendor:/opt/ros/jazzy/opt/gz_tools_vendor:/opt/ros/jazzy/opt/gz_ogre_next_vendor:/opt/ros/jazzy/opt/gz_dartsim_vendor:/opt/ros/jazzy/opt/gz_cmake_vendor:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --build /home/dali/ros2_ws/build/piper_bringup -- -j4 -l4
+[23.958s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/dali/ros2_ws/build/piper_bringup': CMAKE_PREFIX_PATH=/home/dali/ros2_ws/install/scene_graph_interfaces:/home/dali/ros2_ws/install/piper_bringup:/home/dali/ros2_ws/install/piper_moveit_config:/home/dali/ros2_ws/install/piper_description:/opt/ros/jazzy/opt/gz_sim_vendor:/opt/ros/jazzy/opt/gz_sensors_vendor:/opt/ros/jazzy/opt/gz_physics_vendor:/opt/ros/jazzy/opt/sdformat_vendor:/opt/ros/jazzy/opt/gz_gui_vendor:/opt/ros/jazzy/opt/gz_transport_vendor:/opt/ros/jazzy/opt/gz_rendering_vendor:/opt/ros/jazzy/opt/gz_plugin_vendor:/opt/ros/jazzy/opt/gz_fuel_tools_vendor:/opt/ros/jazzy/opt/gz_msgs_vendor:/opt/ros/jazzy/opt/gz_common_vendor:/opt/ros/jazzy/opt/gz_math_vendor:/opt/ros/jazzy/opt/gz_utils_vendor:/opt/ros/jazzy/opt/gz_tools_vendor:/opt/ros/jazzy/opt/gz_ogre_next_vendor:/opt/ros/jazzy/opt/gz_dartsim_vendor:/opt/ros/jazzy/opt/gz_cmake_vendor:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --install /home/dali/ros2_ws/build/piper_bringup
+[24.014s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(piper_bringup)
+[24.014s] Level 1:colcon.colcon_core.environment:checking '/home/dali/ros2_ws/install/piper_bringup' for CMake module files
+[24.015s] Level 1:colcon.colcon_core.environment:checking '/home/dali/ros2_ws/install/piper_bringup' for CMake config files
+[24.015s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/dali/ros2_ws/build/piper_bringup' returned '0': CMAKE_PREFIX_PATH=/home/dali/ros2_ws/install/scene_graph_interfaces:/home/dali/ros2_ws/install/piper_bringup:/home/dali/ros2_ws/install/piper_moveit_config:/home/dali/ros2_ws/install/piper_description:/opt/ros/jazzy/opt/gz_sim_vendor:/opt/ros/jazzy/opt/gz_sensors_vendor:/opt/ros/jazzy/opt/gz_physics_vendor:/opt/ros/jazzy/opt/sdformat_vendor:/opt/ros/jazzy/opt/gz_gui_vendor:/opt/ros/jazzy/opt/gz_transport_vendor:/opt/ros/jazzy/opt/gz_rendering_vendor:/opt/ros/jazzy/opt/gz_plugin_vendor:/opt/ros/jazzy/opt/gz_fuel_tools_vendor:/opt/ros/jazzy/opt/gz_msgs_vendor:/opt/ros/jazzy/opt/gz_common_vendor:/opt/ros/jazzy/opt/gz_math_vendor:/opt/ros/jazzy/opt/gz_utils_vendor:/opt/ros/jazzy/opt/gz_tools_vendor:/opt/ros/jazzy/opt/gz_ogre_next_vendor:/opt/ros/jazzy/opt/gz_dartsim_vendor:/opt/ros/jazzy/opt/gz_cmake_vendor:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --install /home/dali/ros2_ws/build/piper_bringup
+[24.018s] Level 1:colcon.colcon_core.shell:create_environment_hook('piper_bringup', 'cmake_prefix_path')
+[24.018s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/dali/ros2_ws/install/piper_bringup/share/piper_bringup/hook/cmake_prefix_path.ps1'
+[24.018s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/dali/ros2_ws/install/piper_bringup/share/piper_bringup/hook/cmake_prefix_path.dsv'
+[24.018s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/dali/ros2_ws/install/piper_bringup/share/piper_bringup/hook/cmake_prefix_path.sh'
+[24.020s] Level 1:colcon.colcon_core.environment:checking '/home/dali/ros2_ws/install/piper_bringup/lib'
+[24.020s] Level 1:colcon.colcon_core.environment:checking '/home/dali/ros2_ws/install/piper_bringup/bin'
+[24.020s] Level 1:colcon.colcon_core.environment:checking '/home/dali/ros2_ws/install/piper_bringup/lib/pkgconfig/piper_bringup.pc'
+[24.020s] Level 1:colcon.colcon_core.environment:checking '/home/dali/ros2_ws/install/piper_bringup/lib/python3.12/site-packages'
+[24.020s] Level 1:colcon.colcon_core.environment:checking '/home/dali/ros2_ws/install/piper_bringup/bin'
+[24.020s] INFO:colcon.colcon_core.shell:Creating package script '/home/dali/ros2_ws/install/piper_bringup/share/piper_bringup/package.ps1'
+[24.024s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/dali/ros2_ws/install/piper_bringup/share/piper_bringup/package.dsv'
+[24.027s] INFO:colcon.colcon_core.shell:Creating package script '/home/dali/ros2_ws/install/piper_bringup/share/piper_bringup/package.sh'
+[24.027s] INFO:colcon.colcon_core.shell:Creating package script '/home/dali/ros2_ws/install/piper_bringup/share/piper_bringup/package.bash'
+[24.027s] INFO:colcon.colcon_core.shell:Creating package script '/home/dali/ros2_ws/install/piper_bringup/share/piper_bringup/package.zsh'
+[24.028s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/dali/ros2_ws/install/piper_bringup/share/colcon-core/packages/piper_bringup)
+[24.029s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(piper_bringup)
+[24.029s] Level 1:colcon.colcon_core.environment:checking '/home/dali/ros2_ws/install/piper_bringup' for CMake module files
+[24.029s] Level 1:colcon.colcon_core.environment:checking '/home/dali/ros2_ws/install/piper_bringup' for CMake config files
+[24.029s] Level 1:colcon.colcon_core.shell:create_environment_hook('piper_bringup', 'cmake_prefix_path')
+[24.030s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/dali/ros2_ws/install/piper_bringup/share/piper_bringup/hook/cmake_prefix_path.ps1'
+[24.030s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/dali/ros2_ws/install/piper_bringup/share/piper_bringup/hook/cmake_prefix_path.dsv'
+[24.031s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/dali/ros2_ws/install/piper_bringup/share/piper_bringup/hook/cmake_prefix_path.sh'
+[24.034s] Level 1:colcon.colcon_core.environment:checking '/home/dali/ros2_ws/install/piper_bringup/lib'
+[24.034s] Level 1:colcon.colcon_core.environment:checking '/home/dali/ros2_ws/install/piper_bringup/bin'
+[24.034s] Level 1:colcon.colcon_core.environment:checking '/home/dali/ros2_ws/install/piper_bringup/lib/pkgconfig/piper_bringup.pc'
+[24.034s] Level 1:colcon.colcon_core.environment:checking '/home/dali/ros2_ws/install/piper_bringup/lib/python3.12/site-packages'
+[24.034s] Level 1:colcon.colcon_core.environment:checking '/home/dali/ros2_ws/install/piper_bringup/bin'
+[24.037s] INFO:colcon.colcon_core.shell:Creating package script '/home/dali/ros2_ws/install/piper_bringup/share/piper_bringup/package.ps1'
+[24.037s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/dali/ros2_ws/install/piper_bringup/share/piper_bringup/package.dsv'
+[24.039s] INFO:colcon.colcon_core.shell:Creating package script '/home/dali/ros2_ws/install/piper_bringup/share/piper_bringup/package.sh'
+[24.040s] INFO:colcon.colcon_core.shell:Creating package script '/home/dali/ros2_ws/install/piper_bringup/share/piper_bringup/package.bash'
+[24.041s] INFO:colcon.colcon_core.shell:Creating package script '/home/dali/ros2_ws/install/piper_bringup/share/piper_bringup/package.zsh'
+[24.042s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/dali/ros2_ws/install/piper_bringup/share/colcon-core/packages/piper_bringup)
+[24.045s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:closing loop
+[24.045s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:loop closed
+[24.045s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:run_until_complete finished with '0'
+[24.046s] DEBUG:colcon.colcon_core.event_reactor:joining thread
+[24.057s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_notification.desktop_notification.terminal_notifier': Not used on non-Darwin systems
+[24.058s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_notification.desktop_notification.win32': Not used on non-Windows systems
+[24.058s] INFO:colcon.colcon_notification.desktop_notification:Sending desktop notification using 'notify2'
+[24.128s] DEBUG:colcon.colcon_core.event_reactor:joined thread
+[24.128s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/dali/ros2_ws/install/local_setup.ps1'
+[24.128s] INFO:colcon.colcon_core.shell:Creating prefix util module '/home/dali/ros2_ws/install/_local_setup_util_ps1.py'
+[24.134s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/dali/ros2_ws/install/setup.ps1'
+[24.141s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/dali/ros2_ws/install/local_setup.sh'
+[24.141s] INFO:colcon.colcon_core.shell:Creating prefix util module '/home/dali/ros2_ws/install/_local_setup_util_sh.py'
+[24.146s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/dali/ros2_ws/install/setup.sh'
+[24.147s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/dali/ros2_ws/install/local_setup.bash'
+[24.148s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/dali/ros2_ws/install/setup.bash'
+[24.154s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/dali/ros2_ws/install/local_setup.zsh'
+[24.155s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/dali/ros2_ws/install/setup.zsh'

@@ -1,0 +1,15 @@
+[01m[K/home/dali/ros2_ws/src/piper_ros2/piper_bringup/src/moveit_pick_and_place.cpp:[m[K In member function ‘[01m[Kvoid PiperDynamicNode::[01;32m[Kspawn_collision[m[K(double, double, double, std::string)[m[K’:
+[01m[K/home/dali/ros2_ws/src/piper_ros2/piper_bringup/src/moveit_pick_and_place.cpp:148:68:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Kname[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-parameter-Wunused-parameter]8;;[m[K]
+  148 |  void spawn_collision(double x, double y, double z, [01;35m[Kstd::string name[m[K) {
+      |                                                     [01;35m[K~~~~~~~~~~~~^~~~[m[K
+
+[01m[K/home/dali/ros2_ws/src/piper_ros2/piper_bringup/src/moveit_pick_and_place.cpp:[m[K In member function ‘[01m[Kvoid PiperDynamicNode::[01;32m[Kperform_linear_move[m[K(moveit::planning_interface::MoveGroupInterface&, double, double, double, double, double, double, std::string)[m[K’:
+[01m[K/home/dali/ros2_ws/src/piper_ros2/piper_bringup/src/moveit_pick_and_place.cpp:167:159:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Klog[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-parameter-Wunused-parameter]8;;[m[K]
+  167 |  double y, double z, double r, double p, double yaw, [01;35m[Kstd::string log[m[K) {
+      |                                                      [01;35m[K~~~~~~~~~~~~^~~[m[K
+
+[01m[K/home/dali/ros2_ws/src/piper_ros2/piper_bringup/src/moveit_pick_and_place.cpp:[m[K In member function ‘[01m[Kbool PiperDynamicNode::[01;32m[Kplan_and_execute_pose[m[K(moveit::planning_interface::MoveGroupInterface&, double, double, double, double, double, double, std::string)[m[K’:
+[01m[K/home/dali/ros2_ws/src/piper_ros2/piper_bringup/src/moveit_pick_and_place.cpp:180:161:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Klabel[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-parameter-Wunused-parameter]8;;[m[K]
+  180 | ouble y, double z, double r, double p, double yaw, [01;35m[Kstd::string label[m[K) {
+      |                                                    [01;35m[K~~~~~~~~~~~~^~~~~[m[K
+

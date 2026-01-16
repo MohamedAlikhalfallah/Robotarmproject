@@ -1,0 +1,4 @@
+Invoking command in '/home/dali/ros2_ws/build/piper_description': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --build /home/dali/ros2_ws/build/piper_description -- -j4 -l4
+Invoked command in '/home/dali/ros2_ws/build/piper_description' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --build /home/dali/ros2_ws/build/piper_description -- -j4 -l4
+Invoking command in '/home/dali/ros2_ws/build/piper_description': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --install /home/dali/ros2_ws/build/piper_description
+Invoked command in '/home/dali/ros2_ws/build/piper_description' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --install /home/dali/ros2_ws/build/piper_description

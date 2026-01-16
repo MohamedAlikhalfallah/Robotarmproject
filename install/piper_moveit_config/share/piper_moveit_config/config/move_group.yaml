@@ -1,0 +1,6 @@
+/**:
+  ros__parameters:
+    start_state_max_bounds_error: 0.1
+    start_state_max_dt: 0.5
+    start_state_max_size: 100.0
+    jiggle_fraction: 0.05

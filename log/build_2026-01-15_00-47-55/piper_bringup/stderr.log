@@ -1,0 +1,17 @@
+[01m[K/home/dali/ros2_ws/src/piper_ros2/piper_bringup/src/moveit_pick_and_place.cpp:43:51:[m[K [01;31m[Kerror: [m[K‘[01m[KFun_Object3D_BoundingBoxList[m[K’ in namespace ‘[01m[Kscene_graph_interfaces::msg[m[K’ does not name a type; did you mean ‘[01m[KFunObject3DBoundingBoxList[m[K’?
+   43 |     using BBoxList = scene_graph_interfaces::msg::[01;31m[KFun_Object3D_BoundingBoxList[m[K; // Corrected naming if necessary
+      |                                                   [01;31m[K^~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+      |                                                   [32m[KFunObject3DBoundingBoxList[m[K
+[01m[K/home/dali/ros2_ws/src/piper_ros2/piper_bringup/src/moveit_pick_and_place.cpp:[m[K In member function ‘[01m[Kvoid PiperDynamicNode::[01;32m[Kperform_linear_move[m[K(moveit::planning_interface::MoveGroupInterface&, double, double, double, std::string, GraspType)[m[K’:
+[01m[K/home/dali/ros2_ws/src/piper_ros2/piper_bringup/src/moveit_pick_and_place.cpp:169:127:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Klabel[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-parameter-Wunused-parameter]8;;[m[K]
+  169 | Interface& group, double x, double y, double z, [01;35m[Kstd::string label[m[K, GraspType type) {
+      |                                                 [01;35m[K~~~~~~~~~~~~^~~~~[m[K
+
+[01m[K/home/dali/ros2_ws/src/piper_ros2/piper_bringup/src/moveit_pick_and_place.cpp:[m[K In member function ‘[01m[Kbool PiperDynamicNode::[01;32m[Kplan_and_execute_standard[m[K(moveit::planning_interface::MoveGroupInterface&, double, double, double, std::string)[m[K’:
+[01m[K/home/dali/ros2_ws/src/piper_ros2/piper_bringup/src/moveit_pick_and_place.cpp:177:133:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Klabel[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-parameter-Wunused-parameter]8;;[m[K]
+  177 | oupInterface& group, double x, double y, double z, [01;35m[Kstd::string label[m[K) {
+      |                                                    [01;35m[K~~~~~~~~~~~~^~~~~[m[K
+
+gmake[2]: *** [CMakeFiles/moveit_pick_and_place_cpp.dir/build.make:76: CMakeFiles/moveit_pick_and_place_cpp.dir/src/moveit_pick_and_place.cpp.o] Error 1
+gmake[1]: *** [CMakeFiles/Makefile2:137: CMakeFiles/moveit_pick_and_place_cpp.dir/all] Error 2
+gmake: *** [Makefile:146: all] Error 2

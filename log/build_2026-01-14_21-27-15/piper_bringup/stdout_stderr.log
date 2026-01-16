@@ -1,0 +1,44 @@
+[ 50%] [32mBuilding CXX object CMakeFiles/moveit_pick_and_place_cpp.dir/src/moveit_pick_and_place.cpp.o[0m
+[01m[K/home/dali/ros2_ws/src/piper_ros2/piper_bringup/src/moveit_pick_and_place.cpp:210:13:[m[K [01;31m[Kerror: [m[K‘[01m[Kplanning_scene_interface[m[K’ in namespace ‘[01m[Kmoveit[m[K’ does not name a type; did you mean ‘[01m[Kplanning_interface[m[K’?
+  210 |     moveit::[01;31m[Kplanning_scene_interface[m[K::PlanningSceneInterface psi_;
+      |             [01;31m[K^~~~~~~~~~~~~~~~~~~~~~~~[m[K
+      |             [32m[Kplanning_interface[m[K
+[01m[K/home/dali/ros2_ws/src/piper_ros2/piper_bringup/src/moveit_pick_and_place.cpp:[m[K In member function ‘[01m[Kvoid PiperDynamicNode::[01;32m[Kvision_callback[m[K(scene_graph_interfaces::msg::FunObject3DBoundingBoxList_<std::allocator<void> >::SharedPtr)[m[K’:
+[01m[K/home/dali/ros2_ws/src/piper_ros2/piper_bringup/src/moveit_pick_and_place.cpp:147:26:[m[K [01;35m[Kwarning: [m[KC++ designated initializers only available with ‘[01m[K-std=c++20[m[K’ or ‘[01m[K-std=gnu++20[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wc++20-extensions-Wc++20-extensions]8;;[m[K]
+  147 |         latest_place_ = {[01;35m[K.[m[Kx = 0.2, .y = -0.2, .z = latest_target_.z};
+      |                          [01;35m[K^[m[K
+[01m[K/home/dali/ros2_ws/src/piper_ros2/piper_bringup/src/moveit_pick_and_place.cpp:147:36:[m[K [01;35m[Kwarning: [m[KC++ designated initializers only available with ‘[01m[K-std=c++20[m[K’ or ‘[01m[K-std=gnu++20[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wc++20-extensions-Wc++20-extensions]8;;[m[K]
+  147 |         latest_place_ = {.x = 0.2, [01;35m[K.[m[Ky = -0.2, .z = latest_target_.z};
+      |                                    [01;35m[K^[m[K
+[01m[K/home/dali/ros2_ws/src/piper_ros2/piper_bringup/src/moveit_pick_and_place.cpp:147:47:[m[K [01;35m[Kwarning: [m[KC++ designated initializers only available with ‘[01m[K-std=c++20[m[K’ or ‘[01m[K-std=gnu++20[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wc++20-extensions-Wc++20-extensions]8;;[m[K]
+  147 |         latest_place_ = {.x = 0.2, .y = -0.2, [01;35m[K.[m[Kz = latest_target_.z};
+      |                                               [01;35m[K^[m[K
+[01m[K/home/dali/ros2_ws/src/piper_ros2/piper_bringup/src/moveit_pick_and_place.cpp:147:68:[m[K [01;35m[Kwarning: [m[Kmissing initializer for member ‘[01m[KDetectedObject::class_name[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wmissing-field-initializers-Wmissing-field-initializers]8;;[m[K]
+  147 |         latest_place_ = {.x = 0.2, .y = -0.2, .z = latest_target_.z[01;35m[K}[m[K;
+      |                                                                    [01;35m[K^[m[K
+[01m[K/home/dali/ros2_ws/src/piper_ros2/piper_bringup/src/moveit_pick_and_place.cpp:147:68:[m[K [01;35m[Kwarning: [m[Kmissing initializer for member ‘[01m[KDetectedObject::width[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wmissing-field-initializers-Wmissing-field-initializers]8;;[m[K]
+[01m[K/home/dali/ros2_ws/src/piper_ros2/piper_bringup/src/moveit_pick_and_place.cpp:147:68:[m[K [01;35m[Kwarning: [m[Kmissing initializer for member ‘[01m[KDetectedObject::height[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wmissing-field-initializers-Wmissing-field-initializers]8;;[m[K]
+[01m[K/home/dali/ros2_ws/src/piper_ros2/piper_bringup/src/moveit_pick_and_place.cpp:147:68:[m[K [01;35m[Kwarning: [m[Kmissing initializer for member ‘[01m[KDetectedObject::depth[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wmissing-field-initializers-Wmissing-field-initializers]8;;[m[K]
+[01m[K/home/dali/ros2_ws/src/piper_ros2/piper_bringup/src/moveit_pick_and_place.cpp:147:68:[m[K [01;35m[Kwarning: [m[Kmissing initializer for member ‘[01m[KDetectedObject::affordance[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wmissing-field-initializers-Wmissing-field-initializers]8;;[m[K]
+[01m[K/home/dali/ros2_ws/src/piper_ros2/piper_bringup/src/moveit_pick_and_place.cpp:[m[K In member function ‘[01m[Kvoid PiperDynamicNode::[01;32m[Kperform_linear_move[m[K(moveit::planning_interface::MoveGroupInterface&, double, double, double, std::string)[m[K’:
+[01m[K/home/dali/ros2_ws/src/piper_ros2/piper_bringup/src/moveit_pick_and_place.cpp:151:127:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Klabel[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-parameter-Wunused-parameter]8;;[m[K]
+  151 | oupInterface& group, double x, double y, double z, [01;35m[Kstd::string label[m[K) {
+      |                                                    [01;35m[K~~~~~~~~~~~~^~~~~[m[K
+
+[01m[K/home/dali/ros2_ws/src/piper_ros2/piper_bringup/src/moveit_pick_and_place.cpp:[m[K In member function ‘[01m[Kbool PiperDynamicNode::[01;32m[Kplan_and_execute_standard[m[K(moveit::planning_interface::MoveGroupInterface&, double, double, double, std::string)[m[K’:
+[01m[K/home/dali/ros2_ws/src/piper_ros2/piper_bringup/src/moveit_pick_and_place.cpp:159:133:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Klabel[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-parameter-Wunused-parameter]8;;[m[K]
+  159 | oupInterface& group, double x, double y, double z, [01;35m[Kstd::string label[m[K) {
+      |                                                    [01;35m[K~~~~~~~~~~~~^~~~~[m[K
+
+[01m[K/home/dali/ros2_ws/src/piper_ros2/piper_bringup/src/moveit_pick_and_place.cpp:[m[K In member function ‘[01m[Kvoid PiperDynamicNode::[01;32m[Kspawn_collision_object[m[K(const DetectedObject&)[m[K’:
+[01m[K/home/dali/ros2_ws/src/piper_ros2/piper_bringup/src/moveit_pick_and_place.cpp:184:32:[m[K [01;31m[Kerror: [m[K‘[01m[Kpsi_[m[K’ was not declared in this scope
+  184 |         co.operation = co.ADD; [01;31m[Kpsi_[m[K.applyCollisionObject(co);
+      |                                [01;31m[K^~~~[m[K
+[01m[K/home/dali/ros2_ws/src/piper_ros2/piper_bringup/src/moveit_pick_and_place.cpp:[m[K In member function ‘[01m[Kvoid PiperDynamicNode::[01;32m[Kremove_object[m[K(std::string)[m[K’:
+[01m[K/home/dali/ros2_ws/src/piper_ros2/piper_bringup/src/moveit_pick_and_place.cpp:188:81:[m[K [01;31m[Kerror: [m[K‘[01m[Kpsi_[m[K’ was not declared in this scope
+  188 | :msg::CollisionObject o; o.id = id; o.operation = o.REMOVE; [01;31m[Kpsi_[m[K.applyCollisionObject(o);
+      |                                                             [01;31m[K^~~~[m[K
+
+gmake[2]: *** [CMakeFiles/moveit_pick_and_place_cpp.dir/build.make:76: CMakeFiles/moveit_pick_and_place_cpp.dir/src/moveit_pick_and_place.cpp.o] Error 1
+gmake[1]: *** [CMakeFiles/Makefile2:137: CMakeFiles/moveit_pick_and_place_cpp.dir/all] Error 2
+gmake: *** [Makefile:146: all] Error 2

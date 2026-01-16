@@ -1,0 +1,777 @@
+[0.000000] (-) TimerEvent: {}
+[0.000138] (piper_description) JobQueued: {'identifier': 'piper_description', 'dependencies': OrderedDict()}
+[0.007174] (scene_graph_interfaces) JobQueued: {'identifier': 'scene_graph_interfaces', 'dependencies': OrderedDict()}
+[0.007292] (piper_bringup) JobQueued: {'identifier': 'piper_bringup', 'dependencies': OrderedDict({'scene_graph_interfaces': '/home/dali/ros2_ws/install/scene_graph_interfaces'})}
+[0.010113] (piper_moveit_config) JobQueued: {'identifier': 'piper_moveit_config', 'dependencies': OrderedDict({'piper_description': '/home/dali/ros2_ws/install/piper_description'})}
+[0.023500] (piper_description) JobStarted: {'identifier': 'piper_description'}
+[0.054030] (scene_graph_interfaces) JobStarted: {'identifier': 'scene_graph_interfaces'}
+[0.077615] (piper_description) JobProgress: {'identifier': 'piper_description', 'progress': 'cmake'}
+[0.089091] (piper_description) JobProgress: {'identifier': 'piper_description', 'progress': 'build'}
+[0.089147] (piper_description) Command: {'cmd': ['/usr/bin/cmake', '--build', '/home/dali/ros2_ws/build/piper_description', '--', '-j4', '-l4'], 'cwd': '/home/dali/ros2_ws/build/piper_description', 'env': OrderedDict({'LESSOPEN': '| /usr/bin/lesspipe %s', 'GZ_SIM_RESOURCE_PATH': '/opt/ros/jazzy/share', 'USER': 'dali', 'GZ_CONFIG_PATH': '/opt/ros/jazzy/opt/gz_sim_vendor/share/gz:/opt/ros/jazzy/opt/sdformat_vendor/share/gz:/opt/ros/jazzy/opt/gz_gui_vendor/share/gz:/opt/ros/jazzy/opt/gz_transport_vendor/share/gz:/opt/ros/jazzy/opt/gz_rendering_vendor/share/gz:/opt/ros/jazzy/opt/gz_plugin_vendor/share/gz:/opt/ros/jazzy/opt/gz_fuel_tools_vendor/share/gz:/opt/ros/jazzy/opt/gz_msgs_vendor/share/gz:/opt/ros/jazzy/opt/gz_common_vendor/share/gz', 'XDG_SESSION_TYPE': 'wayland', 'CLUTTER_DISABLE_MIPMAPPED_TEXT': '1', 'SHLVL': '1', 'LD_LIBRARY_PATH': '/home/dali/ros2_ws/install/scene_graph_interfaces/lib:/opt/ros/jazzy/opt/gz_sim_vendor/lib:/opt/ros/jazzy/opt/gz_sensors_vendor/lib:/opt/ros/jazzy/opt/gz_physics_vendor/lib:/opt/ros/jazzy/opt/sdformat_vendor/lib:/opt/ros/jazzy/opt/rviz_ogre_vendor/lib:/opt/ros/jazzy/lib/aarch64-linux-gnu:/opt/ros/jazzy/opt/gz_gui_vendor/lib:/opt/ros/jazzy/opt/gz_transport_vendor/lib:/opt/ros/jazzy/opt/gz_rendering_vendor/lib:/opt/ros/jazzy/opt/gz_plugin_vendor/lib:/opt/ros/jazzy/opt/gz_fuel_tools_vendor/lib:/opt/ros/jazzy/opt/gz_msgs_vendor/lib:/opt/ros/jazzy/opt/gz_common_vendor/lib:/opt/ros/jazzy/opt/gz_math_vendor/lib:/opt/ros/jazzy/opt/gz_utils_vendor/lib:/opt/ros/jazzy/opt/gz_tools_vendor/lib:/opt/ros/jazzy/opt/gz_ogre_next_vendor/lib:/opt/ros/jazzy/opt/gz_dartsim_vendor/lib:/opt/ros/jazzy/opt/gz_cmake_vendor/lib:/opt/ros/jazzy/lib', 'HOME': '/home/dali', 'OLDPWD': '/home/dali', 'DESKTOP_SESSION': 'ubuntu', 'ROS_PYTHON_VERSION': '3', 'GNOME_SHELL_SESSION_MODE': 'ubuntu', 'GTK_MODULES': 'gail:atk-bridge', 'SYSTEMD_EXEC_PID': '1842', 'GSM_SKIP_SSH_AGENT_WORKAROUND': 'true', 'DBUS_SESSION_BUS_ADDRESS': 'unix:path=/run/user/1000/bus', 'COLORTERM': 'truecolor', 'DEBUGINFOD_URLS': 'https://debuginfod.ubuntu.com', 'IM_CONFIG_PHASE': '1', 'WAYLAND_DISPLAY': 'wayland-0', 'COLCON_PREFIX_PATH': '/home/dali/ros2_ws/install', 'ROS_DISTRO': 'jazzy', 'LOGNAME': 'dali', '_': '/usr/bin/colcon', 'ROS_VERSION': '2', 'MEMORY_PRESSURE_WATCH': '/sys/fs/cgroup/user.slice/user-1000.slice/user@1000.service/session.slice/org.gnome.Shell@wayland.service/memory.pressure', 'XDG_SESSION_CLASS': 'user', 'USERNAME': 'dali', 'TERM': 'xterm-256color', 'GNOME_DESKTOP_SESSION_ID': 'this-is-deprecated', 'PATH': '/opt/ros/jazzy/opt/gz_msgs_vendor/bin:/opt/ros/jazzy/opt/gz_tools_vendor/bin:/opt/ros/jazzy/opt/gz_ogre_next_vendor/bin:/opt/ros/jazzy/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/snap/bin', 'SESSION_MANAGER': 'local/dali:@/tmp/.ICE-unix/1810,unix/dali:/tmp/.ICE-unix/1810', 'XDG_MENU_PREFIX': 'gnome-', 'GNOME_TERMINAL_SCREEN': '/org/gnome/Terminal/screen/29fc844f_180e_4146_8852_286745236268', 'GNOME_SETUP_DISPLAY': ':1', 'XDG_RUNTIME_DIR': '/run/user/1000', 'DISPLAY': ':0', 'LANG': 'en_US.UTF-8', 'XDG_CURRENT_DESKTOP': 'ubuntu:GNOME', 'XMODIFIERS': '@im=ibus', 'XDG_SESSION_DESKTOP': 'ubuntu', 'XAUTHORITY': '/run/user/1000/.mutter-Xwaylandauth.DMF3I3', 'LS_COLORS': 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=00:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.avif=01;35:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:*~=00;90:*#=00;90:*.bak=00;90:*.crdownload=00;90:*.dpkg-dist=00;90:*.dpkg-new=00;90:*.dpkg-old=00;90:*.dpkg-tmp=00;90:*.old=00;90:*.orig=00;90:*.part=00;90:*.rej=00;90:*.rpmnew=00;90:*.rpmorig=00;90:*.rpmsave=00;90:*.swp=00;90:*.tmp=00;90:*.ucf-dist=00;90:*.ucf-new=00;90:*.ucf-old=00;90:', 'GNOME_TERMINAL_SERVICE': ':1.111', 'SSH_AUTH_SOCK': '/run/user/1000/keyring/ssh', 'AMENT_PREFIX_PATH': '/home/dali/ros2_ws/install/piper_bringup:/home/dali/ros2_ws/install/scene_graph_interfaces:/home/dali/ros2_ws/install/piper_moveit_config:/home/dali/ros2_ws/install/piper_description:/opt/ros/jazzy', 'SHELL': '/bin/bash', 'QT_ACCESSIBILITY': '1', 'GDMSESSION': 'ubuntu', 'LESSCLOSE': '/usr/bin/lesspipe %s %s', 'ROS_AUTOMATIC_DISCOVERY_RANGE': 'SUBNET', 'QT_IM_MODULE': 'ibus', 'PWD': '/home/dali/ros2_ws/build/piper_description', 'LC_ALL': 'en_US.UTF-8', 'XDG_CONFIG_DIRS': '/etc/xdg/xdg-ubuntu:/etc/xdg', 'XDG_DATA_DIRS': '/usr/share/ubuntu:/usr/share/gnome:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop', 'PYTHONPATH': '/home/dali/ros2_ws/install/scene_graph_interfaces/lib/python3.12/site-packages:/opt/ros/jazzy/lib/python3.12/site-packages', 'COLCON': '1', 'MEMORY_PRESSURE_WRITE': 'c29tZSAyMDAwMDAgMjAwMDAwMAA=', 'VTE_VERSION': '7600', 'CMAKE_PREFIX_PATH': '/home/dali/ros2_ws/install/piper_bringup:/home/dali/ros2_ws/install/scene_graph_interfaces:/home/dali/ros2_ws/install/piper_moveit_config:/home/dali/ros2_ws/install/piper_description:/opt/ros/jazzy/opt/gz_sim_vendor:/opt/ros/jazzy/opt/gz_sensors_vendor:/opt/ros/jazzy/opt/gz_physics_vendor:/opt/ros/jazzy/opt/sdformat_vendor:/opt/ros/jazzy/opt/gz_gui_vendor:/opt/ros/jazzy/opt/gz_transport_vendor:/opt/ros/jazzy/opt/gz_rendering_vendor:/opt/ros/jazzy/opt/gz_plugin_vendor:/opt/ros/jazzy/opt/gz_fuel_tools_vendor:/opt/ros/jazzy/opt/gz_msgs_vendor:/opt/ros/jazzy/opt/gz_common_vendor:/opt/ros/jazzy/opt/gz_math_vendor:/opt/ros/jazzy/opt/gz_utils_vendor:/opt/ros/jazzy/opt/gz_tools_vendor:/opt/ros/jazzy/opt/gz_ogre_next_vendor:/opt/ros/jazzy/opt/gz_dartsim_vendor:/opt/ros/jazzy/opt/gz_cmake_vendor:/opt/ros/jazzy'}), 'shell': False}
+[0.107846] (-) TimerEvent: {}
+[0.119024] (scene_graph_interfaces) JobProgress: {'identifier': 'scene_graph_interfaces', 'progress': 'cmake'}
+[0.122308] (scene_graph_interfaces) JobProgress: {'identifier': 'scene_graph_interfaces', 'progress': 'build'}
+[0.124596] (scene_graph_interfaces) Command: {'cmd': ['/usr/bin/cmake', '--build', '/home/dali/ros2_ws/build/scene_graph_interfaces', '--', '-j4', '-l4'], 'cwd': '/home/dali/ros2_ws/build/scene_graph_interfaces', 'env': OrderedDict({'LESSOPEN': '| /usr/bin/lesspipe %s', 'GZ_SIM_RESOURCE_PATH': '/opt/ros/jazzy/share', 'USER': 'dali', 'GZ_CONFIG_PATH': '/opt/ros/jazzy/opt/gz_sim_vendor/share/gz:/opt/ros/jazzy/opt/sdformat_vendor/share/gz:/opt/ros/jazzy/opt/gz_gui_vendor/share/gz:/opt/ros/jazzy/opt/gz_transport_vendor/share/gz:/opt/ros/jazzy/opt/gz_rendering_vendor/share/gz:/opt/ros/jazzy/opt/gz_plugin_vendor/share/gz:/opt/ros/jazzy/opt/gz_fuel_tools_vendor/share/gz:/opt/ros/jazzy/opt/gz_msgs_vendor/share/gz:/opt/ros/jazzy/opt/gz_common_vendor/share/gz', 'XDG_SESSION_TYPE': 'wayland', 'CLUTTER_DISABLE_MIPMAPPED_TEXT': '1', 'SHLVL': '1', 'LD_LIBRARY_PATH': '/home/dali/ros2_ws/install/scene_graph_interfaces/lib:/opt/ros/jazzy/opt/gz_sim_vendor/lib:/opt/ros/jazzy/opt/gz_sensors_vendor/lib:/opt/ros/jazzy/opt/gz_physics_vendor/lib:/opt/ros/jazzy/opt/sdformat_vendor/lib:/opt/ros/jazzy/opt/rviz_ogre_vendor/lib:/opt/ros/jazzy/lib/aarch64-linux-gnu:/opt/ros/jazzy/opt/gz_gui_vendor/lib:/opt/ros/jazzy/opt/gz_transport_vendor/lib:/opt/ros/jazzy/opt/gz_rendering_vendor/lib:/opt/ros/jazzy/opt/gz_plugin_vendor/lib:/opt/ros/jazzy/opt/gz_fuel_tools_vendor/lib:/opt/ros/jazzy/opt/gz_msgs_vendor/lib:/opt/ros/jazzy/opt/gz_common_vendor/lib:/opt/ros/jazzy/opt/gz_math_vendor/lib:/opt/ros/jazzy/opt/gz_utils_vendor/lib:/opt/ros/jazzy/opt/gz_tools_vendor/lib:/opt/ros/jazzy/opt/gz_ogre_next_vendor/lib:/opt/ros/jazzy/opt/gz_dartsim_vendor/lib:/opt/ros/jazzy/opt/gz_cmake_vendor/lib:/opt/ros/jazzy/lib', 'HOME': '/home/dali', 'OLDPWD': '/home/dali', 'DESKTOP_SESSION': 'ubuntu', 'ROS_PYTHON_VERSION': '3', 'GNOME_SHELL_SESSION_MODE': 'ubuntu', 'GTK_MODULES': 'gail:atk-bridge', 'SYSTEMD_EXEC_PID': '1842', 'GSM_SKIP_SSH_AGENT_WORKAROUND': 'true', 'DBUS_SESSION_BUS_ADDRESS': 'unix:path=/run/user/1000/bus', 'COLORTERM': 'truecolor', 'DEBUGINFOD_URLS': 'https://debuginfod.ubuntu.com', 'IM_CONFIG_PHASE': '1', 'WAYLAND_DISPLAY': 'wayland-0', 'COLCON_PREFIX_PATH': '/home/dali/ros2_ws/install', 'ROS_DISTRO': 'jazzy', 'LOGNAME': 'dali', '_': '/usr/bin/colcon', 'ROS_VERSION': '2', 'MEMORY_PRESSURE_WATCH': '/sys/fs/cgroup/user.slice/user-1000.slice/user@1000.service/session.slice/org.gnome.Shell@wayland.service/memory.pressure', 'XDG_SESSION_CLASS': 'user', 'USERNAME': 'dali', 'TERM': 'xterm-256color', 'GNOME_DESKTOP_SESSION_ID': 'this-is-deprecated', 'PATH': '/opt/ros/jazzy/opt/gz_msgs_vendor/bin:/opt/ros/jazzy/opt/gz_tools_vendor/bin:/opt/ros/jazzy/opt/gz_ogre_next_vendor/bin:/opt/ros/jazzy/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/snap/bin', 'SESSION_MANAGER': 'local/dali:@/tmp/.ICE-unix/1810,unix/dali:/tmp/.ICE-unix/1810', 'XDG_MENU_PREFIX': 'gnome-', 'GNOME_TERMINAL_SCREEN': '/org/gnome/Terminal/screen/29fc844f_180e_4146_8852_286745236268', 'GNOME_SETUP_DISPLAY': ':1', 'XDG_RUNTIME_DIR': '/run/user/1000', 'DISPLAY': ':0', 'LANG': 'en_US.UTF-8', 'XDG_CURRENT_DESKTOP': 'ubuntu:GNOME', 'XMODIFIERS': '@im=ibus', 'XDG_SESSION_DESKTOP': 'ubuntu', 'XAUTHORITY': '/run/user/1000/.mutter-Xwaylandauth.DMF3I3', 'LS_COLORS': 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=00:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.avif=01;35:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:*~=00;90:*#=00;90:*.bak=00;90:*.crdownload=00;90:*.dpkg-dist=00;90:*.dpkg-new=00;90:*.dpkg-old=00;90:*.dpkg-tmp=00;90:*.old=00;90:*.orig=00;90:*.part=00;90:*.rej=00;90:*.rpmnew=00;90:*.rpmorig=00;90:*.rpmsave=00;90:*.swp=00;90:*.tmp=00;90:*.ucf-dist=00;90:*.ucf-new=00;90:*.ucf-old=00;90:', 'GNOME_TERMINAL_SERVICE': ':1.111', 'SSH_AUTH_SOCK': '/run/user/1000/keyring/ssh', 'AMENT_PREFIX_PATH': '/home/dali/ros2_ws/install/piper_bringup:/home/dali/ros2_ws/install/scene_graph_interfaces:/home/dali/ros2_ws/install/piper_moveit_config:/home/dali/ros2_ws/install/piper_description:/opt/ros/jazzy', 'SHELL': '/bin/bash', 'QT_ACCESSIBILITY': '1', 'GDMSESSION': 'ubuntu', 'LESSCLOSE': '/usr/bin/lesspipe %s %s', 'ROS_AUTOMATIC_DISCOVERY_RANGE': 'SUBNET', 'QT_IM_MODULE': 'ibus', 'PWD': '/home/dali/ros2_ws/build/scene_graph_interfaces', 'LC_ALL': 'en_US.UTF-8', 'XDG_CONFIG_DIRS': '/etc/xdg/xdg-ubuntu:/etc/xdg', 'XDG_DATA_DIRS': '/usr/share/ubuntu:/usr/share/gnome:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop', 'PYTHONPATH': '/home/dali/ros2_ws/install/scene_graph_interfaces/lib/python3.12/site-packages:/opt/ros/jazzy/lib/python3.12/site-packages', 'COLCON': '1', 'MEMORY_PRESSURE_WRITE': 'c29tZSAyMDAwMDAgMjAwMDAwMAA=', 'VTE_VERSION': '7600', 'CMAKE_PREFIX_PATH': '/home/dali/ros2_ws/install/piper_bringup:/home/dali/ros2_ws/install/scene_graph_interfaces:/home/dali/ros2_ws/install/piper_moveit_config:/home/dali/ros2_ws/install/piper_description:/opt/ros/jazzy/opt/gz_sim_vendor:/opt/ros/jazzy/opt/gz_sensors_vendor:/opt/ros/jazzy/opt/gz_physics_vendor:/opt/ros/jazzy/opt/sdformat_vendor:/opt/ros/jazzy/opt/gz_gui_vendor:/opt/ros/jazzy/opt/gz_transport_vendor:/opt/ros/jazzy/opt/gz_rendering_vendor:/opt/ros/jazzy/opt/gz_plugin_vendor:/opt/ros/jazzy/opt/gz_fuel_tools_vendor:/opt/ros/jazzy/opt/gz_msgs_vendor:/opt/ros/jazzy/opt/gz_common_vendor:/opt/ros/jazzy/opt/gz_math_vendor:/opt/ros/jazzy/opt/gz_utils_vendor:/opt/ros/jazzy/opt/gz_tools_vendor:/opt/ros/jazzy/opt/gz_ogre_next_vendor:/opt/ros/jazzy/opt/gz_dartsim_vendor:/opt/ros/jazzy/opt/gz_cmake_vendor:/opt/ros/jazzy'}), 'shell': False}
+[0.210016] (-) TimerEvent: {}
+[0.310945] (-) TimerEvent: {}
+[0.336589] (piper_description) CommandEnded: {'returncode': 0}
+[0.339079] (piper_description) JobProgress: {'identifier': 'piper_description', 'progress': 'install'}
+[0.363903] (piper_description) Command: {'cmd': ['/usr/bin/cmake', '--install', '/home/dali/ros2_ws/build/piper_description'], 'cwd': '/home/dali/ros2_ws/build/piper_description', 'env': OrderedDict({'LESSOPEN': '| /usr/bin/lesspipe %s', 'GZ_SIM_RESOURCE_PATH': '/opt/ros/jazzy/share', 'USER': 'dali', 'GZ_CONFIG_PATH': '/opt/ros/jazzy/opt/gz_sim_vendor/share/gz:/opt/ros/jazzy/opt/sdformat_vendor/share/gz:/opt/ros/jazzy/opt/gz_gui_vendor/share/gz:/opt/ros/jazzy/opt/gz_transport_vendor/share/gz:/opt/ros/jazzy/opt/gz_rendering_vendor/share/gz:/opt/ros/jazzy/opt/gz_plugin_vendor/share/gz:/opt/ros/jazzy/opt/gz_fuel_tools_vendor/share/gz:/opt/ros/jazzy/opt/gz_msgs_vendor/share/gz:/opt/ros/jazzy/opt/gz_common_vendor/share/gz', 'XDG_SESSION_TYPE': 'wayland', 'CLUTTER_DISABLE_MIPMAPPED_TEXT': '1', 'SHLVL': '1', 'LD_LIBRARY_PATH': '/home/dali/ros2_ws/install/scene_graph_interfaces/lib:/opt/ros/jazzy/opt/gz_sim_vendor/lib:/opt/ros/jazzy/opt/gz_sensors_vendor/lib:/opt/ros/jazzy/opt/gz_physics_vendor/lib:/opt/ros/jazzy/opt/sdformat_vendor/lib:/opt/ros/jazzy/opt/rviz_ogre_vendor/lib:/opt/ros/jazzy/lib/aarch64-linux-gnu:/opt/ros/jazzy/opt/gz_gui_vendor/lib:/opt/ros/jazzy/opt/gz_transport_vendor/lib:/opt/ros/jazzy/opt/gz_rendering_vendor/lib:/opt/ros/jazzy/opt/gz_plugin_vendor/lib:/opt/ros/jazzy/opt/gz_fuel_tools_vendor/lib:/opt/ros/jazzy/opt/gz_msgs_vendor/lib:/opt/ros/jazzy/opt/gz_common_vendor/lib:/opt/ros/jazzy/opt/gz_math_vendor/lib:/opt/ros/jazzy/opt/gz_utils_vendor/lib:/opt/ros/jazzy/opt/gz_tools_vendor/lib:/opt/ros/jazzy/opt/gz_ogre_next_vendor/lib:/opt/ros/jazzy/opt/gz_dartsim_vendor/lib:/opt/ros/jazzy/opt/gz_cmake_vendor/lib:/opt/ros/jazzy/lib', 'HOME': '/home/dali', 'OLDPWD': '/home/dali', 'DESKTOP_SESSION': 'ubuntu', 'ROS_PYTHON_VERSION': '3', 'GNOME_SHELL_SESSION_MODE': 'ubuntu', 'GTK_MODULES': 'gail:atk-bridge', 'SYSTEMD_EXEC_PID': '1842', 'GSM_SKIP_SSH_AGENT_WORKAROUND': 'true', 'DBUS_SESSION_BUS_ADDRESS': 'unix:path=/run/user/1000/bus', 'COLORTERM': 'truecolor', 'DEBUGINFOD_URLS': 'https://debuginfod.ubuntu.com', 'IM_CONFIG_PHASE': '1', 'WAYLAND_DISPLAY': 'wayland-0', 'COLCON_PREFIX_PATH': '/home/dali/ros2_ws/install', 'ROS_DISTRO': 'jazzy', 'LOGNAME': 'dali', '_': '/usr/bin/colcon', 'ROS_VERSION': '2', 'MEMORY_PRESSURE_WATCH': '/sys/fs/cgroup/user.slice/user-1000.slice/user@1000.service/session.slice/org.gnome.Shell@wayland.service/memory.pressure', 'XDG_SESSION_CLASS': 'user', 'USERNAME': 'dali', 'TERM': 'xterm-256color', 'GNOME_DESKTOP_SESSION_ID': 'this-is-deprecated', 'PATH': '/opt/ros/jazzy/opt/gz_msgs_vendor/bin:/opt/ros/jazzy/opt/gz_tools_vendor/bin:/opt/ros/jazzy/opt/gz_ogre_next_vendor/bin:/opt/ros/jazzy/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/snap/bin', 'SESSION_MANAGER': 'local/dali:@/tmp/.ICE-unix/1810,unix/dali:/tmp/.ICE-unix/1810', 'XDG_MENU_PREFIX': 'gnome-', 'GNOME_TERMINAL_SCREEN': '/org/gnome/Terminal/screen/29fc844f_180e_4146_8852_286745236268', 'GNOME_SETUP_DISPLAY': ':1', 'XDG_RUNTIME_DIR': '/run/user/1000', 'DISPLAY': ':0', 'LANG': 'en_US.UTF-8', 'XDG_CURRENT_DESKTOP': 'ubuntu:GNOME', 'XMODIFIERS': '@im=ibus', 'XDG_SESSION_DESKTOP': 'ubuntu', 'XAUTHORITY': '/run/user/1000/.mutter-Xwaylandauth.DMF3I3', 'LS_COLORS': 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=00:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.avif=01;35:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:*~=00;90:*#=00;90:*.bak=00;90:*.crdownload=00;90:*.dpkg-dist=00;90:*.dpkg-new=00;90:*.dpkg-old=00;90:*.dpkg-tmp=00;90:*.old=00;90:*.orig=00;90:*.part=00;90:*.rej=00;90:*.rpmnew=00;90:*.rpmorig=00;90:*.rpmsave=00;90:*.swp=00;90:*.tmp=00;90:*.ucf-dist=00;90:*.ucf-new=00;90:*.ucf-old=00;90:', 'GNOME_TERMINAL_SERVICE': ':1.111', 'SSH_AUTH_SOCK': '/run/user/1000/keyring/ssh', 'AMENT_PREFIX_PATH': '/home/dali/ros2_ws/install/piper_bringup:/home/dali/ros2_ws/install/scene_graph_interfaces:/home/dali/ros2_ws/install/piper_moveit_config:/home/dali/ros2_ws/install/piper_description:/opt/ros/jazzy', 'SHELL': '/bin/bash', 'QT_ACCESSIBILITY': '1', 'GDMSESSION': 'ubuntu', 'LESSCLOSE': '/usr/bin/lesspipe %s %s', 'ROS_AUTOMATIC_DISCOVERY_RANGE': 'SUBNET', 'QT_IM_MODULE': 'ibus', 'PWD': '/home/dali/ros2_ws/build/piper_description', 'LC_ALL': 'en_US.UTF-8', 'XDG_CONFIG_DIRS': '/etc/xdg/xdg-ubuntu:/etc/xdg', 'XDG_DATA_DIRS': '/usr/share/ubuntu:/usr/share/gnome:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop', 'PYTHONPATH': '/home/dali/ros2_ws/install/scene_graph_interfaces/lib/python3.12/site-packages:/opt/ros/jazzy/lib/python3.12/site-packages', 'COLCON': '1', 'MEMORY_PRESSURE_WRITE': 'c29tZSAyMDAwMDAgMjAwMDAwMAA=', 'VTE_VERSION': '7600', 'CMAKE_PREFIX_PATH': '/home/dali/ros2_ws/install/piper_bringup:/home/dali/ros2_ws/install/scene_graph_interfaces:/home/dali/ros2_ws/install/piper_moveit_config:/home/dali/ros2_ws/install/piper_description:/opt/ros/jazzy/opt/gz_sim_vendor:/opt/ros/jazzy/opt/gz_sensors_vendor:/opt/ros/jazzy/opt/gz_physics_vendor:/opt/ros/jazzy/opt/sdformat_vendor:/opt/ros/jazzy/opt/gz_gui_vendor:/opt/ros/jazzy/opt/gz_transport_vendor:/opt/ros/jazzy/opt/gz_rendering_vendor:/opt/ros/jazzy/opt/gz_plugin_vendor:/opt/ros/jazzy/opt/gz_fuel_tools_vendor:/opt/ros/jazzy/opt/gz_msgs_vendor:/opt/ros/jazzy/opt/gz_common_vendor:/opt/ros/jazzy/opt/gz_math_vendor:/opt/ros/jazzy/opt/gz_utils_vendor:/opt/ros/jazzy/opt/gz_tools_vendor:/opt/ros/jazzy/opt/gz_ogre_next_vendor:/opt/ros/jazzy/opt/gz_dartsim_vendor:/opt/ros/jazzy/opt/gz_cmake_vendor:/opt/ros/jazzy'}), 'shell': False}
+[0.392137] (scene_graph_interfaces) StdoutLine: {'line': b'[  2%] Built target scene_graph_interfaces__rosidl_generator_type_description\n'}
+[0.392362] (piper_description) StdoutLine: {'line': b'-- Install configuration: ""\n'}
+[0.392420] (piper_description) StdoutLine: {'line': b'-- Up-to-date: /home/dali/ros2_ws/install/piper_description/share/piper_description//config\n'}
+[0.392457] (piper_description) StdoutLine: {'line': b'-- Up-to-date: /home/dali/ros2_ws/install/piper_description/share/piper_description//config/mock_controllers.yaml\n'}
+[0.392492] (piper_description) StdoutLine: {'line': b'-- Up-to-date: /home/dali/ros2_ws/install/piper_description/share/piper_description//config/initial_positions.yaml\n'}
+[0.392523] (piper_description) StdoutLine: {'line': b'-- Up-to-date: /home/dali/ros2_ws/install/piper_description/share/piper_description//config/gz_controllers.yaml\n'}
+[0.392553] (piper_description) StdoutLine: {'line': b'-- Up-to-date: /home/dali/ros2_ws/install/piper_description/share/piper_description//launch\n'}
+[0.392584] (piper_description) StdoutLine: {'line': b'-- Up-to-date: /home/dali/ros2_ws/install/piper_description/share/piper_description//launch/view_urdf.launch.xml\n'}
+[0.392614] (piper_description) StdoutLine: {'line': b'-- Up-to-date: /home/dali/ros2_ws/install/piper_description/share/piper_description//meshes\n'}
+[0.392644] (piper_description) StdoutLine: {'line': b'-- Up-to-date: /home/dali/ros2_ws/install/piper_description/share/piper_description//meshes/right_finger.dae\n'}
+[0.392674] (piper_description) StdoutLine: {'line': b'-- Up-to-date: /home/dali/ros2_ws/install/piper_description/share/piper_description//meshes/gripper_base_link.dae\n'}
+[0.392704] (piper_description) StdoutLine: {'line': b'-- Up-to-date: /home/dali/ros2_ws/install/piper_description/share/piper_description//meshes/link5.dae\n'}
+[0.392734] (piper_description) StdoutLine: {'line': b'-- Up-to-date: /home/dali/ros2_ws/install/piper_description/share/piper_description//meshes/link2.dae\n'}
+[0.392764] (piper_description) StdoutLine: {'line': b'-- Up-to-date: /home/dali/ros2_ws/install/piper_description/share/piper_description//meshes/link3.dae\n'}
+[0.392793] (piper_description) StdoutLine: {'line': b'-- Up-to-date: /home/dali/ros2_ws/install/piper_description/share/piper_description//meshes/left_finger.dae\n'}
+[0.392861] (piper_description) StdoutLine: {'line': b'-- Up-to-date: /home/dali/ros2_ws/install/piper_description/share/piper_description//meshes/link4.dae\n'}
+[0.392898] (piper_description) StdoutLine: {'line': b'-- Up-to-date: /home/dali/ros2_ws/install/piper_description/share/piper_description//meshes/base_link.dae\n'}
+[0.392928] (piper_description) StdoutLine: {'line': b'-- Up-to-date: /home/dali/ros2_ws/install/piper_description/share/piper_description//meshes/link1.dae\n'}
+[0.392957] (piper_description) StdoutLine: {'line': b'-- Up-to-date: /home/dali/ros2_ws/install/piper_description/share/piper_description//meshes/MESH_LICENSE\n'}
+[0.392987] (piper_description) StdoutLine: {'line': b'-- Up-to-date: /home/dali/ros2_ws/install/piper_description/share/piper_description//urdf\n'}
+[0.393104] (piper_description) StdoutLine: {'line': b'-- Up-to-date: /home/dali/ros2_ws/install/piper_description/share/piper_description//urdf/piper_gripper_macro.xacro\n'}
+[0.393135] (piper_description) StdoutLine: {'line': b'-- Up-to-date: /home/dali/ros2_ws/install/piper_description/share/piper_description//urdf/piper_arm_macro.xacro\n'}
+[0.393165] (piper_description) StdoutLine: {'line': b'-- Up-to-date: /home/dali/ros2_ws/install/piper_description/share/piper_description//urdf/piper.ros2_control.xacro\n'}
+[0.393195] (piper_description) StdoutLine: {'line': b'-- Up-to-date: /home/dali/ros2_ws/install/piper_description/share/piper_description//urdf/piper.gazebo.xacro\n'}
+[0.393224] (piper_description) StdoutLine: {'line': b'-- Up-to-date: /home/dali/ros2_ws/install/piper_description/share/piper_description//urdf/piper_macro.xacro\n'}
+[0.393254] (piper_description) StdoutLine: {'line': b'-- Up-to-date: /home/dali/ros2_ws/install/piper_description/share/piper_description//urdf/piper.urdf.xacro\n'}
+[0.393284] (piper_description) StdoutLine: {'line': b'-- Up-to-date: /home/dali/ros2_ws/install/piper_description/share/piper_description//rviz\n'}
+[0.393313] (piper_description) StdoutLine: {'line': b'-- Up-to-date: /home/dali/ros2_ws/install/piper_description/share/piper_description//rviz/robot_urdf.rviz\n'}
+[0.393342] (piper_description) StdoutLine: {'line': b'-- Up-to-date: /home/dali/ros2_ws/install/piper_description/share/ament_index/resource_index/package_run_dependencies/piper_description\n'}
+[0.393372] (piper_description) StdoutLine: {'line': b'-- Up-to-date: /home/dali/ros2_ws/install/piper_description/share/ament_index/resource_index/parent_prefix_path/piper_description\n'}
+[0.393402] (piper_description) StdoutLine: {'line': b'-- Up-to-date: /home/dali/ros2_ws/install/piper_description/share/piper_description/environment/ament_prefix_path.sh\n'}
+[0.393436] (piper_description) StdoutLine: {'line': b'-- Up-to-date: /home/dali/ros2_ws/install/piper_description/share/piper_description/environment/ament_prefix_path.dsv\n'}
+[0.393466] (piper_description) StdoutLine: {'line': b'-- Up-to-date: /home/dali/ros2_ws/install/piper_description/share/piper_description/environment/path.sh\n'}
+[0.400322] (piper_description) StdoutLine: {'line': b'-- Up-to-date: /home/dali/ros2_ws/install/piper_description/share/piper_description/environment/path.dsv\n'}
+[0.400671] (piper_description) StdoutLine: {'line': b'-- Up-to-date: /home/dali/ros2_ws/install/piper_description/share/piper_description/local_setup.bash\n'}
+[0.400731] (piper_description) StdoutLine: {'line': b'-- Up-to-date: /home/dali/ros2_ws/install/piper_description/share/piper_description/local_setup.sh\n'}
+[0.400766] (piper_description) StdoutLine: {'line': b'-- Up-to-date: /home/dali/ros2_ws/install/piper_description/share/piper_description/local_setup.zsh\n'}
+[0.400797] (piper_description) StdoutLine: {'line': b'-- Up-to-date: /home/dali/ros2_ws/install/piper_description/share/piper_description/local_setup.dsv\n'}
+[0.400883] (piper_description) StdoutLine: {'line': b'-- Installing: /home/dali/ros2_ws/install/piper_description/share/piper_description/package.dsv\n'}
+[0.411428] (piper_description) StdoutLine: {'line': b'-- Up-to-date: /home/dali/ros2_ws/install/piper_description/share/ament_index/resource_index/packages/piper_description\n'}
+[0.411670] (-) TimerEvent: {}
+[0.411776] (piper_description) StdoutLine: {'line': b'-- Up-to-date: /home/dali/ros2_ws/install/piper_description/share/piper_description/cmake/piper_descriptionConfig.cmake\n'}
+[0.411881] (piper_description) StdoutLine: {'line': b'-- Up-to-date: /home/dali/ros2_ws/install/piper_description/share/piper_description/cmake/piper_descriptionConfig-version.cmake\n'}
+[0.411919] (piper_description) StdoutLine: {'line': b'-- Up-to-date: /home/dali/ros2_ws/install/piper_description/share/piper_description/package.xml\n'}
+[0.414567] (piper_description) CommandEnded: {'returncode': 0}
+[0.475873] (scene_graph_interfaces) StdoutLine: {'line': b'[  2%] Built target ament_cmake_python_copy_scene_graph_interfaces\n'}
+[0.483264] (piper_description) JobEnded: {'identifier': 'piper_description', 'rc': 0}
+[0.486775] (piper_moveit_config) JobStarted: {'identifier': 'piper_moveit_config'}
+[0.501000] (piper_moveit_config) JobProgress: {'identifier': 'piper_moveit_config', 'progress': 'cmake'}
+[0.503359] (piper_moveit_config) JobProgress: {'identifier': 'piper_moveit_config', 'progress': 'build'}
+[0.503382] (piper_moveit_config) Command: {'cmd': ['/usr/bin/cmake', '--build', '/home/dali/ros2_ws/build/piper_moveit_config', '--', '-j4', '-l4'], 'cwd': '/home/dali/ros2_ws/build/piper_moveit_config', 'env': OrderedDict({'LESSOPEN': '| /usr/bin/lesspipe %s', 'GZ_SIM_RESOURCE_PATH': '/opt/ros/jazzy/share', 'USER': 'dali', 'GZ_CONFIG_PATH': '/opt/ros/jazzy/opt/gz_sim_vendor/share/gz:/opt/ros/jazzy/opt/sdformat_vendor/share/gz:/opt/ros/jazzy/opt/gz_gui_vendor/share/gz:/opt/ros/jazzy/opt/gz_transport_vendor/share/gz:/opt/ros/jazzy/opt/gz_rendering_vendor/share/gz:/opt/ros/jazzy/opt/gz_plugin_vendor/share/gz:/opt/ros/jazzy/opt/gz_fuel_tools_vendor/share/gz:/opt/ros/jazzy/opt/gz_msgs_vendor/share/gz:/opt/ros/jazzy/opt/gz_common_vendor/share/gz', 'XDG_SESSION_TYPE': 'wayland', 'CLUTTER_DISABLE_MIPMAPPED_TEXT': '1', 'SHLVL': '1', 'LD_LIBRARY_PATH': '/home/dali/ros2_ws/install/scene_graph_interfaces/lib:/opt/ros/jazzy/opt/gz_sim_vendor/lib:/opt/ros/jazzy/opt/gz_sensors_vendor/lib:/opt/ros/jazzy/opt/gz_physics_vendor/lib:/opt/ros/jazzy/opt/sdformat_vendor/lib:/opt/ros/jazzy/opt/rviz_ogre_vendor/lib:/opt/ros/jazzy/lib/aarch64-linux-gnu:/opt/ros/jazzy/opt/gz_gui_vendor/lib:/opt/ros/jazzy/opt/gz_transport_vendor/lib:/opt/ros/jazzy/opt/gz_rendering_vendor/lib:/opt/ros/jazzy/opt/gz_plugin_vendor/lib:/opt/ros/jazzy/opt/gz_fuel_tools_vendor/lib:/opt/ros/jazzy/opt/gz_msgs_vendor/lib:/opt/ros/jazzy/opt/gz_common_vendor/lib:/opt/ros/jazzy/opt/gz_math_vendor/lib:/opt/ros/jazzy/opt/gz_utils_vendor/lib:/opt/ros/jazzy/opt/gz_tools_vendor/lib:/opt/ros/jazzy/opt/gz_ogre_next_vendor/lib:/opt/ros/jazzy/opt/gz_dartsim_vendor/lib:/opt/ros/jazzy/opt/gz_cmake_vendor/lib:/opt/ros/jazzy/lib', 'HOME': '/home/dali', 'OLDPWD': '/home/dali', 'DESKTOP_SESSION': 'ubuntu', 'ROS_PYTHON_VERSION': '3', 'GNOME_SHELL_SESSION_MODE': 'ubuntu', 'GTK_MODULES': 'gail:atk-bridge', 'SYSTEMD_EXEC_PID': '1842', 'GSM_SKIP_SSH_AGENT_WORKAROUND': 'true', 'DBUS_SESSION_BUS_ADDRESS': 'unix:path=/run/user/1000/bus', 'COLORTERM': 'truecolor', 'DEBUGINFOD_URLS': 'https://debuginfod.ubuntu.com', 'IM_CONFIG_PHASE': '1', 'WAYLAND_DISPLAY': 'wayland-0', 'COLCON_PREFIX_PATH': '/home/dali/ros2_ws/install', 'ROS_DISTRO': 'jazzy', 'LOGNAME': 'dali', '_': '/usr/bin/colcon', 'ROS_VERSION': '2', 'MEMORY_PRESSURE_WATCH': '/sys/fs/cgroup/user.slice/user-1000.slice/user@1000.service/session.slice/org.gnome.Shell@wayland.service/memory.pressure', 'XDG_SESSION_CLASS': 'user', 'USERNAME': 'dali', 'TERM': 'xterm-256color', 'GNOME_DESKTOP_SESSION_ID': 'this-is-deprecated', 'PATH': '/opt/ros/jazzy/opt/gz_msgs_vendor/bin:/opt/ros/jazzy/opt/gz_tools_vendor/bin:/opt/ros/jazzy/opt/gz_ogre_next_vendor/bin:/opt/ros/jazzy/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/snap/bin', 'SESSION_MANAGER': 'local/dali:@/tmp/.ICE-unix/1810,unix/dali:/tmp/.ICE-unix/1810', 'XDG_MENU_PREFIX': 'gnome-', 'GNOME_TERMINAL_SCREEN': '/org/gnome/Terminal/screen/29fc844f_180e_4146_8852_286745236268', 'GNOME_SETUP_DISPLAY': ':1', 'XDG_RUNTIME_DIR': '/run/user/1000', 'DISPLAY': ':0', 'LANG': 'en_US.UTF-8', 'XDG_CURRENT_DESKTOP': 'ubuntu:GNOME', 'XMODIFIERS': '@im=ibus', 'XDG_SESSION_DESKTOP': 'ubuntu', 'XAUTHORITY': '/run/user/1000/.mutter-Xwaylandauth.DMF3I3', 'LS_COLORS': 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=00:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.avif=01;35:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:*~=00;90:*#=00;90:*.bak=00;90:*.crdownload=00;90:*.dpkg-dist=00;90:*.dpkg-new=00;90:*.dpkg-old=00;90:*.dpkg-tmp=00;90:*.old=00;90:*.orig=00;90:*.part=00;90:*.rej=00;90:*.rpmnew=00;90:*.rpmorig=00;90:*.rpmsave=00;90:*.swp=00;90:*.tmp=00;90:*.ucf-dist=00;90:*.ucf-new=00;90:*.ucf-old=00;90:', 'GNOME_TERMINAL_SERVICE': ':1.111', 'SSH_AUTH_SOCK': '/run/user/1000/keyring/ssh', 'AMENT_PREFIX_PATH': '/home/dali/ros2_ws/install/piper_bringup:/home/dali/ros2_ws/install/scene_graph_interfaces:/home/dali/ros2_ws/install/piper_moveit_config:/home/dali/ros2_ws/install/piper_description:/opt/ros/jazzy', 'SHELL': '/bin/bash', 'QT_ACCESSIBILITY': '1', 'GDMSESSION': 'ubuntu', 'LESSCLOSE': '/usr/bin/lesspipe %s %s', 'ROS_AUTOMATIC_DISCOVERY_RANGE': 'SUBNET', 'QT_IM_MODULE': 'ibus', 'PWD': '/home/dali/ros2_ws/build/piper_moveit_config', 'LC_ALL': 'en_US.UTF-8', 'XDG_CONFIG_DIRS': '/etc/xdg/xdg-ubuntu:/etc/xdg', 'XDG_DATA_DIRS': '/usr/share/ubuntu:/usr/share/gnome:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop', 'PYTHONPATH': '/home/dali/ros2_ws/install/scene_graph_interfaces/lib/python3.12/site-packages:/opt/ros/jazzy/lib/python3.12/site-packages', 'COLCON': '1', 'MEMORY_PRESSURE_WRITE': 'c29tZSAyMDAwMDAgMjAwMDAwMAA=', 'VTE_VERSION': '7600', 'CMAKE_PREFIX_PATH': '/home/dali/ros2_ws/install/piper_description:/home/dali/ros2_ws/install/piper_bringup:/home/dali/ros2_ws/install/scene_graph_interfaces:/home/dali/ros2_ws/install/piper_moveit_config:/opt/ros/jazzy/opt/gz_sim_vendor:/opt/ros/jazzy/opt/gz_sensors_vendor:/opt/ros/jazzy/opt/gz_physics_vendor:/opt/ros/jazzy/opt/sdformat_vendor:/opt/ros/jazzy/opt/gz_gui_vendor:/opt/ros/jazzy/opt/gz_transport_vendor:/opt/ros/jazzy/opt/gz_rendering_vendor:/opt/ros/jazzy/opt/gz_plugin_vendor:/opt/ros/jazzy/opt/gz_fuel_tools_vendor:/opt/ros/jazzy/opt/gz_msgs_vendor:/opt/ros/jazzy/opt/gz_common_vendor:/opt/ros/jazzy/opt/gz_math_vendor:/opt/ros/jazzy/opt/gz_utils_vendor:/opt/ros/jazzy/opt/gz_tools_vendor:/opt/ros/jazzy/opt/gz_ogre_next_vendor:/opt/ros/jazzy/opt/gz_dartsim_vendor:/opt/ros/jazzy/opt/gz_cmake_vendor:/opt/ros/jazzy'}), 'shell': False}
+[0.512217] (-) TimerEvent: {}
+[0.553870] (scene_graph_interfaces) StdoutLine: {'line': b'[ 20%] Built target scene_graph_interfaces__rosidl_generator_c\n'}
+[0.603864] (piper_moveit_config) CommandEnded: {'returncode': 0}
+[0.608606] (piper_moveit_config) JobProgress: {'identifier': 'piper_moveit_config', 'progress': 'install'}
+[0.608678] (piper_moveit_config) Command: {'cmd': ['/usr/bin/cmake', '--install', '/home/dali/ros2_ws/build/piper_moveit_config'], 'cwd': '/home/dali/ros2_ws/build/piper_moveit_config', 'env': OrderedDict({'LESSOPEN': '| /usr/bin/lesspipe %s', 'GZ_SIM_RESOURCE_PATH': '/opt/ros/jazzy/share', 'USER': 'dali', 'GZ_CONFIG_PATH': '/opt/ros/jazzy/opt/gz_sim_vendor/share/gz:/opt/ros/jazzy/opt/sdformat_vendor/share/gz:/opt/ros/jazzy/opt/gz_gui_vendor/share/gz:/opt/ros/jazzy/opt/gz_transport_vendor/share/gz:/opt/ros/jazzy/opt/gz_rendering_vendor/share/gz:/opt/ros/jazzy/opt/gz_plugin_vendor/share/gz:/opt/ros/jazzy/opt/gz_fuel_tools_vendor/share/gz:/opt/ros/jazzy/opt/gz_msgs_vendor/share/gz:/opt/ros/jazzy/opt/gz_common_vendor/share/gz', 'XDG_SESSION_TYPE': 'wayland', 'CLUTTER_DISABLE_MIPMAPPED_TEXT': '1', 'SHLVL': '1', 'LD_LIBRARY_PATH': '/home/dali/ros2_ws/install/scene_graph_interfaces/lib:/opt/ros/jazzy/opt/gz_sim_vendor/lib:/opt/ros/jazzy/opt/gz_sensors_vendor/lib:/opt/ros/jazzy/opt/gz_physics_vendor/lib:/opt/ros/jazzy/opt/sdformat_vendor/lib:/opt/ros/jazzy/opt/rviz_ogre_vendor/lib:/opt/ros/jazzy/lib/aarch64-linux-gnu:/opt/ros/jazzy/opt/gz_gui_vendor/lib:/opt/ros/jazzy/opt/gz_transport_vendor/lib:/opt/ros/jazzy/opt/gz_rendering_vendor/lib:/opt/ros/jazzy/opt/gz_plugin_vendor/lib:/opt/ros/jazzy/opt/gz_fuel_tools_vendor/lib:/opt/ros/jazzy/opt/gz_msgs_vendor/lib:/opt/ros/jazzy/opt/gz_common_vendor/lib:/opt/ros/jazzy/opt/gz_math_vendor/lib:/opt/ros/jazzy/opt/gz_utils_vendor/lib:/opt/ros/jazzy/opt/gz_tools_vendor/lib:/opt/ros/jazzy/opt/gz_ogre_next_vendor/lib:/opt/ros/jazzy/opt/gz_dartsim_vendor/lib:/opt/ros/jazzy/opt/gz_cmake_vendor/lib:/opt/ros/jazzy/lib', 'HOME': '/home/dali', 'OLDPWD': '/home/dali', 'DESKTOP_SESSION': 'ubuntu', 'ROS_PYTHON_VERSION': '3', 'GNOME_SHELL_SESSION_MODE': 'ubuntu', 'GTK_MODULES': 'gail:atk-bridge', 'SYSTEMD_EXEC_PID': '1842', 'GSM_SKIP_SSH_AGENT_WORKAROUND': 'true', 'DBUS_SESSION_BUS_ADDRESS': 'unix:path=/run/user/1000/bus', 'COLORTERM': 'truecolor', 'DEBUGINFOD_URLS': 'https://debuginfod.ubuntu.com', 'IM_CONFIG_PHASE': '1', 'WAYLAND_DISPLAY': 'wayland-0', 'COLCON_PREFIX_PATH': '/home/dali/ros2_ws/install', 'ROS_DISTRO': 'jazzy', 'LOGNAME': 'dali', '_': '/usr/bin/colcon', 'ROS_VERSION': '2', 'MEMORY_PRESSURE_WATCH': '/sys/fs/cgroup/user.slice/user-1000.slice/user@1000.service/session.slice/org.gnome.Shell@wayland.service/memory.pressure', 'XDG_SESSION_CLASS': 'user', 'USERNAME': 'dali', 'TERM': 'xterm-256color', 'GNOME_DESKTOP_SESSION_ID': 'this-is-deprecated', 'PATH': '/opt/ros/jazzy/opt/gz_msgs_vendor/bin:/opt/ros/jazzy/opt/gz_tools_vendor/bin:/opt/ros/jazzy/opt/gz_ogre_next_vendor/bin:/opt/ros/jazzy/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/snap/bin', 'SESSION_MANAGER': 'local/dali:@/tmp/.ICE-unix/1810,unix/dali:/tmp/.ICE-unix/1810', 'XDG_MENU_PREFIX': 'gnome-', 'GNOME_TERMINAL_SCREEN': '/org/gnome/Terminal/screen/29fc844f_180e_4146_8852_286745236268', 'GNOME_SETUP_DISPLAY': ':1', 'XDG_RUNTIME_DIR': '/run/user/1000', 'DISPLAY': ':0', 'LANG': 'en_US.UTF-8', 'XDG_CURRENT_DESKTOP': 'ubuntu:GNOME', 'XMODIFIERS': '@im=ibus', 'XDG_SESSION_DESKTOP': 'ubuntu', 'XAUTHORITY': '/run/user/1000/.mutter-Xwaylandauth.DMF3I3', 'LS_COLORS': 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=00:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.avif=01;35:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:*~=00;90:*#=00;90:*.bak=00;90:*.crdownload=00;90:*.dpkg-dist=00;90:*.dpkg-new=00;90:*.dpkg-old=00;90:*.dpkg-tmp=00;90:*.old=00;90:*.orig=00;90:*.part=00;90:*.rej=00;90:*.rpmnew=00;90:*.rpmorig=00;90:*.rpmsave=00;90:*.swp=00;90:*.tmp=00;90:*.ucf-dist=00;90:*.ucf-new=00;90:*.ucf-old=00;90:', 'GNOME_TERMINAL_SERVICE': ':1.111', 'SSH_AUTH_SOCK': '/run/user/1000/keyring/ssh', 'AMENT_PREFIX_PATH': '/home/dali/ros2_ws/install/piper_bringup:/home/dali/ros2_ws/install/scene_graph_interfaces:/home/dali/ros2_ws/install/piper_moveit_config:/home/dali/ros2_ws/install/piper_description:/opt/ros/jazzy', 'SHELL': '/bin/bash', 'QT_ACCESSIBILITY': '1', 'GDMSESSION': 'ubuntu', 'LESSCLOSE': '/usr/bin/lesspipe %s %s', 'ROS_AUTOMATIC_DISCOVERY_RANGE': 'SUBNET', 'QT_IM_MODULE': 'ibus', 'PWD': '/home/dali/ros2_ws/build/piper_moveit_config', 'LC_ALL': 'en_US.UTF-8', 'XDG_CONFIG_DIRS': '/etc/xdg/xdg-ubuntu:/etc/xdg', 'XDG_DATA_DIRS': '/usr/share/ubuntu:/usr/share/gnome:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop', 'PYTHONPATH': '/home/dali/ros2_ws/install/scene_graph_interfaces/lib/python3.12/site-packages:/opt/ros/jazzy/lib/python3.12/site-packages', 'COLCON': '1', 'MEMORY_PRESSURE_WRITE': 'c29tZSAyMDAwMDAgMjAwMDAwMAA=', 'VTE_VERSION': '7600', 'CMAKE_PREFIX_PATH': '/home/dali/ros2_ws/install/piper_description:/home/dali/ros2_ws/install/piper_bringup:/home/dali/ros2_ws/install/scene_graph_interfaces:/home/dali/ros2_ws/install/piper_moveit_config:/opt/ros/jazzy/opt/gz_sim_vendor:/opt/ros/jazzy/opt/gz_sensors_vendor:/opt/ros/jazzy/opt/gz_physics_vendor:/opt/ros/jazzy/opt/sdformat_vendor:/opt/ros/jazzy/opt/gz_gui_vendor:/opt/ros/jazzy/opt/gz_transport_vendor:/opt/ros/jazzy/opt/gz_rendering_vendor:/opt/ros/jazzy/opt/gz_plugin_vendor:/opt/ros/jazzy/opt/gz_fuel_tools_vendor:/opt/ros/jazzy/opt/gz_msgs_vendor:/opt/ros/jazzy/opt/gz_common_vendor:/opt/ros/jazzy/opt/gz_math_vendor:/opt/ros/jazzy/opt/gz_utils_vendor:/opt/ros/jazzy/opt/gz_tools_vendor:/opt/ros/jazzy/opt/gz_ogre_next_vendor:/opt/ros/jazzy/opt/gz_dartsim_vendor:/opt/ros/jazzy/opt/gz_cmake_vendor:/opt/ros/jazzy'}), 'shell': False}
+[0.612943] (-) TimerEvent: {}
+[0.648808] (piper_moveit_config) StdoutLine: {'line': b'-- Install configuration: ""\n'}
+[0.650921] (piper_moveit_config) StdoutLine: {'line': b'-- Up-to-date: /home/dali/ros2_ws/install/piper_moveit_config/share/piper_moveit_config//config\n'}
+[0.651148] (piper_moveit_config) StdoutLine: {'line': b'-- Up-to-date: /home/dali/ros2_ws/install/piper_moveit_config/share/piper_moveit_config//config/moveit.rviz\n'}
+[0.651212] (piper_moveit_config) StdoutLine: {'line': b'-- Up-to-date: /home/dali/ros2_ws/install/piper_moveit_config/share/piper_moveit_config//config/joint_limits.yaml\n'}
+[0.651267] (piper_moveit_config) StdoutLine: {'line': b'-- Up-to-date: /home/dali/ros2_ws/install/piper_moveit_config/share/piper_moveit_config//config/kinematics_ros2.yaml\n'}
+[0.651321] (piper_moveit_config) StdoutLine: {'line': b'-- Up-to-date: /home/dali/ros2_ws/install/piper_moveit_config/share/piper_moveit_config//config/ompl_planning.yaml\n'}
+[0.651375] (piper_moveit_config) StdoutLine: {'line': b'-- Up-to-date: /home/dali/ros2_ws/install/piper_moveit_config/share/piper_moveit_config//config/kinematics.yaml\n'}
+[0.651426] (piper_moveit_config) StdoutLine: {'line': b'-- Up-to-date: /home/dali/ros2_ws/install/piper_moveit_config/share/piper_moveit_config//config/move_group.yaml\n'}
+[0.651489] (piper_moveit_config) StdoutLine: {'line': b'-- Up-to-date: /home/dali/ros2_ws/install/piper_moveit_config/share/piper_moveit_config//config/piper.srdf.xacro\n'}
+[0.651541] (piper_moveit_config) StdoutLine: {'line': b'-- Up-to-date: /home/dali/ros2_ws/install/piper_moveit_config/share/piper_moveit_config//config/moveit_controllers.yaml\n'}
+[0.651599] (piper_moveit_config) StdoutLine: {'line': b'-- Up-to-date: /home/dali/ros2_ws/install/piper_moveit_config/share/piper_moveit_config//launch\n'}
+[0.655184] (piper_moveit_config) StdoutLine: {'line': b'-- Up-to-date: /home/dali/ros2_ws/install/piper_moveit_config/share/piper_moveit_config//launch/demo.launch.xml\n'}
+[0.655311] (piper_moveit_config) StdoutLine: {'line': b'-- Up-to-date: /home/dali/ros2_ws/install/piper_moveit_config/share/ament_index/resource_index/package_run_dependencies/piper_moveit_config\n'}
+[0.655354] (piper_moveit_config) StdoutLine: {'line': b'-- Up-to-date: /home/dali/ros2_ws/install/piper_moveit_config/share/ament_index/resource_index/parent_prefix_path/piper_moveit_config\n'}
+[0.655389] (piper_moveit_config) StdoutLine: {'line': b'-- Up-to-date: /home/dali/ros2_ws/install/piper_moveit_config/share/piper_moveit_config/environment/ament_prefix_path.sh\n'}
+[0.655423] (piper_moveit_config) StdoutLine: {'line': b'-- Up-to-date: /home/dali/ros2_ws/install/piper_moveit_config/share/piper_moveit_config/environment/ament_prefix_path.dsv\n'}
+[0.655456] (piper_moveit_config) StdoutLine: {'line': b'-- Up-to-date: /home/dali/ros2_ws/install/piper_moveit_config/share/piper_moveit_config/environment/path.sh\n'}
+[0.656569] (piper_moveit_config) StdoutLine: {'line': b'-- Up-to-date: /home/dali/ros2_ws/install/piper_moveit_config/share/piper_moveit_config/environment/path.dsv\n'}
+[0.656616] (piper_moveit_config) StdoutLine: {'line': b'-- Up-to-date: /home/dali/ros2_ws/install/piper_moveit_config/share/piper_moveit_config/local_setup.bash\n'}
+[0.656653] (piper_moveit_config) StdoutLine: {'line': b'-- Up-to-date: /home/dali/ros2_ws/install/piper_moveit_config/share/piper_moveit_config/local_setup.sh\n'}
+[0.656687] (piper_moveit_config) StdoutLine: {'line': b'-- Up-to-date: /home/dali/ros2_ws/install/piper_moveit_config/share/piper_moveit_config/local_setup.zsh\n'}
+[0.656721] (piper_moveit_config) StdoutLine: {'line': b'-- Up-to-date: /home/dali/ros2_ws/install/piper_moveit_config/share/piper_moveit_config/local_setup.dsv\n'}
+[0.656754] (piper_moveit_config) StdoutLine: {'line': b'-- Installing: /home/dali/ros2_ws/install/piper_moveit_config/share/piper_moveit_config/package.dsv\n'}
+[0.658905] (piper_moveit_config) StdoutLine: {'line': b'-- Up-to-date: /home/dali/ros2_ws/install/piper_moveit_config/share/ament_index/resource_index/packages/piper_moveit_config\n'}
+[0.658993] (piper_moveit_config) StdoutLine: {'line': b'-- Up-to-date: /home/dali/ros2_ws/install/piper_moveit_config/share/piper_moveit_config/cmake/piper_moveit_configConfig.cmake\n'}
+[0.659032] (piper_moveit_config) StdoutLine: {'line': b'-- Up-to-date: /home/dali/ros2_ws/install/piper_moveit_config/share/piper_moveit_config/cmake/piper_moveit_configConfig-version.cmake\n'}
+[0.659068] (piper_moveit_config) StdoutLine: {'line': b'-- Up-to-date: /home/dali/ros2_ws/install/piper_moveit_config/share/piper_moveit_config/package.xml\n'}
+[0.667127] (piper_moveit_config) CommandEnded: {'returncode': 0}
+[0.684187] (piper_moveit_config) JobEnded: {'identifier': 'piper_moveit_config', 'rc': 0}
+[0.713102] (-) TimerEvent: {}
+[0.842169] (-) TimerEvent: {}
+[0.942927] (-) TimerEvent: {}
+[1.043365] (-) TimerEvent: {}
+[1.143753] (-) TimerEvent: {}
+[1.244264] (-) TimerEvent: {}
+[1.337238] (scene_graph_interfaces) StdoutLine: {'line': b'running egg_info\n'}
+[1.344474] (-) TimerEvent: {}
+[1.412575] (scene_graph_interfaces) StdoutLine: {'line': b'writing scene_graph_interfaces.egg-info/PKG-INFO\n'}
+[1.415394] (scene_graph_interfaces) StdoutLine: {'line': b'writing dependency_links to scene_graph_interfaces.egg-info/dependency_links.txt\n'}
+[1.417562] (scene_graph_interfaces) StdoutLine: {'line': b'writing top-level names to scene_graph_interfaces.egg-info/top_level.txt\n'}
+[1.448176] (-) TimerEvent: {}
+[1.555952] (-) TimerEvent: {}
+[1.596082] (scene_graph_interfaces) StdoutLine: {'line': b"reading manifest file 'scene_graph_interfaces.egg-info/SOURCES.txt'\n"}
+[1.596272] (scene_graph_interfaces) StdoutLine: {'line': b"writing manifest file 'scene_graph_interfaces.egg-info/SOURCES.txt'\n"}
+[1.623326] (scene_graph_interfaces) StdoutLine: {'line': b'[ 20%] Built target ament_cmake_python_build_scene_graph_interfaces_egg\n'}
+[1.656205] (-) TimerEvent: {}
+[1.702208] (scene_graph_interfaces) StdoutLine: {'line': b'[ 29%] Built target scene_graph_interfaces__rosidl_typesupport_introspection_c\n'}
+[1.757518] (-) TimerEvent: {}
+[1.807302] (scene_graph_interfaces) StdoutLine: {'line': b'[ 38%] Built target scene_graph_interfaces__rosidl_typesupport_c\n'}
+[1.863004] (-) TimerEvent: {}
+[1.902158] (scene_graph_interfaces) StdoutLine: {'line': b'[ 47%] Built target scene_graph_interfaces__rosidl_typesupport_fastrtps_c\n'}
+[1.963160] (-) TimerEvent: {}
+[1.967532] (scene_graph_interfaces) StdoutLine: {'line': b'[ 50%] Built target scene_graph_interfaces__cpp\n'}
+[2.105740] (-) TimerEvent: {}
+[2.210010] (-) TimerEvent: {}
+[2.215985] (scene_graph_interfaces) StdoutLine: {'line': b'[ 59%] Built target scene_graph_interfaces__rosidl_typesupport_introspection_cpp\n'}
+[2.313401] (scene_graph_interfaces) StdoutLine: {'line': b'[ 68%] Built target scene_graph_interfaces__rosidl_typesupport_fastrtps_cpp\n'}
+[2.313596] (-) TimerEvent: {}
+[2.375243] (scene_graph_interfaces) StdoutLine: {'line': b'[ 77%] Built target scene_graph_interfaces__rosidl_typesupport_cpp\n'}
+[2.414002] (-) TimerEvent: {}
+[2.418783] (scene_graph_interfaces) StdoutLine: {'line': b'[ 77%] Built target scene_graph_interfaces\n'}
+[2.509376] (scene_graph_interfaces) StdoutLine: {'line': b'[ 79%] Built target scene_graph_interfaces__py\n'}
+[2.514198] (-) TimerEvent: {}
+[2.614895] (-) TimerEvent: {}
+[2.639094] (scene_graph_interfaces) StdoutLine: {'line': b'[ 86%] Built target scene_graph_interfaces__rosidl_generator_py\n'}
+[2.708809] (scene_graph_interfaces) StdoutLine: {'line': b'[ 90%] Built target scene_graph_interfaces_s__rosidl_typesupport_fastrtps_c\n'}
+[2.715110] (-) TimerEvent: {}
+[2.791208] (scene_graph_interfaces) StdoutLine: {'line': b'[ 95%] Built target scene_graph_interfaces_s__rosidl_typesupport_c\n'}
+[2.816283] (-) TimerEvent: {}
+[2.914309] (scene_graph_interfaces) StdoutLine: {'line': b'[100%] Built target scene_graph_interfaces_s__rosidl_typesupport_introspection_c\n'}
+[2.916673] (-) TimerEvent: {}
+[2.969104] (scene_graph_interfaces) CommandEnded: {'returncode': 0}
+[2.980115] (scene_graph_interfaces) JobProgress: {'identifier': 'scene_graph_interfaces', 'progress': 'install'}
+[2.980178] (scene_graph_interfaces) Command: {'cmd': ['/usr/bin/cmake', '--install', '/home/dali/ros2_ws/build/scene_graph_interfaces'], 'cwd': '/home/dali/ros2_ws/build/scene_graph_interfaces', 'env': OrderedDict({'LESSOPEN': '| /usr/bin/lesspipe %s', 'GZ_SIM_RESOURCE_PATH': '/opt/ros/jazzy/share', 'USER': 'dali', 'GZ_CONFIG_PATH': '/opt/ros/jazzy/opt/gz_sim_vendor/share/gz:/opt/ros/jazzy/opt/sdformat_vendor/share/gz:/opt/ros/jazzy/opt/gz_gui_vendor/share/gz:/opt/ros/jazzy/opt/gz_transport_vendor/share/gz:/opt/ros/jazzy/opt/gz_rendering_vendor/share/gz:/opt/ros/jazzy/opt/gz_plugin_vendor/share/gz:/opt/ros/jazzy/opt/gz_fuel_tools_vendor/share/gz:/opt/ros/jazzy/opt/gz_msgs_vendor/share/gz:/opt/ros/jazzy/opt/gz_common_vendor/share/gz', 'XDG_SESSION_TYPE': 'wayland', 'CLUTTER_DISABLE_MIPMAPPED_TEXT': '1', 'SHLVL': '1', 'LD_LIBRARY_PATH': '/home/dali/ros2_ws/install/scene_graph_interfaces/lib:/opt/ros/jazzy/opt/gz_sim_vendor/lib:/opt/ros/jazzy/opt/gz_sensors_vendor/lib:/opt/ros/jazzy/opt/gz_physics_vendor/lib:/opt/ros/jazzy/opt/sdformat_vendor/lib:/opt/ros/jazzy/opt/rviz_ogre_vendor/lib:/opt/ros/jazzy/lib/aarch64-linux-gnu:/opt/ros/jazzy/opt/gz_gui_vendor/lib:/opt/ros/jazzy/opt/gz_transport_vendor/lib:/opt/ros/jazzy/opt/gz_rendering_vendor/lib:/opt/ros/jazzy/opt/gz_plugin_vendor/lib:/opt/ros/jazzy/opt/gz_fuel_tools_vendor/lib:/opt/ros/jazzy/opt/gz_msgs_vendor/lib:/opt/ros/jazzy/opt/gz_common_vendor/lib:/opt/ros/jazzy/opt/gz_math_vendor/lib:/opt/ros/jazzy/opt/gz_utils_vendor/lib:/opt/ros/jazzy/opt/gz_tools_vendor/lib:/opt/ros/jazzy/opt/gz_ogre_next_vendor/lib:/opt/ros/jazzy/opt/gz_dartsim_vendor/lib:/opt/ros/jazzy/opt/gz_cmake_vendor/lib:/opt/ros/jazzy/lib', 'HOME': '/home/dali', 'OLDPWD': '/home/dali', 'DESKTOP_SESSION': 'ubuntu', 'ROS_PYTHON_VERSION': '3', 'GNOME_SHELL_SESSION_MODE': 'ubuntu', 'GTK_MODULES': 'gail:atk-bridge', 'SYSTEMD_EXEC_PID': '1842', 'GSM_SKIP_SSH_AGENT_WORKAROUND': 'true', 'DBUS_SESSION_BUS_ADDRESS': 'unix:path=/run/user/1000/bus', 'COLORTERM': 'truecolor', 'DEBUGINFOD_URLS': 'https://debuginfod.ubuntu.com', 'IM_CONFIG_PHASE': '1', 'WAYLAND_DISPLAY': 'wayland-0', 'COLCON_PREFIX_PATH': '/home/dali/ros2_ws/install', 'ROS_DISTRO': 'jazzy', 'LOGNAME': 'dali', '_': '/usr/bin/colcon', 'ROS_VERSION': '2', 'MEMORY_PRESSURE_WATCH': '/sys/fs/cgroup/user.slice/user-1000.slice/user@1000.service/session.slice/org.gnome.Shell@wayland.service/memory.pressure', 'XDG_SESSION_CLASS': 'user', 'USERNAME': 'dali', 'TERM': 'xterm-256color', 'GNOME_DESKTOP_SESSION_ID': 'this-is-deprecated', 'PATH': '/opt/ros/jazzy/opt/gz_msgs_vendor/bin:/opt/ros/jazzy/opt/gz_tools_vendor/bin:/opt/ros/jazzy/opt/gz_ogre_next_vendor/bin:/opt/ros/jazzy/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/snap/bin', 'SESSION_MANAGER': 'local/dali:@/tmp/.ICE-unix/1810,unix/dali:/tmp/.ICE-unix/1810', 'XDG_MENU_PREFIX': 'gnome-', 'GNOME_TERMINAL_SCREEN': '/org/gnome/Terminal/screen/29fc844f_180e_4146_8852_286745236268', 'GNOME_SETUP_DISPLAY': ':1', 'XDG_RUNTIME_DIR': '/run/user/1000', 'DISPLAY': ':0', 'LANG': 'en_US.UTF-8', 'XDG_CURRENT_DESKTOP': 'ubuntu:GNOME', 'XMODIFIERS': '@im=ibus', 'XDG_SESSION_DESKTOP': 'ubuntu', 'XAUTHORITY': '/run/user/1000/.mutter-Xwaylandauth.DMF3I3', 'LS_COLORS': 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=00:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.avif=01;35:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:*~=00;90:*#=00;90:*.bak=00;90:*.crdownload=00;90:*.dpkg-dist=00;90:*.dpkg-new=00;90:*.dpkg-old=00;90:*.dpkg-tmp=00;90:*.old=00;90:*.orig=00;90:*.part=00;90:*.rej=00;90:*.rpmnew=00;90:*.rpmorig=00;90:*.rpmsave=00;90:*.swp=00;90:*.tmp=00;90:*.ucf-dist=00;90:*.ucf-new=00;90:*.ucf-old=00;90:', 'GNOME_TERMINAL_SERVICE': ':1.111', 'SSH_AUTH_SOCK': '/run/user/1000/keyring/ssh', 'AMENT_PREFIX_PATH': '/home/dali/ros2_ws/install/piper_bringup:/home/dali/ros2_ws/install/scene_graph_interfaces:/home/dali/ros2_ws/install/piper_moveit_config:/home/dali/ros2_ws/install/piper_description:/opt/ros/jazzy', 'SHELL': '/bin/bash', 'QT_ACCESSIBILITY': '1', 'GDMSESSION': 'ubuntu', 'LESSCLOSE': '/usr/bin/lesspipe %s %s', 'ROS_AUTOMATIC_DISCOVERY_RANGE': 'SUBNET', 'QT_IM_MODULE': 'ibus', 'PWD': '/home/dali/ros2_ws/build/scene_graph_interfaces', 'LC_ALL': 'en_US.UTF-8', 'XDG_CONFIG_DIRS': '/etc/xdg/xdg-ubuntu:/etc/xdg', 'XDG_DATA_DIRS': '/usr/share/ubuntu:/usr/share/gnome:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop', 'PYTHONPATH': '/home/dali/ros2_ws/install/scene_graph_interfaces/lib/python3.12/site-packages:/opt/ros/jazzy/lib/python3.12/site-packages', 'COLCON': '1', 'MEMORY_PRESSURE_WRITE': 'c29tZSAyMDAwMDAgMjAwMDAwMAA=', 'VTE_VERSION': '7600', 'CMAKE_PREFIX_PATH': '/home/dali/ros2_ws/install/piper_bringup:/home/dali/ros2_ws/install/scene_graph_interfaces:/home/dali/ros2_ws/install/piper_moveit_config:/home/dali/ros2_ws/install/piper_description:/opt/ros/jazzy/opt/gz_sim_vendor:/opt/ros/jazzy/opt/gz_sensors_vendor:/opt/ros/jazzy/opt/gz_physics_vendor:/opt/ros/jazzy/opt/sdformat_vendor:/opt/ros/jazzy/opt/gz_gui_vendor:/opt/ros/jazzy/opt/gz_transport_vendor:/opt/ros/jazzy/opt/gz_rendering_vendor:/opt/ros/jazzy/opt/gz_plugin_vendor:/opt/ros/jazzy/opt/gz_fuel_tools_vendor:/opt/ros/jazzy/opt/gz_msgs_vendor:/opt/ros/jazzy/opt/gz_common_vendor:/opt/ros/jazzy/opt/gz_math_vendor:/opt/ros/jazzy/opt/gz_utils_vendor:/opt/ros/jazzy/opt/gz_tools_vendor:/opt/ros/jazzy/opt/gz_ogre_next_vendor:/opt/ros/jazzy/opt/gz_dartsim_vendor:/opt/ros/jazzy/opt/gz_cmake_vendor:/opt/ros/jazzy'}), 'shell': False}
+[2.999624] (scene_graph_interfaces) StdoutLine: {'line': b'-- Install configuration: ""\n'}
+[3.000195] (scene_graph_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/dali/ros2_ws/install/scene_graph_interfaces/share/ament_index/resource_index/rosidl_interfaces/scene_graph_interfaces\n'}
+[3.000252] (scene_graph_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/dali/ros2_ws/install/scene_graph_interfaces/share/scene_graph_interfaces/msg/FunObject3DBoundingBox.json\n'}
+[3.000286] (scene_graph_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/dali/ros2_ws/install/scene_graph_interfaces/share/scene_graph_interfaces/msg/FunObject3DBoundingBoxList.json\n'}
+[3.000319] (scene_graph_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/dali/ros2_ws/install/scene_graph_interfaces/include/scene_graph_interfaces/scene_graph_interfaces\n'}
+[3.000352] (scene_graph_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/dali/ros2_ws/install/scene_graph_interfaces/include/scene_graph_interfaces/scene_graph_interfaces/msg\n'}
+[3.000383] (scene_graph_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/dali/ros2_ws/install/scene_graph_interfaces/include/scene_graph_interfaces/scene_graph_interfaces/msg/rosidl_generator_c__visibility_control.h\n'}
+[3.000680] (scene_graph_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/dali/ros2_ws/install/scene_graph_interfaces/include/scene_graph_interfaces/scene_graph_interfaces/msg/fun_object3_d_bounding_box.h\n'}
+[3.000716] (scene_graph_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/dali/ros2_ws/install/scene_graph_interfaces/include/scene_graph_interfaces/scene_graph_interfaces/msg/fun_object3_d_bounding_box_list.h\n'}
+[3.000748] (scene_graph_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/dali/ros2_ws/install/scene_graph_interfaces/include/scene_graph_interfaces/scene_graph_interfaces/msg/detail\n'}
+[3.000779] (scene_graph_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/dali/ros2_ws/install/scene_graph_interfaces/include/scene_graph_interfaces/scene_graph_interfaces/msg/detail/fun_object3_d_bounding_box_list__description.c\n'}
+[3.000813] (scene_graph_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/dali/ros2_ws/install/scene_graph_interfaces/include/scene_graph_interfaces/scene_graph_interfaces/msg/detail/fun_object3_d_bounding_box_list__functions.h\n'}
+[3.000906] (scene_graph_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/dali/ros2_ws/install/scene_graph_interfaces/include/scene_graph_interfaces/scene_graph_interfaces/msg/detail/fun_object3_d_bounding_box_list__functions.c\n'}
+[3.000941] (scene_graph_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/dali/ros2_ws/install/scene_graph_interfaces/include/scene_graph_interfaces/scene_graph_interfaces/msg/detail/fun_object3_d_bounding_box_list__struct.h\n'}
+[3.000975] (scene_graph_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/dali/ros2_ws/install/scene_graph_interfaces/include/scene_graph_interfaces/scene_graph_interfaces/msg/detail/fun_object3_d_bounding_box__functions.c\n'}
+[3.001018] (scene_graph_interfaces) StdoutLine: {'line': b'-- Installing: /home/dali/ros2_ws/install/scene_graph_interfaces/include/scene_graph_interfaces/scene_graph_interfaces/msg/detail/fun_object3_d_bounding_box_list__type_support.c\n'}
+[3.001134] (scene_graph_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/dali/ros2_ws/install/scene_graph_interfaces/include/scene_graph_interfaces/scene_graph_interfaces/msg/detail/fun_object3_d_bounding_box__struct.h\n'}
+[3.001169] (scene_graph_interfaces) StdoutLine: {'line': b'-- Installing: /home/dali/ros2_ws/install/scene_graph_interfaces/include/scene_graph_interfaces/scene_graph_interfaces/msg/detail/fun_object3_d_bounding_box__type_support.c\n'}
+[3.001476] (scene_graph_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/dali/ros2_ws/install/scene_graph_interfaces/include/scene_graph_interfaces/scene_graph_interfaces/msg/detail/fun_object3_d_bounding_box__description.c\n'}
+[3.001727] (scene_graph_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/dali/ros2_ws/install/scene_graph_interfaces/include/scene_graph_interfaces/scene_graph_interfaces/msg/detail/fun_object3_d_bounding_box__type_support.h\n'}
+[3.001991] (scene_graph_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/dali/ros2_ws/install/scene_graph_interfaces/include/scene_graph_interfaces/scene_graph_interfaces/msg/detail/fun_object3_d_bounding_box_list__type_support.h\n'}
+[3.002263] (scene_graph_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/dali/ros2_ws/install/scene_graph_interfaces/include/scene_graph_interfaces/scene_graph_interfaces/msg/detail/fun_object3_d_bounding_box__functions.h\n'}
+[3.002689] (scene_graph_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/dali/ros2_ws/install/scene_graph_interfaces/share/scene_graph_interfaces/environment/library_path.sh\n'}
+[3.003102] (scene_graph_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/dali/ros2_ws/install/scene_graph_interfaces/share/scene_graph_interfaces/environment/library_path.dsv\n'}
+[3.003341] (scene_graph_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/dali/ros2_ws/install/scene_graph_interfaces/lib/libscene_graph_interfaces__rosidl_generator_c.so\n'}
+[3.003669] (scene_graph_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/dali/ros2_ws/install/scene_graph_interfaces/include/scene_graph_interfaces/scene_graph_interfaces\n'}
+[3.004355] (scene_graph_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/dali/ros2_ws/install/scene_graph_interfaces/include/scene_graph_interfaces/scene_graph_interfaces/msg\n'}
+[3.004893] (scene_graph_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/dali/ros2_ws/install/scene_graph_interfaces/include/scene_graph_interfaces/scene_graph_interfaces/msg/rosidl_typesupport_fastrtps_c__visibility_control.h\n'}
+[3.004940] (scene_graph_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/dali/ros2_ws/install/scene_graph_interfaces/include/scene_graph_interfaces/scene_graph_interfaces/msg/detail\n'}
+[3.005675] (scene_graph_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/dali/ros2_ws/install/scene_graph_interfaces/include/scene_graph_interfaces/scene_graph_interfaces/msg/detail/fun_object3_d_bounding_box_list__rosidl_typesupport_fastrtps_c.h\n'}
+[3.005725] (scene_graph_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/dali/ros2_ws/install/scene_graph_interfaces/include/scene_graph_interfaces/scene_graph_interfaces/msg/detail/fun_object3_d_bounding_box__rosidl_typesupport_fastrtps_c.h\n'}
+[3.005886] (scene_graph_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/dali/ros2_ws/install/scene_graph_interfaces/lib/libscene_graph_interfaces__rosidl_typesupport_fastrtps_c.so\n'}
+[3.006389] (scene_graph_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/dali/ros2_ws/install/scene_graph_interfaces/include/scene_graph_interfaces/scene_graph_interfaces\n'}
+[3.007308] (scene_graph_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/dali/ros2_ws/install/scene_graph_interfaces/include/scene_graph_interfaces/scene_graph_interfaces/msg\n'}
+[3.008162] (scene_graph_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/dali/ros2_ws/install/scene_graph_interfaces/include/scene_graph_interfaces/scene_graph_interfaces/msg/rosidl_typesupport_introspection_c__visibility_control.h\n'}
+[3.008732] (scene_graph_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/dali/ros2_ws/install/scene_graph_interfaces/include/scene_graph_interfaces/scene_graph_interfaces/msg/detail\n'}
+[3.008777] (scene_graph_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/dali/ros2_ws/install/scene_graph_interfaces/include/scene_graph_interfaces/scene_graph_interfaces/msg/detail/fun_object3_d_bounding_box_list__rosidl_typesupport_introspection_c.h\n'}
+[3.008820] (scene_graph_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/dali/ros2_ws/install/scene_graph_interfaces/include/scene_graph_interfaces/scene_graph_interfaces/msg/detail/fun_object3_d_bounding_box__rosidl_typesupport_introspection_c.h\n'}
+[3.009175] (scene_graph_interfaces) StdoutLine: {'line': b'-- Installing: /home/dali/ros2_ws/install/scene_graph_interfaces/include/scene_graph_interfaces/scene_graph_interfaces/msg/detail/fun_object3_d_bounding_box_list__type_support.c\n'}
+[3.012304] (scene_graph_interfaces) StdoutLine: {'line': b'-- Installing: /home/dali/ros2_ws/install/scene_graph_interfaces/include/scene_graph_interfaces/scene_graph_interfaces/msg/detail/fun_object3_d_bounding_box__type_support.c\n'}
+[3.015087] (scene_graph_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/dali/ros2_ws/install/scene_graph_interfaces/lib/libscene_graph_interfaces__rosidl_typesupport_introspection_c.so\n'}
+[3.015863] (scene_graph_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/dali/ros2_ws/install/scene_graph_interfaces/lib/libscene_graph_interfaces__rosidl_typesupport_c.so\n'}
+[3.015923] (scene_graph_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/dali/ros2_ws/install/scene_graph_interfaces/include/scene_graph_interfaces/scene_graph_interfaces\n'}
+[3.017885] (scene_graph_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/dali/ros2_ws/install/scene_graph_interfaces/include/scene_graph_interfaces/scene_graph_interfaces/msg\n'}
+[3.018059] (-) TimerEvent: {}
+[3.020726] (scene_graph_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/dali/ros2_ws/install/scene_graph_interfaces/include/scene_graph_interfaces/scene_graph_interfaces/msg/rosidl_generator_cpp__visibility_control.hpp\n'}
+[3.023879] (scene_graph_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/dali/ros2_ws/install/scene_graph_interfaces/include/scene_graph_interfaces/scene_graph_interfaces/msg/fun_object3_d_bounding_box.hpp\n'}
+[3.023986] (scene_graph_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/dali/ros2_ws/install/scene_graph_interfaces/include/scene_graph_interfaces/scene_graph_interfaces/msg/fun_object3_d_bounding_box_list.hpp\n'}
+[3.024027] (scene_graph_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/dali/ros2_ws/install/scene_graph_interfaces/include/scene_graph_interfaces/scene_graph_interfaces/msg/detail\n'}
+[3.024066] (scene_graph_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/dali/ros2_ws/install/scene_graph_interfaces/include/scene_graph_interfaces/scene_graph_interfaces/msg/detail/fun_object3_d_bounding_box_list__builder.hpp\n'}
+[3.024101] (scene_graph_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/dali/ros2_ws/install/scene_graph_interfaces/include/scene_graph_interfaces/scene_graph_interfaces/msg/detail/fun_object3_d_bounding_box__type_support.hpp\n'}
+[3.024147] (scene_graph_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/dali/ros2_ws/install/scene_graph_interfaces/include/scene_graph_interfaces/scene_graph_interfaces/msg/detail/fun_object3_d_bounding_box_list__traits.hpp\n'}
+[3.024181] (scene_graph_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/dali/ros2_ws/install/scene_graph_interfaces/include/scene_graph_interfaces/scene_graph_interfaces/msg/detail/fun_object3_d_bounding_box__traits.hpp\n'}
+[3.024217] (scene_graph_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/dali/ros2_ws/install/scene_graph_interfaces/include/scene_graph_interfaces/scene_graph_interfaces/msg/detail/fun_object3_d_bounding_box_list__struct.hpp\n'}
+[3.024249] (scene_graph_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/dali/ros2_ws/install/scene_graph_interfaces/include/scene_graph_interfaces/scene_graph_interfaces/msg/detail/fun_object3_d_bounding_box__builder.hpp\n'}
+[3.024281] (scene_graph_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/dali/ros2_ws/install/scene_graph_interfaces/include/scene_graph_interfaces/scene_graph_interfaces/msg/detail/fun_object3_d_bounding_box__struct.hpp\n'}
+[3.024314] (scene_graph_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/dali/ros2_ws/install/scene_graph_interfaces/include/scene_graph_interfaces/scene_graph_interfaces/msg/detail/fun_object3_d_bounding_box_list__type_support.hpp\n'}
+[3.024877] (scene_graph_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/dali/ros2_ws/install/scene_graph_interfaces/include/scene_graph_interfaces/scene_graph_interfaces\n'}
+[3.024920] (scene_graph_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/dali/ros2_ws/install/scene_graph_interfaces/include/scene_graph_interfaces/scene_graph_interfaces/msg\n'}
+[3.024952] (scene_graph_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/dali/ros2_ws/install/scene_graph_interfaces/include/scene_graph_interfaces/scene_graph_interfaces/msg/rosidl_typesupport_fastrtps_cpp__visibility_control.h\n'}
+[3.024984] (scene_graph_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/dali/ros2_ws/install/scene_graph_interfaces/include/scene_graph_interfaces/scene_graph_interfaces/msg/detail\n'}
+[3.025015] (scene_graph_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/dali/ros2_ws/install/scene_graph_interfaces/include/scene_graph_interfaces/scene_graph_interfaces/msg/detail/fun_object3_d_bounding_box_list__rosidl_typesupport_fastrtps_cpp.hpp\n'}
+[3.025054] (scene_graph_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/dali/ros2_ws/install/scene_graph_interfaces/include/scene_graph_interfaces/scene_graph_interfaces/msg/detail/dds_fastrtps\n'}
+[3.025086] (scene_graph_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/dali/ros2_ws/install/scene_graph_interfaces/include/scene_graph_interfaces/scene_graph_interfaces/msg/detail/fun_object3_d_bounding_box__rosidl_typesupport_fastrtps_cpp.hpp\n'}
+[3.026498] (scene_graph_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/dali/ros2_ws/install/scene_graph_interfaces/lib/libscene_graph_interfaces__rosidl_typesupport_fastrtps_cpp.so\n'}
+[3.026949] (scene_graph_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/dali/ros2_ws/install/scene_graph_interfaces/include/scene_graph_interfaces/scene_graph_interfaces\n'}
+[3.029076] (scene_graph_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/dali/ros2_ws/install/scene_graph_interfaces/include/scene_graph_interfaces/scene_graph_interfaces/msg\n'}
+[3.030757] (scene_graph_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/dali/ros2_ws/install/scene_graph_interfaces/include/scene_graph_interfaces/scene_graph_interfaces/msg/detail\n'}
+[3.030807] (scene_graph_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/dali/ros2_ws/install/scene_graph_interfaces/include/scene_graph_interfaces/scene_graph_interfaces/msg/detail/fun_object3_d_bounding_box_list__rosidl_typesupport_introspection_cpp.hpp\n'}
+[3.030988] (scene_graph_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/dali/ros2_ws/install/scene_graph_interfaces/include/scene_graph_interfaces/scene_graph_interfaces/msg/detail/fun_object3_d_bounding_box__type_support.cpp\n'}
+[3.031308] (scene_graph_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/dali/ros2_ws/install/scene_graph_interfaces/include/scene_graph_interfaces/scene_graph_interfaces/msg/detail/fun_object3_d_bounding_box__rosidl_typesupport_introspection_cpp.hpp\n'}
+[3.031367] (scene_graph_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/dali/ros2_ws/install/scene_graph_interfaces/include/scene_graph_interfaces/scene_graph_interfaces/msg/detail/fun_object3_d_bounding_box_list__type_support.cpp\n'}
+[3.031439] (scene_graph_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/dali/ros2_ws/install/scene_graph_interfaces/lib/libscene_graph_interfaces__rosidl_typesupport_introspection_cpp.so\n'}
+[3.031493] (scene_graph_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/dali/ros2_ws/install/scene_graph_interfaces/lib/libscene_graph_interfaces__rosidl_typesupport_cpp.so\n'}
+[3.031546] (scene_graph_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/dali/ros2_ws/install/scene_graph_interfaces/share/scene_graph_interfaces/environment/pythonpath.sh\n'}
+[3.031609] (scene_graph_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/dali/ros2_ws/install/scene_graph_interfaces/share/scene_graph_interfaces/environment/pythonpath.dsv\n'}
+[3.031665] (scene_graph_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/dali/ros2_ws/install/scene_graph_interfaces/lib/python3.12/site-packages/scene_graph_interfaces-0.0.0-py3.12.egg-info\n'}
+[3.031720] (scene_graph_interfaces) StdoutLine: {'line': b'-- Installing: /home/dali/ros2_ws/install/scene_graph_interfaces/lib/python3.12/site-packages/scene_graph_interfaces-0.0.0-py3.12.egg-info/SOURCES.txt\n'}
+[3.031773] (scene_graph_interfaces) StdoutLine: {'line': b'-- Installing: /home/dali/ros2_ws/install/scene_graph_interfaces/lib/python3.12/site-packages/scene_graph_interfaces-0.0.0-py3.12.egg-info/top_level.txt\n'}
+[3.031825] (scene_graph_interfaces) StdoutLine: {'line': b'-- Installing: /home/dali/ros2_ws/install/scene_graph_interfaces/lib/python3.12/site-packages/scene_graph_interfaces-0.0.0-py3.12.egg-info/dependency_links.txt\n'}
+[3.031878] (scene_graph_interfaces) StdoutLine: {'line': b'-- Installing: /home/dali/ros2_ws/install/scene_graph_interfaces/lib/python3.12/site-packages/scene_graph_interfaces-0.0.0-py3.12.egg-info/PKG-INFO\n'}
+[3.032067] (scene_graph_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/dali/ros2_ws/install/scene_graph_interfaces/lib/python3.12/site-packages/scene_graph_interfaces\n'}
+[3.032127] (scene_graph_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/dali/ros2_ws/install/scene_graph_interfaces/lib/python3.12/site-packages/scene_graph_interfaces/__init__.py\n'}
+[3.032182] (scene_graph_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/dali/ros2_ws/install/scene_graph_interfaces/lib/python3.12/site-packages/scene_graph_interfaces/scene_graph_interfaces_s__rosidl_typesupport_fastrtps_c.so\n'}
+[3.032243] (scene_graph_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/dali/ros2_ws/install/scene_graph_interfaces/lib/python3.12/site-packages/scene_graph_interfaces/_scene_graph_interfaces_s.ep.rosidl_typesupport_fastrtps_c.c\n'}
+[3.032317] (scene_graph_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/dali/ros2_ws/install/scene_graph_interfaces/lib/python3.12/site-packages/scene_graph_interfaces/_scene_graph_interfaces_s.ep.rosidl_typesupport_c.c\n'}
+[3.032371] (scene_graph_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/dali/ros2_ws/install/scene_graph_interfaces/lib/python3.12/site-packages/scene_graph_interfaces/msg\n'}
+[3.032424] (scene_graph_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/dali/ros2_ws/install/scene_graph_interfaces/lib/python3.12/site-packages/scene_graph_interfaces/msg/_fun_object3_d_bounding_box_list_s.c\n'}
+[3.032545] (scene_graph_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/dali/ros2_ws/install/scene_graph_interfaces/lib/python3.12/site-packages/scene_graph_interfaces/msg/_fun_object3_d_bounding_box_list.py\n'}
+[3.032630] (scene_graph_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/dali/ros2_ws/install/scene_graph_interfaces/lib/python3.12/site-packages/scene_graph_interfaces/msg/__init__.py\n'}
+[3.032667] (scene_graph_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/dali/ros2_ws/install/scene_graph_interfaces/lib/python3.12/site-packages/scene_graph_interfaces/msg/_fun_object3_d_bounding_box_s.c\n'}
+[3.032700] (scene_graph_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/dali/ros2_ws/install/scene_graph_interfaces/lib/python3.12/site-packages/scene_graph_interfaces/msg/_fun_object3_d_bounding_box.py\n'}
+[3.032732] (scene_graph_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/dali/ros2_ws/install/scene_graph_interfaces/lib/python3.12/site-packages/scene_graph_interfaces/scene_graph_interfaces_s__rosidl_typesupport_introspection_c.so\n'}
+[3.032764] (scene_graph_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/dali/ros2_ws/install/scene_graph_interfaces/lib/python3.12/site-packages/scene_graph_interfaces/_scene_graph_interfaces_s.ep.rosidl_typesupport_introspection_c.c\n'}
+[3.032795] (scene_graph_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/dali/ros2_ws/install/scene_graph_interfaces/lib/python3.12/site-packages/scene_graph_interfaces/scene_graph_interfaces_s__rosidl_typesupport_c.so\n'}
+[3.077699] (scene_graph_interfaces) StdoutLine: {'line': b"Listing '/home/dali/ros2_ws/install/scene_graph_interfaces/lib/python3.12/site-packages/scene_graph_interfaces'...\n"}
+[3.078172] (scene_graph_interfaces) StdoutLine: {'line': b"Listing '/home/dali/ros2_ws/install/scene_graph_interfaces/lib/python3.12/site-packages/scene_graph_interfaces/msg'...\n"}
+[3.085436] (scene_graph_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/dali/ros2_ws/install/scene_graph_interfaces/lib/python3.12/site-packages/scene_graph_interfaces/scene_graph_interfaces_s__rosidl_typesupport_fastrtps_c.so\n'}
+[3.086151] (scene_graph_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/dali/ros2_ws/install/scene_graph_interfaces/lib/python3.12/site-packages/scene_graph_interfaces/scene_graph_interfaces_s__rosidl_typesupport_introspection_c.so\n'}
+[3.086684] (scene_graph_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/dali/ros2_ws/install/scene_graph_interfaces/lib/python3.12/site-packages/scene_graph_interfaces/scene_graph_interfaces_s__rosidl_typesupport_c.so\n'}
+[3.086822] (scene_graph_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/dali/ros2_ws/install/scene_graph_interfaces/lib/libscene_graph_interfaces__rosidl_generator_py.so\n'}
+[3.086903] (scene_graph_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/dali/ros2_ws/install/scene_graph_interfaces/share/scene_graph_interfaces/msg/FunObject3DBoundingBox.idl\n'}
+[3.088573] (scene_graph_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/dali/ros2_ws/install/scene_graph_interfaces/share/scene_graph_interfaces/msg/FunObject3DBoundingBoxList.idl\n'}
+[3.088620] (scene_graph_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/dali/ros2_ws/install/scene_graph_interfaces/share/scene_graph_interfaces/msg/FunObject3DBoundingBox.msg\n'}
+[3.088655] (scene_graph_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/dali/ros2_ws/install/scene_graph_interfaces/share/scene_graph_interfaces/msg/FunObject3DBoundingBoxList.msg\n'}
+[3.088688] (scene_graph_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/dali/ros2_ws/install/scene_graph_interfaces/share/ament_index/resource_index/package_run_dependencies/scene_graph_interfaces\n'}
+[3.088723] (scene_graph_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/dali/ros2_ws/install/scene_graph_interfaces/share/ament_index/resource_index/parent_prefix_path/scene_graph_interfaces\n'}
+[3.088755] (scene_graph_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/dali/ros2_ws/install/scene_graph_interfaces/share/scene_graph_interfaces/environment/ament_prefix_path.sh\n'}
+[3.088788] (scene_graph_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/dali/ros2_ws/install/scene_graph_interfaces/share/scene_graph_interfaces/environment/ament_prefix_path.dsv\n'}
+[3.088838] (scene_graph_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/dali/ros2_ws/install/scene_graph_interfaces/share/scene_graph_interfaces/environment/path.sh\n'}
+[3.091092] (scene_graph_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/dali/ros2_ws/install/scene_graph_interfaces/share/scene_graph_interfaces/environment/path.dsv\n'}
+[3.092380] (scene_graph_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/dali/ros2_ws/install/scene_graph_interfaces/share/scene_graph_interfaces/local_setup.bash\n'}
+[3.093652] (scene_graph_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/dali/ros2_ws/install/scene_graph_interfaces/share/scene_graph_interfaces/local_setup.sh\n'}
+[3.093689] (scene_graph_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/dali/ros2_ws/install/scene_graph_interfaces/share/scene_graph_interfaces/local_setup.zsh\n'}
+[3.093723] (scene_graph_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/dali/ros2_ws/install/scene_graph_interfaces/share/scene_graph_interfaces/local_setup.dsv\n'}
+[3.093755] (scene_graph_interfaces) StdoutLine: {'line': b'-- Installing: /home/dali/ros2_ws/install/scene_graph_interfaces/share/scene_graph_interfaces/package.dsv\n'}
+[3.093796] (scene_graph_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/dali/ros2_ws/install/scene_graph_interfaces/share/ament_index/resource_index/packages/scene_graph_interfaces\n'}
+[3.096905] (scene_graph_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/dali/ros2_ws/install/scene_graph_interfaces/share/scene_graph_interfaces/cmake/export_scene_graph_interfaces__rosidl_generator_cExport.cmake\n'}
+[3.097728] (scene_graph_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/dali/ros2_ws/install/scene_graph_interfaces/share/scene_graph_interfaces/cmake/export_scene_graph_interfaces__rosidl_generator_cExport-noconfig.cmake\n'}
+[3.097770] (scene_graph_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/dali/ros2_ws/install/scene_graph_interfaces/share/scene_graph_interfaces/cmake/export_scene_graph_interfaces__rosidl_typesupport_fastrtps_cExport.cmake\n'}
+[3.097805] (scene_graph_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/dali/ros2_ws/install/scene_graph_interfaces/share/scene_graph_interfaces/cmake/export_scene_graph_interfaces__rosidl_typesupport_fastrtps_cExport-noconfig.cmake\n'}
+[3.097910] (scene_graph_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/dali/ros2_ws/install/scene_graph_interfaces/share/scene_graph_interfaces/cmake/scene_graph_interfaces__rosidl_typesupport_introspection_cExport.cmake\n'}
+[3.099590] (scene_graph_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/dali/ros2_ws/install/scene_graph_interfaces/share/scene_graph_interfaces/cmake/scene_graph_interfaces__rosidl_typesupport_introspection_cExport-noconfig.cmake\n'}
+[3.102282] (scene_graph_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/dali/ros2_ws/install/scene_graph_interfaces/share/scene_graph_interfaces/cmake/scene_graph_interfaces__rosidl_typesupport_cExport.cmake\n'}
+[3.102436] (scene_graph_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/dali/ros2_ws/install/scene_graph_interfaces/share/scene_graph_interfaces/cmake/scene_graph_interfaces__rosidl_typesupport_cExport-noconfig.cmake\n'}
+[3.102495] (scene_graph_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/dali/ros2_ws/install/scene_graph_interfaces/share/scene_graph_interfaces/cmake/export_scene_graph_interfaces__rosidl_generator_cppExport.cmake\n'}
+[3.105441] (scene_graph_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/dali/ros2_ws/install/scene_graph_interfaces/share/scene_graph_interfaces/cmake/export_scene_graph_interfaces__rosidl_typesupport_fastrtps_cppExport.cmake\n'}
+[3.105692] (scene_graph_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/dali/ros2_ws/install/scene_graph_interfaces/share/scene_graph_interfaces/cmake/export_scene_graph_interfaces__rosidl_typesupport_fastrtps_cppExport-noconfig.cmake\n'}
+[3.107065] (scene_graph_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/dali/ros2_ws/install/scene_graph_interfaces/share/scene_graph_interfaces/cmake/scene_graph_interfaces__rosidl_typesupport_introspection_cppExport.cmake\n'}
+[3.107140] (scene_graph_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/dali/ros2_ws/install/scene_graph_interfaces/share/scene_graph_interfaces/cmake/scene_graph_interfaces__rosidl_typesupport_introspection_cppExport-noconfig.cmake\n'}
+[3.108951] (scene_graph_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/dali/ros2_ws/install/scene_graph_interfaces/share/scene_graph_interfaces/cmake/scene_graph_interfaces__rosidl_typesupport_cppExport.cmake\n'}
+[3.109032] (scene_graph_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/dali/ros2_ws/install/scene_graph_interfaces/share/scene_graph_interfaces/cmake/scene_graph_interfaces__rosidl_typesupport_cppExport-noconfig.cmake\n'}
+[3.111350] (scene_graph_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/dali/ros2_ws/install/scene_graph_interfaces/share/scene_graph_interfaces/cmake/export_scene_graph_interfaces__rosidl_generator_pyExport.cmake\n'}
+[3.111455] (scene_graph_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/dali/ros2_ws/install/scene_graph_interfaces/share/scene_graph_interfaces/cmake/export_scene_graph_interfaces__rosidl_generator_pyExport-noconfig.cmake\n'}
+[3.111494] (scene_graph_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/dali/ros2_ws/install/scene_graph_interfaces/share/scene_graph_interfaces/cmake/rosidl_cmake-extras.cmake\n'}
+[3.112941] (scene_graph_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/dali/ros2_ws/install/scene_graph_interfaces/share/scene_graph_interfaces/cmake/ament_cmake_export_dependencies-extras.cmake\n'}
+[3.113143] (scene_graph_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/dali/ros2_ws/install/scene_graph_interfaces/share/scene_graph_interfaces/cmake/ament_cmake_export_include_directories-extras.cmake\n'}
+[3.116014] (scene_graph_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/dali/ros2_ws/install/scene_graph_interfaces/share/scene_graph_interfaces/cmake/ament_cmake_export_libraries-extras.cmake\n'}
+[3.116780] (scene_graph_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/dali/ros2_ws/install/scene_graph_interfaces/share/scene_graph_interfaces/cmake/ament_cmake_export_targets-extras.cmake\n'}
+[3.117053] (scene_graph_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/dali/ros2_ws/install/scene_graph_interfaces/share/scene_graph_interfaces/cmake/rosidl_cmake_export_typesupport_targets-extras.cmake\n'}
+[3.117102] (scene_graph_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/dali/ros2_ws/install/scene_graph_interfaces/share/scene_graph_interfaces/cmake/rosidl_cmake_export_typesupport_libraries-extras.cmake\n'}
+[3.117136] (scene_graph_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/dali/ros2_ws/install/scene_graph_interfaces/share/scene_graph_interfaces/cmake/scene_graph_interfacesConfig.cmake\n'}
+[3.119455] (scene_graph_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/dali/ros2_ws/install/scene_graph_interfaces/share/scene_graph_interfaces/cmake/scene_graph_interfacesConfig-version.cmake\n'}
+[3.119565] (-) TimerEvent: {}
+[3.120478] (scene_graph_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/dali/ros2_ws/install/scene_graph_interfaces/share/scene_graph_interfaces/package.xml\n'}
+[3.133226] (scene_graph_interfaces) CommandEnded: {'returncode': 0}
+[3.268037] (-) TimerEvent: {}
+[3.318909] (scene_graph_interfaces) JobEnded: {'identifier': 'scene_graph_interfaces', 'rc': 0}
+[3.319382] (piper_bringup) JobStarted: {'identifier': 'piper_bringup'}
+[3.359320] (piper_bringup) JobProgress: {'identifier': 'piper_bringup', 'progress': 'cmake'}
+[3.360321] (piper_bringup) JobProgress: {'identifier': 'piper_bringup', 'progress': 'build'}
+[3.360340] (piper_bringup) Command: {'cmd': ['/usr/bin/cmake', '--build', '/home/dali/ros2_ws/build/piper_bringup', '--', '-j4', '-l4'], 'cwd': '/home/dali/ros2_ws/build/piper_bringup', 'env': OrderedDict({'LESSOPEN': '| /usr/bin/lesspipe %s', 'GZ_SIM_RESOURCE_PATH': '/opt/ros/jazzy/share', 'USER': 'dali', 'GZ_CONFIG_PATH': '/opt/ros/jazzy/opt/gz_sim_vendor/share/gz:/opt/ros/jazzy/opt/sdformat_vendor/share/gz:/opt/ros/jazzy/opt/gz_gui_vendor/share/gz:/opt/ros/jazzy/opt/gz_transport_vendor/share/gz:/opt/ros/jazzy/opt/gz_rendering_vendor/share/gz:/opt/ros/jazzy/opt/gz_plugin_vendor/share/gz:/opt/ros/jazzy/opt/gz_fuel_tools_vendor/share/gz:/opt/ros/jazzy/opt/gz_msgs_vendor/share/gz:/opt/ros/jazzy/opt/gz_common_vendor/share/gz', 'XDG_SESSION_TYPE': 'wayland', 'CLUTTER_DISABLE_MIPMAPPED_TEXT': '1', 'SHLVL': '1', 'LD_LIBRARY_PATH': '/home/dali/ros2_ws/install/scene_graph_interfaces/lib:/opt/ros/jazzy/opt/gz_sim_vendor/lib:/opt/ros/jazzy/opt/gz_sensors_vendor/lib:/opt/ros/jazzy/opt/gz_physics_vendor/lib:/opt/ros/jazzy/opt/sdformat_vendor/lib:/opt/ros/jazzy/opt/rviz_ogre_vendor/lib:/opt/ros/jazzy/lib/aarch64-linux-gnu:/opt/ros/jazzy/opt/gz_gui_vendor/lib:/opt/ros/jazzy/opt/gz_transport_vendor/lib:/opt/ros/jazzy/opt/gz_rendering_vendor/lib:/opt/ros/jazzy/opt/gz_plugin_vendor/lib:/opt/ros/jazzy/opt/gz_fuel_tools_vendor/lib:/opt/ros/jazzy/opt/gz_msgs_vendor/lib:/opt/ros/jazzy/opt/gz_common_vendor/lib:/opt/ros/jazzy/opt/gz_math_vendor/lib:/opt/ros/jazzy/opt/gz_utils_vendor/lib:/opt/ros/jazzy/opt/gz_tools_vendor/lib:/opt/ros/jazzy/opt/gz_ogre_next_vendor/lib:/opt/ros/jazzy/opt/gz_dartsim_vendor/lib:/opt/ros/jazzy/opt/gz_cmake_vendor/lib:/opt/ros/jazzy/lib', 'HOME': '/home/dali', 'OLDPWD': '/home/dali', 'DESKTOP_SESSION': 'ubuntu', 'ROS_PYTHON_VERSION': '3', 'GNOME_SHELL_SESSION_MODE': 'ubuntu', 'GTK_MODULES': 'gail:atk-bridge', 'SYSTEMD_EXEC_PID': '1842', 'GSM_SKIP_SSH_AGENT_WORKAROUND': 'true', 'DBUS_SESSION_BUS_ADDRESS': 'unix:path=/run/user/1000/bus', 'COLORTERM': 'truecolor', 'DEBUGINFOD_URLS': 'https://debuginfod.ubuntu.com', 'IM_CONFIG_PHASE': '1', 'WAYLAND_DISPLAY': 'wayland-0', 'COLCON_PREFIX_PATH': '/home/dali/ros2_ws/install', 'ROS_DISTRO': 'jazzy', 'LOGNAME': 'dali', '_': '/usr/bin/colcon', 'ROS_VERSION': '2', 'MEMORY_PRESSURE_WATCH': '/sys/fs/cgroup/user.slice/user-1000.slice/user@1000.service/session.slice/org.gnome.Shell@wayland.service/memory.pressure', 'XDG_SESSION_CLASS': 'user', 'USERNAME': 'dali', 'TERM': 'xterm-256color', 'GNOME_DESKTOP_SESSION_ID': 'this-is-deprecated', 'PATH': '/opt/ros/jazzy/opt/gz_msgs_vendor/bin:/opt/ros/jazzy/opt/gz_tools_vendor/bin:/opt/ros/jazzy/opt/gz_ogre_next_vendor/bin:/opt/ros/jazzy/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/snap/bin', 'SESSION_MANAGER': 'local/dali:@/tmp/.ICE-unix/1810,unix/dali:/tmp/.ICE-unix/1810', 'XDG_MENU_PREFIX': 'gnome-', 'GNOME_TERMINAL_SCREEN': '/org/gnome/Terminal/screen/29fc844f_180e_4146_8852_286745236268', 'GNOME_SETUP_DISPLAY': ':1', 'XDG_RUNTIME_DIR': '/run/user/1000', 'DISPLAY': ':0', 'LANG': 'en_US.UTF-8', 'XDG_CURRENT_DESKTOP': 'ubuntu:GNOME', 'XMODIFIERS': '@im=ibus', 'XDG_SESSION_DESKTOP': 'ubuntu', 'XAUTHORITY': '/run/user/1000/.mutter-Xwaylandauth.DMF3I3', 'LS_COLORS': 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=00:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.avif=01;35:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:*~=00;90:*#=00;90:*.bak=00;90:*.crdownload=00;90:*.dpkg-dist=00;90:*.dpkg-new=00;90:*.dpkg-old=00;90:*.dpkg-tmp=00;90:*.old=00;90:*.orig=00;90:*.part=00;90:*.rej=00;90:*.rpmnew=00;90:*.rpmorig=00;90:*.rpmsave=00;90:*.swp=00;90:*.tmp=00;90:*.ucf-dist=00;90:*.ucf-new=00;90:*.ucf-old=00;90:', 'GNOME_TERMINAL_SERVICE': ':1.111', 'SSH_AUTH_SOCK': '/run/user/1000/keyring/ssh', 'AMENT_PREFIX_PATH': '/home/dali/ros2_ws/install/piper_bringup:/home/dali/ros2_ws/install/scene_graph_interfaces:/home/dali/ros2_ws/install/piper_moveit_config:/home/dali/ros2_ws/install/piper_description:/opt/ros/jazzy', 'SHELL': '/bin/bash', 'QT_ACCESSIBILITY': '1', 'GDMSESSION': 'ubuntu', 'LESSCLOSE': '/usr/bin/lesspipe %s %s', 'ROS_AUTOMATIC_DISCOVERY_RANGE': 'SUBNET', 'QT_IM_MODULE': 'ibus', 'PWD': '/home/dali/ros2_ws/build/piper_bringup', 'LC_ALL': 'en_US.UTF-8', 'XDG_CONFIG_DIRS': '/etc/xdg/xdg-ubuntu:/etc/xdg', 'XDG_DATA_DIRS': '/usr/share/ubuntu:/usr/share/gnome:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop', 'PYTHONPATH': '/home/dali/ros2_ws/install/scene_graph_interfaces/lib/python3.12/site-packages:/opt/ros/jazzy/lib/python3.12/site-packages', 'COLCON': '1', 'MEMORY_PRESSURE_WRITE': 'c29tZSAyMDAwMDAgMjAwMDAwMAA=', 'VTE_VERSION': '7600', 'CMAKE_PREFIX_PATH': '/home/dali/ros2_ws/install/scene_graph_interfaces:/home/dali/ros2_ws/install/piper_bringup:/home/dali/ros2_ws/install/piper_moveit_config:/home/dali/ros2_ws/install/piper_description:/opt/ros/jazzy/opt/gz_sim_vendor:/opt/ros/jazzy/opt/gz_sensors_vendor:/opt/ros/jazzy/opt/gz_physics_vendor:/opt/ros/jazzy/opt/sdformat_vendor:/opt/ros/jazzy/opt/gz_gui_vendor:/opt/ros/jazzy/opt/gz_transport_vendor:/opt/ros/jazzy/opt/gz_rendering_vendor:/opt/ros/jazzy/opt/gz_plugin_vendor:/opt/ros/jazzy/opt/gz_fuel_tools_vendor:/opt/ros/jazzy/opt/gz_msgs_vendor:/opt/ros/jazzy/opt/gz_common_vendor:/opt/ros/jazzy/opt/gz_math_vendor:/opt/ros/jazzy/opt/gz_utils_vendor:/opt/ros/jazzy/opt/gz_tools_vendor:/opt/ros/jazzy/opt/gz_ogre_next_vendor:/opt/ros/jazzy/opt/gz_dartsim_vendor:/opt/ros/jazzy/opt/gz_cmake_vendor:/opt/ros/jazzy'}), 'shell': False}
+[3.375696] (-) TimerEvent: {}
+[3.477994] (-) TimerEvent: {}
+[3.579962] (-) TimerEvent: {}
+[3.680432] (-) TimerEvent: {}
+[3.791890] (-) TimerEvent: {}
+[3.798167] (piper_bringup) StdoutLine: {'line': b'[ 50%] \x1b[32mBuilding CXX object CMakeFiles/moveit_pick_and_place_cpp.dir/src/moveit_pick_and_place.cpp.o\x1b[0m\n'}
+[3.892033] (-) TimerEvent: {}
+[3.997555] (-) TimerEvent: {}
+[4.104226] (-) TimerEvent: {}
+[4.322040] (-) TimerEvent: {}
+[4.422640] (-) TimerEvent: {}
+[4.523409] (-) TimerEvent: {}
+[4.623927] (-) TimerEvent: {}
+[4.724727] (-) TimerEvent: {}
+[4.825820] (-) TimerEvent: {}
+[4.940329] (-) TimerEvent: {}
+[5.043066] (-) TimerEvent: {}
+[5.143501] (-) TimerEvent: {}
+[5.247257] (-) TimerEvent: {}
+[5.348064] (-) TimerEvent: {}
+[5.453270] (-) TimerEvent: {}
+[5.560085] (-) TimerEvent: {}
+[5.661008] (-) TimerEvent: {}
+[5.761537] (-) TimerEvent: {}
+[5.863952] (-) TimerEvent: {}
+[5.964796] (-) TimerEvent: {}
+[6.066429] (-) TimerEvent: {}
+[6.168024] (-) TimerEvent: {}
+[6.307525] (-) TimerEvent: {}
+[6.408118] (-) TimerEvent: {}
+[6.508665] (-) TimerEvent: {}
+[6.609169] (-) TimerEvent: {}
+[6.709917] (-) TimerEvent: {}
+[6.820443] (-) TimerEvent: {}
+[6.920980] (-) TimerEvent: {}
+[7.023114] (-) TimerEvent: {}
+[7.130215] (-) TimerEvent: {}
+[7.230605] (-) TimerEvent: {}
+[7.334027] (-) TimerEvent: {}
+[7.434508] (-) TimerEvent: {}
+[7.534935] (-) TimerEvent: {}
+[7.635316] (-) TimerEvent: {}
+[7.736092] (-) TimerEvent: {}
+[7.884457] (-) TimerEvent: {}
+[8.000113] (-) TimerEvent: {}
+[8.110183] (-) TimerEvent: {}
+[8.215196] (-) TimerEvent: {}
+[8.315741] (-) TimerEvent: {}
+[8.417199] (-) TimerEvent: {}
+[8.517757] (-) TimerEvent: {}
+[8.628058] (-) TimerEvent: {}
+[8.728887] (-) TimerEvent: {}
+[8.831968] (-) TimerEvent: {}
+[8.936023] (-) TimerEvent: {}
+[9.036398] (-) TimerEvent: {}
+[9.137003] (-) TimerEvent: {}
+[9.238235] (-) TimerEvent: {}
+[9.339371] (-) TimerEvent: {}
+[9.439947] (-) TimerEvent: {}
+[9.541040] (-) TimerEvent: {}
+[9.646136] (-) TimerEvent: {}
+[9.803685] (-) TimerEvent: {}
+[9.904202] (-) TimerEvent: {}
+[10.004649] (-) TimerEvent: {}
+[10.112167] (-) TimerEvent: {}
+[10.217346] (-) TimerEvent: {}
+[10.318636] (-) TimerEvent: {}
+[10.419144] (-) TimerEvent: {}
+[10.519639] (-) TimerEvent: {}
+[10.657844] (-) TimerEvent: {}
+[10.758342] (-) TimerEvent: {}
+[10.859352] (-) TimerEvent: {}
+[10.961052] (-) TimerEvent: {}
+[11.061641] (-) TimerEvent: {}
+[11.239006] (-) TimerEvent: {}
+[11.339594] (-) TimerEvent: {}
+[11.440110] (-) TimerEvent: {}
+[11.540641] (-) TimerEvent: {}
+[11.641756] (-) TimerEvent: {}
+[11.742256] (-) TimerEvent: {}
+[11.842891] (-) TimerEvent: {}
+[11.943328] (-) TimerEvent: {}
+[12.043720] (-) TimerEvent: {}
+[12.144407] (-) TimerEvent: {}
+[12.245077] (-) TimerEvent: {}
+[12.345567] (-) TimerEvent: {}
+[12.448261] (-) TimerEvent: {}
+[12.548712] (-) TimerEvent: {}
+[12.650178] (-) TimerEvent: {}
+[12.756905] (-) TimerEvent: {}
+[12.857516] (-) TimerEvent: {}
+[12.958064] (-) TimerEvent: {}
+[13.058555] (-) TimerEvent: {}
+[13.168566] (-) TimerEvent: {}
+[13.278971] (-) TimerEvent: {}
+[13.379569] (-) TimerEvent: {}
+[13.479921] (-) TimerEvent: {}
+[13.580631] (-) TimerEvent: {}
+[13.681286] (-) TimerEvent: {}
+[13.781863] (-) TimerEvent: {}
+[13.882351] (-) TimerEvent: {}
+[13.983051] (-) TimerEvent: {}
+[14.083538] (-) TimerEvent: {}
+[14.194971] (-) TimerEvent: {}
+[14.300685] (-) TimerEvent: {}
+[14.402679] (-) TimerEvent: {}
+[14.503181] (-) TimerEvent: {}
+[14.604248] (-) TimerEvent: {}
+[14.704935] (-) TimerEvent: {}
+[14.806967] (-) TimerEvent: {}
+[14.908198] (-) TimerEvent: {}
+[15.008918] (-) TimerEvent: {}
+[15.140229] (-) TimerEvent: {}
+[15.240744] (-) TimerEvent: {}
+[15.341300] (-) TimerEvent: {}
+[15.442086] (-) TimerEvent: {}
+[15.543603] (-) TimerEvent: {}
+[15.644488] (-) TimerEvent: {}
+[15.745013] (-) TimerEvent: {}
+[15.848801] (-) TimerEvent: {}
+[15.955297] (-) TimerEvent: {}
+[16.152003] (-) TimerEvent: {}
+[16.258094] (-) TimerEvent: {}
+[16.360330] (-) TimerEvent: {}
+[16.461050] (-) TimerEvent: {}
+[16.567200] (-) TimerEvent: {}
+[16.667906] (-) TimerEvent: {}
+[16.768506] (-) TimerEvent: {}
+[16.869532] (-) TimerEvent: {}
+[16.970214] (-) TimerEvent: {}
+[17.078796] (-) TimerEvent: {}
+[17.182902] (-) TimerEvent: {}
+[17.293333] (-) TimerEvent: {}
+[17.393765] (-) TimerEvent: {}
+[17.496694] (-) TimerEvent: {}
+[17.600050] (-) TimerEvent: {}
+[17.700598] (-) TimerEvent: {}
+[17.801696] (-) TimerEvent: {}
+[17.903997] (-) TimerEvent: {}
+[18.011081] (-) TimerEvent: {}
+[18.111936] (-) TimerEvent: {}
+[18.213630] (-) TimerEvent: {}
+[18.317098] (-) TimerEvent: {}
+[18.421219] (-) TimerEvent: {}
+[18.521735] (-) TimerEvent: {}
+[18.625939] (-) TimerEvent: {}
+[18.726519] (-) TimerEvent: {}
+[18.827011] (-) TimerEvent: {}
+[18.927915] (-) TimerEvent: {}
+[19.028377] (-) TimerEvent: {}
+[19.133216] (-) TimerEvent: {}
+[19.234224] (-) TimerEvent: {}
+[19.336986] (-) TimerEvent: {}
+[19.438961] (-) TimerEvent: {}
+[19.543010] (-) TimerEvent: {}
+[19.647203] (-) TimerEvent: {}
+[19.750938] (-) TimerEvent: {}
+[19.851403] (-) TimerEvent: {}
+[19.953236] (-) TimerEvent: {}
+[20.057406] (-) TimerEvent: {}
+[20.157984] (-) TimerEvent: {}
+[20.264906] (-) TimerEvent: {}
+[20.365924] (-) TimerEvent: {}
+[20.472905] (-) TimerEvent: {}
+[20.573692] (-) TimerEvent: {}
+[20.683447] (-) TimerEvent: {}
+[20.783946] (-) TimerEvent: {}
+[20.884439] (-) TimerEvent: {}
+[20.985357] (-) TimerEvent: {}
+[21.086068] (-) TimerEvent: {}
+[21.187429] (-) TimerEvent: {}
+[21.261582] (piper_bringup) StderrLine: {'line': b'In file included from \x1b[01m\x1b[K/opt/ros/jazzy/include/rclcpp/rclcpp/logging.hpp:24\x1b[m\x1b[K,\n'}
+[21.261951] (piper_bringup) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/jazzy/include/rclcpp/rclcpp/copy_all_parameter_values.hpp:27\x1b[m\x1b[K,\n'}
+[21.262015] (piper_bringup) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/jazzy/include/rclcpp/rclcpp/rclcpp.hpp:171\x1b[m\x1b[K,\n'}
+[21.262050] (piper_bringup) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/home/dali/ros2_ws/src/piper_ros2/piper_bringup/src/moveit_pick_and_place.cpp:1\x1b[m\x1b[K:\n'}
+[21.262081] (piper_bringup) StderrLine: {'line': b'\x1b[01m\x1b[K/home/dali/ros2_ws/src/piper_ros2/piper_bringup/src/moveit_pick_and_place.cpp:\x1b[m\x1b[K In member function \xe2\x80\x98\x1b[01m\x1b[Kvoid PiperDynamicNode::\x1b[01;32m\x1b[Krun\x1b[m\x1b[K()\x1b[m\x1b[K\xe2\x80\x99:\n'}
+[21.262136] (piper_bringup) StderrLine: {'line': b'\x1b[01m\x1b[K/home/dali/ros2_ws/src/piper_ros2/piper_bringup/src/moveit_pick_and_place.cpp:86:49:\x1b[m\x1b[K \x1b[01;35m\x1b[Kwarning: \x1b[m\x1b[Kzero-length gnu_printf format string [\x1b[01;35m\x1b[K\x1b]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wformat-zero-length\x07-Wformat-zero-length\x1b]8;;\x07\x1b[m\x1b[K]\n'}
+[21.262190] (piper_bringup) StderrLine: {'line': b'   86 |                 RCLCPP_INFO(this->get_logger(), \x1b[01;35m\x1b[K""\x1b[m\x1b[K);\n'}
+[21.262222] (piper_bringup) StderrLine: {'line': b'      |                                                 \x1b[01;35m\x1b[K^~\x1b[m\x1b[K\n'}
+[21.275904] (piper_bringup) StderrLine: {'line': b'\x1b[01m\x1b[K/home/dali/ros2_ws/src/piper_ros2/piper_bringup/src/moveit_pick_and_place.cpp:\x1b[m\x1b[K In member function \xe2\x80\x98\x1b[01m\x1b[Kvoid PiperDynamicNode::\x1b[01;32m\x1b[Kvision_callback\x1b[m\x1b[K(scene_graph_interfaces::msg::FunObject3DBoundingBoxList_<std::allocator<void> >::SharedPtr)\x1b[m\x1b[K\xe2\x80\x99:\n'}
+[21.276084] (piper_bringup) StderrLine: {'line': b'\x1b[01m\x1b[K/home/dali/ros2_ws/src/piper_ros2/piper_bringup/src/moveit_pick_and_place.cpp:189:34:\x1b[m\x1b[K \x1b[01;35m\x1b[Kwarning: \x1b[m\x1b[KC++ designated initializers only available with \xe2\x80\x98\x1b[01m\x1b[K-std=c++20\x1b[m\x1b[K\xe2\x80\x99 or \xe2\x80\x98\x1b[01m\x1b[K-std=gnu++20\x1b[m\x1b[K\xe2\x80\x99 [\x1b[01;35m\x1b[K\x1b]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wc++20-extensions\x07-Wc++20-extensions\x1b]8;;\x07\x1b[m\x1b[K]\n'}
+[21.276126] (piper_bringup) StderrLine: {'line': b'  189 |                 latest_place_ = {\x1b[01;35m\x1b[K.\x1b[m\x1b[Kclass_name = obj.name.data,\n'}
+[21.276164] (piper_bringup) StderrLine: {'line': b'      |                                  \x1b[01;35m\x1b[K^\x1b[m\x1b[K\n'}
+[21.276194] (piper_bringup) StderrLine: {'line': b'\x1b[01m\x1b[K/home/dali/ros2_ws/src/piper_ros2/piper_bringup/src/moveit_pick_and_place.cpp:190:33:\x1b[m\x1b[K \x1b[01;35m\x1b[Kwarning: \x1b[m\x1b[KC++ designated initializers only available with \xe2\x80\x98\x1b[01m\x1b[K-std=c++20\x1b[m\x1b[K\xe2\x80\x99 or \xe2\x80\x98\x1b[01m\x1b[K-std=gnu++20\x1b[m\x1b[K\xe2\x80\x99 [\x1b[01;35m\x1b[K\x1b]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wc++20-extensions\x07-Wc++20-extensions\x1b]8;;\x07\x1b[m\x1b[K]\n'}
+[21.276226] (piper_bringup) StderrLine: {'line': b'  190 |                                 \x1b[01;35m\x1b[K.\x1b[m\x1b[Kx = 0.2, .y = 0.2, .z = latest_target_.z,\n'}
+[21.276255] (piper_bringup) StderrLine: {'line': b'      |                                 \x1b[01;35m\x1b[K^\x1b[m\x1b[K\n'}
+[21.276289] (piper_bringup) StderrLine: {'line': b'\x1b[01m\x1b[K/home/dali/ros2_ws/src/piper_ros2/piper_bringup/src/moveit_pick_and_place.cpp:190:43:\x1b[m\x1b[K \x1b[01;35m\x1b[Kwarning: \x1b[m\x1b[KC++ designated initializers only available with \xe2\x80\x98\x1b[01m\x1b[K-std=c++20\x1b[m\x1b[K\xe2\x80\x99 or \xe2\x80\x98\x1b[01m\x1b[K-std=gnu++20\x1b[m\x1b[K\xe2\x80\x99 [\x1b[01;35m\x1b[K\x1b]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wc++20-extensions\x07-Wc++20-extensions\x1b]8;;\x07\x1b[m\x1b[K]\n'}
+[21.276319] (piper_bringup) StderrLine: {'line': b'  190 |                                 .x = 0.2, \x1b[01;35m\x1b[K.\x1b[m\x1b[Ky = 0.2, .z = latest_target_.z,\n'}
+[21.276378] (piper_bringup) StderrLine: {'line': b'      |                                           \x1b[01;35m\x1b[K^\x1b[m\x1b[K\n'}
+[21.276407] (piper_bringup) StderrLine: {'line': b'\x1b[01m\x1b[K/home/dali/ros2_ws/src/piper_ros2/piper_bringup/src/moveit_pick_and_place.cpp:190:53:\x1b[m\x1b[K \x1b[01;35m\x1b[Kwarning: \x1b[m\x1b[KC++ designated initializers only available with \xe2\x80\x98\x1b[01m\x1b[K-std=c++20\x1b[m\x1b[K\xe2\x80\x99 or \xe2\x80\x98\x1b[01m\x1b[K-std=gnu++20\x1b[m\x1b[K\xe2\x80\x99 [\x1b[01;35m\x1b[K\x1b]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wc++20-extensions\x07-Wc++20-extensions\x1b]8;;\x07\x1b[m\x1b[K]\n'}
+[21.276477] (piper_bringup) StderrLine: {'line': b'  190 |                                 .x = 0.2, .y = 0.2, \x1b[01;35m\x1b[K.\x1b[m\x1b[Kz = latest_target_.z,\n'}
+[21.276506] (piper_bringup) StderrLine: {'line': b'      |                                                     \x1b[01;35m\x1b[K^\x1b[m\x1b[K\n'}
+[21.276535] (piper_bringup) StderrLine: {'line': b'\x1b[01m\x1b[K/home/dali/ros2_ws/src/piper_ros2/piper_bringup/src/moveit_pick_and_place.cpp:191:33:\x1b[m\x1b[K \x1b[01;35m\x1b[Kwarning: \x1b[m\x1b[KC++ designated initializers only available with \xe2\x80\x98\x1b[01m\x1b[K-std=c++20\x1b[m\x1b[K\xe2\x80\x99 or \xe2\x80\x98\x1b[01m\x1b[K-std=gnu++20\x1b[m\x1b[K\xe2\x80\x99 [\x1b[01;35m\x1b[K\x1b]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wc++20-extensions\x07-Wc++20-extensions\x1b]8;;\x07\x1b[m\x1b[K]\n'}
+[21.276565] (piper_bringup) StderrLine: {'line': b'  191 |                                 \x1b[01;35m\x1b[K.\x1b[m\x1b[Kwidth = 0, .height = 0, .depth = 0,\n'}
+[21.276598] (piper_bringup) StderrLine: {'line': b'      |                                 \x1b[01;35m\x1b[K^\x1b[m\x1b[K\n'}
+[21.276626] (piper_bringup) StderrLine: {'line': b'\x1b[01m\x1b[K/home/dali/ros2_ws/src/piper_ros2/piper_bringup/src/moveit_pick_and_place.cpp:191:45:\x1b[m\x1b[K \x1b[01;35m\x1b[Kwarning: \x1b[m\x1b[KC++ designated initializers only available with \xe2\x80\x98\x1b[01m\x1b[K-std=c++20\x1b[m\x1b[K\xe2\x80\x99 or \xe2\x80\x98\x1b[01m\x1b[K-std=gnu++20\x1b[m\x1b[K\xe2\x80\x99 [\x1b[01;35m\x1b[K\x1b]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wc++20-extensions\x07-Wc++20-extensions\x1b]8;;\x07\x1b[m\x1b[K]\n'}
+[21.276666] (piper_bringup) StderrLine: {'line': b'  191 |                                 .width = 0, \x1b[01;35m\x1b[K.\x1b[m\x1b[Kheight = 0, .depth = 0,\n'}
+[21.276710] (piper_bringup) StderrLine: {'line': b'      |                                             \x1b[01;35m\x1b[K^\x1b[m\x1b[K\n'}
+[21.276744] (piper_bringup) StderrLine: {'line': b'\x1b[01m\x1b[K/home/dali/ros2_ws/src/piper_ros2/piper_bringup/src/moveit_pick_and_place.cpp:191:58:\x1b[m\x1b[K \x1b[01;35m\x1b[Kwarning: \x1b[m\x1b[KC++ designated initializers only available with \xe2\x80\x98\x1b[01m\x1b[K-std=c++20\x1b[m\x1b[K\xe2\x80\x99 or \xe2\x80\x98\x1b[01m\x1b[K-std=gnu++20\x1b[m\x1b[K\xe2\x80\x99 [\x1b[01;35m\x1b[K\x1b]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wc++20-extensions\x07-Wc++20-extensions\x1b]8;;\x07\x1b[m\x1b[K]\n'}
+[21.276774] (piper_bringup) StderrLine: {'line': b'  191 |                                 .width = 0, .height = 0, \x1b[01;35m\x1b[K.\x1b[m\x1b[Kdepth = 0,\n'}
+[21.276803] (piper_bringup) StderrLine: {'line': b'      |                                                          \x1b[01;35m\x1b[K^\x1b[m\x1b[K\n'}
+[21.276871] (piper_bringup) StderrLine: {'line': b'\x1b[01m\x1b[K/home/dali/ros2_ws/src/piper_ros2/piper_bringup/src/moveit_pick_and_place.cpp:192:33:\x1b[m\x1b[K \x1b[01;35m\x1b[Kwarning: \x1b[m\x1b[KC++ designated initializers only available with \xe2\x80\x98\x1b[01m\x1b[K-std=c++20\x1b[m\x1b[K\xe2\x80\x99 or \xe2\x80\x98\x1b[01m\x1b[K-std=gnu++20\x1b[m\x1b[K\xe2\x80\x99 [\x1b[01;35m\x1b[K\x1b]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wc++20-extensions\x07-Wc++20-extensions\x1b]8;;\x07\x1b[m\x1b[K]\n'}
+[21.276902] (piper_bringup) StderrLine: {'line': b'  192 |                                 \x1b[01;35m\x1b[K.\x1b[m\x1b[Kaffordance = Affordance::NONE};\n'}
+[21.276937] (piper_bringup) StderrLine: {'line': b'      |                                 \x1b[01;35m\x1b[K^\x1b[m\x1b[K\n'}
+[21.276966] (piper_bringup) StderrLine: {'line': b'\x1b[01m\x1b[K/home/dali/ros2_ws/src/piper_ros2/piper_bringup/src/moveit_pick_and_place.cpp:\x1b[m\x1b[K In member function \xe2\x80\x98\x1b[01m\x1b[KInteractionStrategy PiperDynamicNode::\x1b[01;32m\x1b[Kselect_strategy\x1b[m\x1b[K(const DetectedObject&)\x1b[m\x1b[K\xe2\x80\x99:\n'}
+[21.276997] (piper_bringup) StderrLine: {'line': b'\x1b[01m\x1b[K/home/dali/ros2_ws/src/piper_ros2/piper_bringup/src/moveit_pick_and_place.cpp:217:45:\x1b[m\x1b[K \x1b[01;35m\x1b[Kwarning: \x1b[m\x1b[Kzero-length gnu_printf format string [\x1b[01;35m\x1b[K\x1b]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wformat-zero-length\x07-Wformat-zero-length\x1b]8;;\x07\x1b[m\x1b[K]\n'}
+[21.277033] (piper_bringup) StderrLine: {'line': b'  217 |             RCLCPP_INFO(this->get_logger(), \x1b[01;35m\x1b[K""\x1b[m\x1b[K);\n'}
+[21.277061] (piper_bringup) StderrLine: {'line': b'      |                                             \x1b[01;35m\x1b[K^~\x1b[m\x1b[K\n'}
+[21.278733] (piper_bringup) StderrLine: {'line': b'\x1b[01m\x1b[K/home/dali/ros2_ws/src/piper_ros2/piper_bringup/src/moveit_pick_and_place.cpp:\x1b[m\x1b[K In member function \xe2\x80\x98\x1b[01m\x1b[Kvoid PiperDynamicNode::\x1b[01;32m\x1b[Kexecute_intelligent_grasp\x1b[m\x1b[K(std::shared_ptr<moveit::planning_interface::MoveGroupInterface>, const DetectedObject&)\x1b[m\x1b[K\xe2\x80\x99:\n'}
+[21.278800] (piper_bringup) StderrLine: {'line': b'\x1b[01m\x1b[K/home/dali/ros2_ws/src/piper_ros2/piper_bringup/src/moveit_pick_and_place.cpp:276:41:\x1b[m\x1b[K \x1b[01;35m\x1b[Kwarning: \x1b[m\x1b[Kzero-length gnu_printf format string [\x1b[01;35m\x1b[K\x1b]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wformat-zero-length\x07-Wformat-zero-length\x1b]8;;\x07\x1b[m\x1b[K]\n'}
+[21.280867] (piper_bringup) StderrLine: {'line': b'  276 |         RCLCPP_INFO(this->get_logger(), \x1b[01;35m\x1b[K""\x1b[m\x1b[K);\n'}
+[21.281095] (piper_bringup) StderrLine: {'line': b'      |                                         \x1b[01;35m\x1b[K^~\x1b[m\x1b[K\n'}
+[21.281128] (piper_bringup) StderrLine: {'line': b'\x1b[01m\x1b[K/home/dali/ros2_ws/src/piper_ros2/piper_bringup/src/moveit_pick_and_place.cpp:285:45:\x1b[m\x1b[K \x1b[01;35m\x1b[Kwarning: \x1b[m\x1b[Kzero-length gnu_printf format string [\x1b[01;35m\x1b[K\x1b]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wformat-zero-length\x07-Wformat-zero-length\x1b]8;;\x07\x1b[m\x1b[K]\n'}
+[21.281161] (piper_bringup) StderrLine: {'line': b'  285 |             RCLCPP_INFO(this->get_logger(), \x1b[01;35m\x1b[K""\x1b[m\x1b[K);\n'}
+[21.281191] (piper_bringup) StderrLine: {'line': b'      |                                             \x1b[01;35m\x1b[K^~\x1b[m\x1b[K\n'}
+[21.281225] (piper_bringup) StderrLine: {'line': b'\x1b[01m\x1b[K/home/dali/ros2_ws/src/piper_ros2/piper_bringup/src/moveit_pick_and_place.cpp:301:45:\x1b[m\x1b[K \x1b[01;35m\x1b[Kwarning: \x1b[m\x1b[Kzero-length gnu_printf format string [\x1b[01;35m\x1b[K\x1b]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wformat-zero-length\x07-Wformat-zero-length\x1b]8;;\x07\x1b[m\x1b[K]\n'}
+[21.281256] (piper_bringup) StderrLine: {'line': b'  301 |             RCLCPP_INFO(this->get_logger(), \x1b[01;35m\x1b[K""\x1b[m\x1b[K);\n'}
+[21.281285] (piper_bringup) StderrLine: {'line': b'      |                                             \x1b[01;35m\x1b[K^~\x1b[m\x1b[K\n'}
+[21.281314] (piper_bringup) StderrLine: {'line': b'\x1b[01m\x1b[K/home/dali/ros2_ws/src/piper_ros2/piper_bringup/src/moveit_pick_and_place.cpp:325:45:\x1b[m\x1b[K \x1b[01;35m\x1b[Kwarning: \x1b[m\x1b[Kzero-length gnu_printf format string [\x1b[01;35m\x1b[K\x1b]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wformat-zero-length\x07-Wformat-zero-length\x1b]8;;\x07\x1b[m\x1b[K]\n'}
+[21.281372] (piper_bringup) StderrLine: {'line': b'  325 |             RCLCPP_INFO(this->get_logger(), \x1b[01;35m\x1b[K""\x1b[m\x1b[K);\n'}
+[21.281410] (piper_bringup) StderrLine: {'line': b'      |                                             \x1b[01;35m\x1b[K^~\x1b[m\x1b[K\n'}
+[21.281439] (piper_bringup) StderrLine: {'line': b'\x1b[01m\x1b[K/home/dali/ros2_ws/src/piper_ros2/piper_bringup/src/moveit_pick_and_place.cpp:332:45:\x1b[m\x1b[K \x1b[01;35m\x1b[Kwarning: \x1b[m\x1b[Kzero-length gnu_printf format string [\x1b[01;35m\x1b[K\x1b]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wformat-zero-length\x07-Wformat-zero-length\x1b]8;;\x07\x1b[m\x1b[K]\n'}
+[21.281470] (piper_bringup) StderrLine: {'line': b'  332 |             RCLCPP_INFO(this->get_logger(), \x1b[01;35m\x1b[K""\x1b[m\x1b[K);\n'}
+[21.281504] (piper_bringup) StderrLine: {'line': b'      |                                             \x1b[01;35m\x1b[K^~\x1b[m\x1b[K\n'}
+[21.281539] (piper_bringup) StderrLine: {'line': b'\x1b[01m\x1b[K/home/dali/ros2_ws/src/piper_ros2/piper_bringup/src/moveit_pick_and_place.cpp:\x1b[m\x1b[K In member function \xe2\x80\x98\x1b[01m\x1b[Kvoid PiperDynamicNode::\x1b[01;32m\x1b[Kexecute_push_action\x1b[m\x1b[K(std::shared_ptr<moveit::planning_interface::MoveGroupInterface>, const DetectedObject&)\x1b[m\x1b[K\xe2\x80\x99:\n'}
+[21.281569] (piper_bringup) StderrLine: {'line': b'\x1b[01m\x1b[K/home/dali/ros2_ws/src/piper_ros2/piper_bringup/src/moveit_pick_and_place.cpp:356:41:\x1b[m\x1b[K \x1b[01;35m\x1b[Kwarning: \x1b[m\x1b[Kzero-length gnu_printf format string [\x1b[01;35m\x1b[K\x1b]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wformat-zero-length\x07-Wformat-zero-length\x1b]8;;\x07\x1b[m\x1b[K]\n'}
+[21.281599] (piper_bringup) StderrLine: {'line': b'  356 |         RCLCPP_INFO(this->get_logger(), \x1b[01;35m\x1b[K""\x1b[m\x1b[K);\n'}
+[21.281627] (piper_bringup) StderrLine: {'line': b'      |                                         \x1b[01;35m\x1b[K^~\x1b[m\x1b[K\n'}
+[21.285045] (piper_bringup) StderrLine: {'line': b'\x1b[01m\x1b[K/home/dali/ros2_ws/src/piper_ros2/piper_bringup/src/moveit_pick_and_place.cpp:\x1b[m\x1b[K In member function \xe2\x80\x98\x1b[01m\x1b[Kvoid PiperDynamicNode::\x1b[01;32m\x1b[Kexecute_pull_action\x1b[m\x1b[K(std::shared_ptr<moveit::planning_interface::MoveGroupInterface>, const DetectedObject&)\x1b[m\x1b[K\xe2\x80\x99:\n'}
+[21.285130] (piper_bringup) StderrLine: {'line': b'\x1b[01m\x1b[K/home/dali/ros2_ws/src/piper_ros2/piper_bringup/src/moveit_pick_and_place.cpp:379:41:\x1b[m\x1b[K \x1b[01;35m\x1b[Kwarning: \x1b[m\x1b[Kzero-length gnu_printf format string [\x1b[01;35m\x1b[K\x1b]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wformat-zero-length\x07-Wformat-zero-length\x1b]8;;\x07\x1b[m\x1b[K]\n'}
+[21.285166] (piper_bringup) StderrLine: {'line': b'  379 |         RCLCPP_INFO(this->get_logger(), \x1b[01;35m\x1b[K""\x1b[m\x1b[K);\n'}
+[21.285207] (piper_bringup) StderrLine: {'line': b'      |                                         \x1b[01;35m\x1b[K^~\x1b[m\x1b[K\n'}
+[21.285240] (piper_bringup) StderrLine: {'line': b'\x1b[01m\x1b[K/home/dali/ros2_ws/src/piper_ros2/piper_bringup/src/moveit_pick_and_place.cpp:\x1b[m\x1b[K In member function \xe2\x80\x98\x1b[01m\x1b[Kvoid PiperDynamicNode::\x1b[01;32m\x1b[Kexecute_intelligent_place\x1b[m\x1b[K(std::shared_ptr<moveit::planning_interface::MoveGroupInterface>, const DetectedObject&)\x1b[m\x1b[K\xe2\x80\x99:\n'}
+[21.285274] (piper_bringup) StderrLine: {'line': b'\x1b[01m\x1b[K/home/dali/ros2_ws/src/piper_ros2/piper_bringup/src/moveit_pick_and_place.cpp:406:41:\x1b[m\x1b[K \x1b[01;35m\x1b[Kwarning: \x1b[m\x1b[Kzero-length gnu_printf format string [\x1b[01;35m\x1b[K\x1b]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wformat-zero-length\x07-Wformat-zero-length\x1b]8;;\x07\x1b[m\x1b[K]\n'}
+[21.286036] (piper_bringup) StderrLine: {'line': b'  406 |         RCLCPP_INFO(this->get_logger(), \x1b[01;35m\x1b[K""\x1b[m\x1b[K);\n'}
+[21.286078] (piper_bringup) StderrLine: {'line': b'      |                                         \x1b[01;35m\x1b[K^~\x1b[m\x1b[K\n'}
+[21.288404] (piper_bringup) StderrLine: {'line': b'\x1b[01m\x1b[K/home/dali/ros2_ws/src/piper_ros2/piper_bringup/src/moveit_pick_and_place.cpp:\x1b[m\x1b[K In member function \xe2\x80\x98\x1b[01m\x1b[Kvoid PiperDynamicNode::\x1b[01;32m\x1b[Kperform_linear_move\x1b[m\x1b[K(moveit::planning_interface::MoveGroupInterface&, double, double, double, std::string)\x1b[m\x1b[K\xe2\x80\x99:\n'}
+[21.288491] (-) TimerEvent: {}
+[21.288644] (piper_bringup) StderrLine: {'line': b'\x1b[01m\x1b[K/home/dali/ros2_ws/src/piper_ros2/piper_bringup/src/moveit_pick_and_place.cpp:453:71:\x1b[m\x1b[K \x1b[01;35m\x1b[Kwarning: \x1b[m\x1b[Kunused parameter \xe2\x80\x98\x1b[01m\x1b[Klabel\x1b[m\x1b[K\xe2\x80\x99 [\x1b[01;35m\x1b[K\x1b]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-parameter\x07-Wunused-parameter\x1b]8;;\x07\x1b[m\x1b[K]\n'}
+[21.288696] (piper_bringup) StderrLine: {'line': b'  453 |                      double x, double y, double z, \x1b[01;35m\x1b[Kstd::string label\x1b[m\x1b[K) {\n'}
+[21.288733] (piper_bringup) StderrLine: {'line': b'      |                                                    \x1b[01;35m\x1b[K~~~~~~~~~~~~^~~~~\x1b[m\x1b[K\n'}
+[21.288766] (piper_bringup) StderrLine: {'line': b'\n'}
+[21.288798] (piper_bringup) StderrLine: {'line': b'\x1b[01m\x1b[K/home/dali/ros2_ws/src/piper_ros2/piper_bringup/src/moveit_pick_and_place.cpp:\x1b[m\x1b[K In member function \xe2\x80\x98\x1b[01m\x1b[Kbool PiperDynamicNode::\x1b[01;32m\x1b[Kplan_and_execute_standard\x1b[m\x1b[K(moveit::planning_interface::MoveGroupInterface&, double, double, double, std::string)\x1b[m\x1b[K\xe2\x80\x99:\n'}
+[21.288866] (piper_bringup) StderrLine: {'line': b'\x1b[01m\x1b[K/home/dali/ros2_ws/src/piper_ros2/piper_bringup/src/moveit_pick_and_place.cpp:462:78:\x1b[m\x1b[K \x1b[01;35m\x1b[Kwarning: \x1b[m\x1b[Kunused parameter \xe2\x80\x98\x1b[01m\x1b[Klabel\x1b[m\x1b[K\xe2\x80\x99 [\x1b[01;35m\x1b[K\x1b]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-parameter\x07-Wunused-parameter\x1b]8;;\x07\x1b[m\x1b[K]\n'}
+[21.288912] (piper_bringup) StderrLine: {'line': b'  462 |                      double x, double y, double z, \x1b[01;35m\x1b[Kstd::string label\x1b[m\x1b[K) {\n'}
+[21.288952] (piper_bringup) StderrLine: {'line': b'      |                                                    \x1b[01;35m\x1b[K~~~~~~~~~~~~^~~~~\x1b[m\x1b[K\n'}
+[21.288984] (piper_bringup) StderrLine: {'line': b'\n'}
+[21.390102] (-) TimerEvent: {}
+[21.496436] (-) TimerEvent: {}
+[21.596878] (-) TimerEvent: {}
+[21.697578] (-) TimerEvent: {}
+[21.806841] (-) TimerEvent: {}
+[21.907244] (-) TimerEvent: {}
+[22.007761] (-) TimerEvent: {}
+[22.108588] (-) TimerEvent: {}
+[22.211488] (-) TimerEvent: {}
+[22.312304] (-) TimerEvent: {}
+[22.412752] (-) TimerEvent: {}
+[22.518691] (-) TimerEvent: {}
+[22.621017] (-) TimerEvent: {}
+[22.721922] (-) TimerEvent: {}
+[22.824488] (-) TimerEvent: {}
+[22.928360] (-) TimerEvent: {}
+[23.032747] (-) TimerEvent: {}
+[23.133225] (-) TimerEvent: {}
+[23.233741] (-) TimerEvent: {}
+[23.335460] (-) TimerEvent: {}
+[23.436116] (-) TimerEvent: {}
+[23.538315] (-) TimerEvent: {}
+[23.638663] (-) TimerEvent: {}
+[23.742681] (-) TimerEvent: {}
+[23.845080] (-) TimerEvent: {}
+[23.947183] (-) TimerEvent: {}
+[24.047612] (-) TimerEvent: {}
+[24.149275] (-) TimerEvent: {}
+[24.251281] (-) TimerEvent: {}
+[24.351663] (-) TimerEvent: {}
+[24.452208] (-) TimerEvent: {}
+[24.557771] (-) TimerEvent: {}
+[24.662642] (-) TimerEvent: {}
+[24.763128] (-) TimerEvent: {}
+[24.867397] (-) TimerEvent: {}
+[24.967825] (-) TimerEvent: {}
+[25.068502] (-) TimerEvent: {}
+[25.172075] (-) TimerEvent: {}
+[25.272720] (-) TimerEvent: {}
+[25.373147] (-) TimerEvent: {}
+[25.475439] (-) TimerEvent: {}
+[25.576345] (-) TimerEvent: {}
+[25.677041] (-) TimerEvent: {}
+[25.777965] (-) TimerEvent: {}
+[25.878989] (-) TimerEvent: {}
+[25.980187] (-) TimerEvent: {}
+[26.083604] (-) TimerEvent: {}
+[26.186468] (-) TimerEvent: {}
+[26.295087] (-) TimerEvent: {}
+[26.395678] (-) TimerEvent: {}
+[26.497055] (-) TimerEvent: {}
+[26.597585] (-) TimerEvent: {}
+[26.699157] (-) TimerEvent: {}
+[26.805246] (-) TimerEvent: {}
+[26.954671] (-) TimerEvent: {}
+[27.055230] (-) TimerEvent: {}
+[27.155619] (-) TimerEvent: {}
+[27.267174] (-) TimerEvent: {}
+[27.367889] (-) TimerEvent: {}
+[27.468552] (-) TimerEvent: {}
+[27.570678] (-) TimerEvent: {}
+[27.679349] (-) TimerEvent: {}
+[27.779972] (-) TimerEvent: {}
+[27.880644] (-) TimerEvent: {}
+[27.981170] (-) TimerEvent: {}
+[28.083352] (-) TimerEvent: {}
+[28.184107] (-) TimerEvent: {}
+[28.284546] (-) TimerEvent: {}
+[28.384945] (-) TimerEvent: {}
+[28.485470] (-) TimerEvent: {}
+[28.586004] (-) TimerEvent: {}
+[28.687050] (-) TimerEvent: {}
+[28.787655] (-) TimerEvent: {}
+[28.891506] (-) TimerEvent: {}
+[28.992955] (-) TimerEvent: {}
+[29.094568] (-) TimerEvent: {}
+[29.194978] (-) TimerEvent: {}
+[29.296081] (-) TimerEvent: {}
+[29.398603] (-) TimerEvent: {}
+[29.499911] (-) TimerEvent: {}
+[29.607543] (-) TimerEvent: {}
+[29.709345] (-) TimerEvent: {}
+[29.809782] (-) TimerEvent: {}
+[29.910255] (-) TimerEvent: {}
+[30.010761] (-) TimerEvent: {}
+[30.111651] (-) TimerEvent: {}
+[30.212092] (-) TimerEvent: {}
+[30.312552] (-) TimerEvent: {}
+[30.414692] (-) TimerEvent: {}
+[30.515364] (-) TimerEvent: {}
+[30.615793] (-) TimerEvent: {}
+[30.716235] (-) TimerEvent: {}
+[30.833364] (-) TimerEvent: {}
+[30.934823] (-) TimerEvent: {}
+[31.037123] (-) TimerEvent: {}
+[31.137557] (-) TimerEvent: {}
+[31.238081] (-) TimerEvent: {}
+[31.338737] (-) TimerEvent: {}
+[31.443941] (-) TimerEvent: {}
+[31.547083] (-) TimerEvent: {}
+[31.647786] (-) TimerEvent: {}
+[31.754395] (-) TimerEvent: {}
+[31.854897] (-) TimerEvent: {}
+[31.955289] (-) TimerEvent: {}
+[32.057269] (-) TimerEvent: {}
+[32.159134] (-) TimerEvent: {}
+[32.262316] (-) TimerEvent: {}
+[32.366878] (-) TimerEvent: {}
+[32.470333] (-) TimerEvent: {}
+[32.572161] (-) TimerEvent: {}
+[32.673024] (-) TimerEvent: {}
+[32.775550] (-) TimerEvent: {}
+[32.883681] (-) TimerEvent: {}
+[32.987371] (-) TimerEvent: {}
+[33.088452] (-) TimerEvent: {}
+[33.193317] (-) TimerEvent: {}
+[33.294999] (-) TimerEvent: {}
+[33.395389] (-) TimerEvent: {}
+[33.497619] (-) TimerEvent: {}
+[33.599564] (-) TimerEvent: {}
+[33.700089] (-) TimerEvent: {}
+[33.801447] (-) TimerEvent: {}
+[33.902947] (-) TimerEvent: {}
+[34.005701] (-) TimerEvent: {}
+[34.108662] (-) TimerEvent: {}
+[34.209097] (-) TimerEvent: {}
+[34.310908] (-) TimerEvent: {}
+[34.411281] (-) TimerEvent: {}
+[34.516447] (-) TimerEvent: {}
+[34.616904] (-) TimerEvent: {}
+[34.717420] (-) TimerEvent: {}
+[34.818197] (-) TimerEvent: {}
+[34.919315] (-) TimerEvent: {}
+[35.019726] (-) TimerEvent: {}
+[35.126982] (-) TimerEvent: {}
+[35.227548] (-) TimerEvent: {}
+[35.332927] (-) TimerEvent: {}
+[35.433306] (-) TimerEvent: {}
+[35.548986] (-) TimerEvent: {}
+[35.650437] (-) TimerEvent: {}
+[35.750882] (-) TimerEvent: {}
+[35.852487] (-) TimerEvent: {}
+[35.965046] (-) TimerEvent: {}
+[36.066638] (-) TimerEvent: {}
+[36.167156] (-) TimerEvent: {}
+[36.267574] (-) TimerEvent: {}
+[36.368235] (-) TimerEvent: {}
+[36.470432] (-) TimerEvent: {}
+[36.572792] (-) TimerEvent: {}
+[36.678447] (-) TimerEvent: {}
+[36.785524] (-) TimerEvent: {}
+[36.887203] (-) TimerEvent: {}
+[36.987642] (-) TimerEvent: {}
+[37.089869] (-) TimerEvent: {}
+[37.193335] (-) TimerEvent: {}
+[37.297935] (-) TimerEvent: {}
+[37.399685] (-) TimerEvent: {}
+[37.500217] (-) TimerEvent: {}
+[37.601640] (-) TimerEvent: {}
+[37.714208] (-) TimerEvent: {}
+[37.814575] (-) TimerEvent: {}
+[37.915130] (-) TimerEvent: {}
+[37.960012] (piper_bringup) StdoutLine: {'line': b'[100%] \x1b[32m\x1b[1mLinking CXX executable moveit_pick_and_place_cpp\x1b[0m\n'}
+[38.015306] (-) TimerEvent: {}
+[38.126095] (-) TimerEvent: {}
+[38.226565] (-) TimerEvent: {}
+[38.329633] (-) TimerEvent: {}
+[38.430126] (-) TimerEvent: {}
+[38.533331] (-) TimerEvent: {}
+[38.633747] (-) TimerEvent: {}
+[38.734234] (-) TimerEvent: {}
+[38.834699] (-) TimerEvent: {}
+[38.935345] (-) TimerEvent: {}
+[39.035797] (-) TimerEvent: {}
+[39.137654] (-) TimerEvent: {}
+[39.240183] (-) TimerEvent: {}
+[39.340604] (-) TimerEvent: {}
+[39.441081] (-) TimerEvent: {}
+[39.541497] (-) TimerEvent: {}
+[39.644112] (-) TimerEvent: {}
+[39.745901] (-) TimerEvent: {}
+[39.846297] (-) TimerEvent: {}
+[39.946625] (-) TimerEvent: {}
+[39.962552] (piper_bringup) StdoutLine: {'line': b'[100%] Built target moveit_pick_and_place_cpp\n'}
+[40.004034] (piper_bringup) CommandEnded: {'returncode': 0}
+[40.007635] (piper_bringup) JobProgress: {'identifier': 'piper_bringup', 'progress': 'install'}
+[40.007783] (piper_bringup) Command: {'cmd': ['/usr/bin/cmake', '--install', '/home/dali/ros2_ws/build/piper_bringup'], 'cwd': '/home/dali/ros2_ws/build/piper_bringup', 'env': OrderedDict({'LESSOPEN': '| /usr/bin/lesspipe %s', 'GZ_SIM_RESOURCE_PATH': '/opt/ros/jazzy/share', 'USER': 'dali', 'GZ_CONFIG_PATH': '/opt/ros/jazzy/opt/gz_sim_vendor/share/gz:/opt/ros/jazzy/opt/sdformat_vendor/share/gz:/opt/ros/jazzy/opt/gz_gui_vendor/share/gz:/opt/ros/jazzy/opt/gz_transport_vendor/share/gz:/opt/ros/jazzy/opt/gz_rendering_vendor/share/gz:/opt/ros/jazzy/opt/gz_plugin_vendor/share/gz:/opt/ros/jazzy/opt/gz_fuel_tools_vendor/share/gz:/opt/ros/jazzy/opt/gz_msgs_vendor/share/gz:/opt/ros/jazzy/opt/gz_common_vendor/share/gz', 'XDG_SESSION_TYPE': 'wayland', 'CLUTTER_DISABLE_MIPMAPPED_TEXT': '1', 'SHLVL': '1', 'LD_LIBRARY_PATH': '/home/dali/ros2_ws/install/scene_graph_interfaces/lib:/opt/ros/jazzy/opt/gz_sim_vendor/lib:/opt/ros/jazzy/opt/gz_sensors_vendor/lib:/opt/ros/jazzy/opt/gz_physics_vendor/lib:/opt/ros/jazzy/opt/sdformat_vendor/lib:/opt/ros/jazzy/opt/rviz_ogre_vendor/lib:/opt/ros/jazzy/lib/aarch64-linux-gnu:/opt/ros/jazzy/opt/gz_gui_vendor/lib:/opt/ros/jazzy/opt/gz_transport_vendor/lib:/opt/ros/jazzy/opt/gz_rendering_vendor/lib:/opt/ros/jazzy/opt/gz_plugin_vendor/lib:/opt/ros/jazzy/opt/gz_fuel_tools_vendor/lib:/opt/ros/jazzy/opt/gz_msgs_vendor/lib:/opt/ros/jazzy/opt/gz_common_vendor/lib:/opt/ros/jazzy/opt/gz_math_vendor/lib:/opt/ros/jazzy/opt/gz_utils_vendor/lib:/opt/ros/jazzy/opt/gz_tools_vendor/lib:/opt/ros/jazzy/opt/gz_ogre_next_vendor/lib:/opt/ros/jazzy/opt/gz_dartsim_vendor/lib:/opt/ros/jazzy/opt/gz_cmake_vendor/lib:/opt/ros/jazzy/lib', 'HOME': '/home/dali', 'OLDPWD': '/home/dali', 'DESKTOP_SESSION': 'ubuntu', 'ROS_PYTHON_VERSION': '3', 'GNOME_SHELL_SESSION_MODE': 'ubuntu', 'GTK_MODULES': 'gail:atk-bridge', 'SYSTEMD_EXEC_PID': '1842', 'GSM_SKIP_SSH_AGENT_WORKAROUND': 'true', 'DBUS_SESSION_BUS_ADDRESS': 'unix:path=/run/user/1000/bus', 'COLORTERM': 'truecolor', 'DEBUGINFOD_URLS': 'https://debuginfod.ubuntu.com', 'IM_CONFIG_PHASE': '1', 'WAYLAND_DISPLAY': 'wayland-0', 'COLCON_PREFIX_PATH': '/home/dali/ros2_ws/install', 'ROS_DISTRO': 'jazzy', 'LOGNAME': 'dali', '_': '/usr/bin/colcon', 'ROS_VERSION': '2', 'MEMORY_PRESSURE_WATCH': '/sys/fs/cgroup/user.slice/user-1000.slice/user@1000.service/session.slice/org.gnome.Shell@wayland.service/memory.pressure', 'XDG_SESSION_CLASS': 'user', 'USERNAME': 'dali', 'TERM': 'xterm-256color', 'GNOME_DESKTOP_SESSION_ID': 'this-is-deprecated', 'PATH': '/opt/ros/jazzy/opt/gz_msgs_vendor/bin:/opt/ros/jazzy/opt/gz_tools_vendor/bin:/opt/ros/jazzy/opt/gz_ogre_next_vendor/bin:/opt/ros/jazzy/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/snap/bin', 'SESSION_MANAGER': 'local/dali:@/tmp/.ICE-unix/1810,unix/dali:/tmp/.ICE-unix/1810', 'XDG_MENU_PREFIX': 'gnome-', 'GNOME_TERMINAL_SCREEN': '/org/gnome/Terminal/screen/29fc844f_180e_4146_8852_286745236268', 'GNOME_SETUP_DISPLAY': ':1', 'XDG_RUNTIME_DIR': '/run/user/1000', 'DISPLAY': ':0', 'LANG': 'en_US.UTF-8', 'XDG_CURRENT_DESKTOP': 'ubuntu:GNOME', 'XMODIFIERS': '@im=ibus', 'XDG_SESSION_DESKTOP': 'ubuntu', 'XAUTHORITY': '/run/user/1000/.mutter-Xwaylandauth.DMF3I3', 'LS_COLORS': 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=00:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.avif=01;35:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:*~=00;90:*#=00;90:*.bak=00;90:*.crdownload=00;90:*.dpkg-dist=00;90:*.dpkg-new=00;90:*.dpkg-old=00;90:*.dpkg-tmp=00;90:*.old=00;90:*.orig=00;90:*.part=00;90:*.rej=00;90:*.rpmnew=00;90:*.rpmorig=00;90:*.rpmsave=00;90:*.swp=00;90:*.tmp=00;90:*.ucf-dist=00;90:*.ucf-new=00;90:*.ucf-old=00;90:', 'GNOME_TERMINAL_SERVICE': ':1.111', 'SSH_AUTH_SOCK': '/run/user/1000/keyring/ssh', 'AMENT_PREFIX_PATH': '/home/dali/ros2_ws/install/piper_bringup:/home/dali/ros2_ws/install/scene_graph_interfaces:/home/dali/ros2_ws/install/piper_moveit_config:/home/dali/ros2_ws/install/piper_description:/opt/ros/jazzy', 'SHELL': '/bin/bash', 'QT_ACCESSIBILITY': '1', 'GDMSESSION': 'ubuntu', 'LESSCLOSE': '/usr/bin/lesspipe %s %s', 'ROS_AUTOMATIC_DISCOVERY_RANGE': 'SUBNET', 'QT_IM_MODULE': 'ibus', 'PWD': '/home/dali/ros2_ws/build/piper_bringup', 'LC_ALL': 'en_US.UTF-8', 'XDG_CONFIG_DIRS': '/etc/xdg/xdg-ubuntu:/etc/xdg', 'XDG_DATA_DIRS': '/usr/share/ubuntu:/usr/share/gnome:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop', 'PYTHONPATH': '/home/dali/ros2_ws/install/scene_graph_interfaces/lib/python3.12/site-packages:/opt/ros/jazzy/lib/python3.12/site-packages', 'COLCON': '1', 'MEMORY_PRESSURE_WRITE': 'c29tZSAyMDAwMDAgMjAwMDAwMAA=', 'VTE_VERSION': '7600', 'CMAKE_PREFIX_PATH': '/home/dali/ros2_ws/install/scene_graph_interfaces:/home/dali/ros2_ws/install/piper_bringup:/home/dali/ros2_ws/install/piper_moveit_config:/home/dali/ros2_ws/install/piper_description:/opt/ros/jazzy/opt/gz_sim_vendor:/opt/ros/jazzy/opt/gz_sensors_vendor:/opt/ros/jazzy/opt/gz_physics_vendor:/opt/ros/jazzy/opt/sdformat_vendor:/opt/ros/jazzy/opt/gz_gui_vendor:/opt/ros/jazzy/opt/gz_transport_vendor:/opt/ros/jazzy/opt/gz_rendering_vendor:/opt/ros/jazzy/opt/gz_plugin_vendor:/opt/ros/jazzy/opt/gz_fuel_tools_vendor:/opt/ros/jazzy/opt/gz_msgs_vendor:/opt/ros/jazzy/opt/gz_common_vendor:/opt/ros/jazzy/opt/gz_math_vendor:/opt/ros/jazzy/opt/gz_utils_vendor:/opt/ros/jazzy/opt/gz_tools_vendor:/opt/ros/jazzy/opt/gz_ogre_next_vendor:/opt/ros/jazzy/opt/gz_dartsim_vendor:/opt/ros/jazzy/opt/gz_cmake_vendor:/opt/ros/jazzy'}), 'shell': False}
+[40.015548] (piper_bringup) StdoutLine: {'line': b'-- Install configuration: ""\n'}
+[40.016088] (piper_bringup) StdoutLine: {'line': b'-- Up-to-date: /home/dali/ros2_ws/install/piper_bringup/share/piper_bringup/launch\n'}
+[40.016563] (piper_bringup) StdoutLine: {'line': b'-- Up-to-date: /home/dali/ros2_ws/install/piper_bringup/share/piper_bringup/launch/piper.launch.xml\n'}
+[40.017951] (piper_bringup) StdoutLine: {'line': b'-- Up-to-date: /home/dali/ros2_ws/install/piper_bringup/share/piper_bringup/launch/pick_place_launch.py\n'}
+[40.017985] (piper_bringup) StdoutLine: {'line': b'-- Up-to-date: /home/dali/ros2_ws/install/piper_bringup/share/piper_bringup/launch/gazebo_piper.launch.py\n'}
+[40.018115] (piper_bringup) StdoutLine: {'line': b'-- Up-to-date: /home/dali/ros2_ws/install/piper_bringup/share/piper_bringup/rviz\n'}
+[40.018149] (piper_bringup) StdoutLine: {'line': b'-- Up-to-date: /home/dali/ros2_ws/install/piper_bringup/share/piper_bringup/rviz/robotmodel.rviz\n'}
+[40.018185] (piper_bringup) StdoutLine: {'line': b'-- Up-to-date: /home/dali/ros2_ws/install/piper_bringup/share/piper_bringup/worlds\n'}
+[40.018216] (piper_bringup) StdoutLine: {'line': b'-- Up-to-date: /home/dali/ros2_ws/install/piper_bringup/share/piper_bringup/worlds/empty_world.sdf\n'}
+[40.018246] (piper_bringup) StdoutLine: {'line': b'-- Up-to-date: /home/dali/ros2_ws/install/piper_bringup/share/piper_bringup/models\n'}
+[40.018276] (piper_bringup) StdoutLine: {'line': b'-- Up-to-date: /home/dali/ros2_ws/install/piper_bringup/share/piper_bringup/models/cylinder\n'}
+[40.018306] (piper_bringup) StdoutLine: {'line': b'-- Up-to-date: /home/dali/ros2_ws/install/piper_bringup/share/piper_bringup/models/cylinder/model.sdf\n'}
+[40.018336] (piper_bringup) StdoutLine: {'line': b'-- Up-to-date: /home/dali/ros2_ws/install/piper_bringup/share/piper_bringup/models/cylinder/model.config\n'}
+[40.018377] (piper_bringup) StdoutLine: {'line': b'-- Up-to-date: /home/dali/ros2_ws/install/piper_bringup/share/piper_bringup/models/cube\n'}
+[40.018409] (piper_bringup) StdoutLine: {'line': b'-- Up-to-date: /home/dali/ros2_ws/install/piper_bringup/share/piper_bringup/models/cube/model.sdf\n'}
+[40.018439] (piper_bringup) StdoutLine: {'line': b'-- Up-to-date: /home/dali/ros2_ws/install/piper_bringup/share/piper_bringup/models/cube/model.config\n'}
+[40.018469] (piper_bringup) StdoutLine: {'line': b'-- Up-to-date: /home/dali/ros2_ws/install/piper_bringup/lib/piper_bringup/pick_and_place.py\n'}
+[40.018499] (piper_bringup) StdoutLine: {'line': b'-- Up-to-date: /home/dali/ros2_ws/install/piper_bringup/lib/piper_bringup/ik_pick_and_place.py\n'}
+[40.018528] (piper_bringup) StdoutLine: {'line': b'-- Up-to-date: /home/dali/ros2_ws/install/piper_bringup/lib/piper_bringup/detection_node.py\n'}
+[40.018558] (piper_bringup) StdoutLine: {'line': b'-- Installing: /home/dali/ros2_ws/install/piper_bringup/lib/piper_bringup/moveit_pick_and_place_cpp\n'}
+[40.032617] (piper_bringup) StdoutLine: {'line': b'-- Set non-toolchain portion of runtime path of "/home/dali/ros2_ws/install/piper_bringup/lib/piper_bringup/moveit_pick_and_place_cpp" to ""\n'}
+[40.033164] (piper_bringup) StdoutLine: {'line': b'-- Up-to-date: /home/dali/ros2_ws/install/piper_bringup/share/ament_index/resource_index/package_run_dependencies/piper_bringup\n'}
+[40.033211] (piper_bringup) StdoutLine: {'line': b'-- Up-to-date: /home/dali/ros2_ws/install/piper_bringup/share/ament_index/resource_index/parent_prefix_path/piper_bringup\n'}
+[40.033243] (piper_bringup) StdoutLine: {'line': b'-- Up-to-date: /home/dali/ros2_ws/install/piper_bringup/share/piper_bringup/environment/ament_prefix_path.sh\n'}
+[40.033275] (piper_bringup) StdoutLine: {'line': b'-- Up-to-date: /home/dali/ros2_ws/install/piper_bringup/share/piper_bringup/environment/ament_prefix_path.dsv\n'}
+[40.033305] (piper_bringup) StdoutLine: {'line': b'-- Up-to-date: /home/dali/ros2_ws/install/piper_bringup/share/piper_bringup/environment/path.sh\n'}
+[40.033335] (piper_bringup) StdoutLine: {'line': b'-- Up-to-date: /home/dali/ros2_ws/install/piper_bringup/share/piper_bringup/environment/path.dsv\n'}
+[40.033366] (piper_bringup) StdoutLine: {'line': b'-- Up-to-date: /home/dali/ros2_ws/install/piper_bringup/share/piper_bringup/local_setup.bash\n'}
+[40.033396] (piper_bringup) StdoutLine: {'line': b'-- Up-to-date: /home/dali/ros2_ws/install/piper_bringup/share/piper_bringup/local_setup.sh\n'}
+[40.033425] (piper_bringup) StdoutLine: {'line': b'-- Up-to-date: /home/dali/ros2_ws/install/piper_bringup/share/piper_bringup/local_setup.zsh\n'}
+[40.035186] (piper_bringup) StdoutLine: {'line': b'-- Up-to-date: /home/dali/ros2_ws/install/piper_bringup/share/piper_bringup/local_setup.dsv\n'}
+[40.035321] (piper_bringup) StdoutLine: {'line': b'-- Installing: /home/dali/ros2_ws/install/piper_bringup/share/piper_bringup/package.dsv\n'}
+[40.035669] (piper_bringup) StdoutLine: {'line': b'-- Up-to-date: /home/dali/ros2_ws/install/piper_bringup/share/ament_index/resource_index/packages/piper_bringup\n'}
+[40.035798] (piper_bringup) StdoutLine: {'line': b'-- Up-to-date: /home/dali/ros2_ws/install/piper_bringup/share/piper_bringup/cmake/ament_cmake_export_dependencies-extras.cmake\n'}
+[40.035835] (piper_bringup) StdoutLine: {'line': b'-- Up-to-date: /home/dali/ros2_ws/install/piper_bringup/share/piper_bringup/cmake/piper_bringupConfig.cmake\n'}
+[40.035865] (piper_bringup) StdoutLine: {'line': b'-- Up-to-date: /home/dali/ros2_ws/install/piper_bringup/share/piper_bringup/cmake/piper_bringupConfig-version.cmake\n'}
+[40.035930] (piper_bringup) StdoutLine: {'line': b'-- Up-to-date: /home/dali/ros2_ws/install/piper_bringup/share/piper_bringup/package.xml\n'}
+[40.041908] (piper_bringup) CommandEnded: {'returncode': 0}
+[40.062488] (-) TimerEvent: {}
+[40.074936] (piper_bringup) JobEnded: {'identifier': 'piper_bringup', 'rc': 0}
+[40.090968] (-) EventReactorShutdown: {}

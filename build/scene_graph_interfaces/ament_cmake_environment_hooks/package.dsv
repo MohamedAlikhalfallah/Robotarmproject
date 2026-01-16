@@ -1,0 +1,4 @@
+source;share/scene_graph_interfaces/local_setup.bash
+source;share/scene_graph_interfaces/local_setup.dsv
+source;share/scene_graph_interfaces/local_setup.sh
+source;share/scene_graph_interfaces/local_setup.zsh

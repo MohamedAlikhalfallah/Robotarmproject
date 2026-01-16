@@ -1,0 +1,43 @@
+[01m[K/home/dali/ros2_ws/src/piper_ros2/piper_bringup/src/moveit_pick_and_place.cpp:[m[K In member function ‘[01m[Kvoid PiperUniversalEngine::[01;32m[Kexecute_interaction[m[K(std::shared_ptr<moveit::planning_interface::MoveGroupInterface>)[m[K’:
+[01m[K/home/dali/ros2_ws/src/piper_ros2/piper_bringup/src/moveit_pick_and_place.cpp:97:35:[m[K [01;31m[Kerror: [m[Kinvalid initialization of reference of type ‘[01m[Kconst std::chrono::nanoseconds&[m[K’ {aka ‘[01m[Kconst std::chrono::duration<long int, std::ratio<1, 1000000000> >&[m[K’} from expression of type ‘[01m[Kstd::chrono::duration<long double>[m[K’
+   97 |                 rclcpp::sleep_for([01;31m[K1.5s[m[K);
+      |                                   [01;31m[K^~~~[m[K
+In file included from [01m[K/opt/ros/jazzy/include/rclcpp/rclcpp/logging.hpp:25[m[K,
+                 from [01m[K/opt/ros/jazzy/include/rclcpp/rclcpp/copy_all_parameter_values.hpp:27[m[K,
+                 from [01m[K/opt/ros/jazzy/include/rclcpp/rclcpp/rclcpp.hpp:171[m[K,
+                 from [01m[K/home/dali/ros2_ws/src/piper_ros2/piper_bringup/src/moveit_pick_and_place.cpp:1[m[K:
+[01m[K/opt/ros/jazzy/include/rclcpp/rclcpp/utilities.hpp:233:36:[m[K [01;36m[Knote: [m[Kin passing argument 1 of ‘[01m[Kbool rclcpp::[01;32m[Ksleep_for[m[K(const std::chrono::nanoseconds&, Context::SharedPtr)[m[K’
+  233 |   [01;36m[Kconst std::chrono::nanoseconds & nanoseconds[m[K,
+      |   [01;36m[K~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~[m[K
+[01m[K/home/dali/ros2_ws/src/piper_ros2/piper_bringup/src/moveit_pick_and_place.cpp:110:35:[m[K [01;31m[Kerror: [m[Kinvalid initialization of reference of type ‘[01m[Kconst std::chrono::nanoseconds&[m[K’ {aka ‘[01m[Kconst std::chrono::duration<long int, std::ratio<1, 1000000000> >&[m[K’} from expression of type ‘[01m[Kstd::chrono::duration<long double>[m[K’
+  110 |                 rclcpp::sleep_for([01;31m[K1.5s[m[K);
+      |                                   [01;31m[K^~~~[m[K
+[01m[K/opt/ros/jazzy/include/rclcpp/rclcpp/utilities.hpp:233:36:[m[K [01;36m[Knote: [m[Kin passing argument 1 of ‘[01m[Kbool rclcpp::[01;32m[Ksleep_for[m[K(const std::chrono::nanoseconds&, Context::SharedPtr)[m[K’
+  233 |   [01;36m[Kconst std::chrono::nanoseconds & nanoseconds[m[K,
+      |   [01;36m[K~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~[m[K
+[01m[K/home/dali/ros2_ws/src/piper_ros2/piper_bringup/src/moveit_pick_and_place.cpp:114:35:[m[K [01;31m[Kerror: [m[Kjump to case label
+  114 |             case InteractionType::[01;31m[KPUSH[m[K:
+      |                                   [01;31m[K^~~~[m[K
+[01m[K/home/dali/ros2_ws/src/piper_ros2/piper_bringup/src/moveit_pick_and_place.cpp:106:24:[m[K [01;36m[Knote: [m[K  crosses initialization of ‘[01m[Kdouble pre_y[m[K’
+  106 |                 double [01;36m[Kpre_y[m[K = target_.y - (active_strategy_.approach_dist * sin(yaw));
+      |                        [01;36m[K^~~~~[m[K
+[01m[K/home/dali/ros2_ws/src/piper_ros2/piper_bringup/src/moveit_pick_and_place.cpp:105:24:[m[K [01;36m[Knote: [m[K  crosses initialization of ‘[01m[Kdouble pre_x[m[K’
+  105 |                 double [01;36m[Kpre_x[m[K = target_.x - (active_strategy_.approach_dist * cos(yaw));
+      |                        [01;36m[K^~~~~[m[K
+[01m[K/home/dali/ros2_ws/src/piper_ros2/piper_bringup/src/moveit_pick_and_place.cpp:121:35:[m[K [01;31m[Kerror: [m[Kjump to case label
+  121 |             case InteractionType::[01;31m[KPULL[m[K:
+      |                                   [01;31m[K^~~~[m[K
+[01m[K/home/dali/ros2_ws/src/piper_ros2/piper_bringup/src/moveit_pick_and_place.cpp:106:24:[m[K [01;36m[Knote: [m[K  crosses initialization of ‘[01m[Kdouble pre_y[m[K’
+  106 |                 double [01;36m[Kpre_y[m[K = target_.y - (active_strategy_.approach_dist * sin(yaw));
+      |                        [01;36m[K^~~~~[m[K
+[01m[K/home/dali/ros2_ws/src/piper_ros2/piper_bringup/src/moveit_pick_and_place.cpp:105:24:[m[K [01;36m[Knote: [m[K  crosses initialization of ‘[01m[Kdouble pre_x[m[K’
+  105 |                 double [01;36m[Kpre_x[m[K = target_.x - (active_strategy_.approach_dist * cos(yaw));
+      |                        [01;36m[K^~~~~[m[K
+[01m[K/home/dali/ros2_ws/src/piper_ros2/piper_bringup/src/moveit_pick_and_place.cpp:90:16:[m[K [01;35m[Kwarning: [m[Kenumeration value ‘[01m[KPUSH[m[K’ not handled in switch [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wswitch-Wswitch]8;;[m[K]
+   90 |         switch [01;35m[K([m[Kactive_strategy_.type) {
+      |                [01;35m[K^[m[K
+[01m[K/home/dali/ros2_ws/src/piper_ros2/piper_bringup/src/moveit_pick_and_place.cpp:90:16:[m[K [01;35m[Kwarning: [m[Kenumeration value ‘[01m[KPULL[m[K’ not handled in switch [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wswitch-Wswitch]8;;[m[K]
+[01m[K/home/dali/ros2_ws/src/piper_ros2/piper_bringup/src/moveit_pick_and_place.cpp:90:16:[m[K [01;35m[Kwarning: [m[Kenumeration value ‘[01m[KNONE[m[K’ not handled in switch [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wswitch-Wswitch]8;;[m[K]
+gmake[2]: *** [CMakeFiles/moveit_pick_and_place_cpp.dir/build.make:76: CMakeFiles/moveit_pick_and_place_cpp.dir/src/moveit_pick_and_place.cpp.o] Error 1
+gmake[1]: *** [CMakeFiles/Makefile2:137: CMakeFiles/moveit_pick_and_place_cpp.dir/all] Error 2
+gmake: *** [Makefile:146: all] Error 2

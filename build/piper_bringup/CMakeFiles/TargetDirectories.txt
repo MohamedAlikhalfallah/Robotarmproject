@@ -1,0 +1,10 @@
+/home/dali/ros2_ws/build/piper_bringup/CMakeFiles/uninstall.dir
+/home/dali/ros2_ws/build/piper_bringup/CMakeFiles/piper_bringup_uninstall.dir
+/home/dali/ros2_ws/build/piper_bringup/CMakeFiles/moveit_pick_and_place_cpp.dir
+/home/dali/ros2_ws/build/piper_bringup/CMakeFiles/test.dir
+/home/dali/ros2_ws/build/piper_bringup/CMakeFiles/edit_cache.dir
+/home/dali/ros2_ws/build/piper_bringup/CMakeFiles/rebuild_cache.dir
+/home/dali/ros2_ws/build/piper_bringup/CMakeFiles/list_install_components.dir
+/home/dali/ros2_ws/build/piper_bringup/CMakeFiles/install.dir
+/home/dali/ros2_ws/build/piper_bringup/CMakeFiles/install/local.dir
+/home/dali/ros2_ws/build/piper_bringup/CMakeFiles/install/strip.dir

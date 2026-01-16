@@ -1,0 +1,65 @@
+[0.020s] Invoking command in '/home/dali/ros2_ws/build/piper_description': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake /home/dali/ros2_ws/src/piper_ros2/piper_description -DCMAKE_INSTALL_PREFIX=/home/dali/ros2_ws/install/piper_description
+[0.168s] -- The C compiler identification is GNU 13.3.0
+[0.203s] -- The CXX compiler identification is GNU 13.3.0
+[0.223s] -- Detecting C compiler ABI info
+[0.381s] -- Detecting C compiler ABI info - done
+[0.396s] -- Check for working C compiler: /usr/bin/cc - skipped
+[0.396s] -- Detecting C compile features
+[0.396s] -- Detecting C compile features - done
+[0.404s] -- Detecting CXX compiler ABI info
+[0.598s] -- Detecting CXX compiler ABI info - done
+[0.612s] -- Check for working CXX compiler: /usr/bin/c++ - skipped
+[0.617s] -- Detecting CXX compile features
+[0.617s] -- Detecting CXX compile features - done
+[0.619s] -- Found ament_cmake: 2.5.4 (/opt/ros/jazzy/share/ament_cmake/cmake)
+[0.986s] -- Found Python3: /usr/bin/python3 (found version "3.12.3") found components: Interpreter 
+[1.374s] -- Configuring done (1.3s)
+[1.374s] -- Generating done (0.0s)
+[1.375s] -- Build files have been written to: /home/dali/ros2_ws/build/piper_description
+[1.384s] Invoked command in '/home/dali/ros2_ws/build/piper_description' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake /home/dali/ros2_ws/src/piper_ros2/piper_description -DCMAKE_INSTALL_PREFIX=/home/dali/ros2_ws/install/piper_description
+[1.385s] Invoking command in '/home/dali/ros2_ws/build/piper_description': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --build /home/dali/ros2_ws/build/piper_description -- -j4 -l4
+[1.461s] Invoked command in '/home/dali/ros2_ws/build/piper_description' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --build /home/dali/ros2_ws/build/piper_description -- -j4 -l4
+[1.470s] Invoking command in '/home/dali/ros2_ws/build/piper_description': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --install /home/dali/ros2_ws/build/piper_description
+[1.482s] -- Install configuration: ""
+[1.482s] -- Installing: /home/dali/ros2_ws/install/piper_description/share/piper_description//config
+[1.484s] -- Installing: /home/dali/ros2_ws/install/piper_description/share/piper_description//config/mock_controllers.yaml
+[1.487s] -- Installing: /home/dali/ros2_ws/install/piper_description/share/piper_description//config/initial_positions.yaml
+[1.487s] -- Installing: /home/dali/ros2_ws/install/piper_description/share/piper_description//config/gz_controllers.yaml
+[1.489s] -- Installing: /home/dali/ros2_ws/install/piper_description/share/piper_description//launch
+[1.491s] -- Installing: /home/dali/ros2_ws/install/piper_description/share/piper_description//launch/view_urdf.launch.xml
+[1.491s] -- Installing: /home/dali/ros2_ws/install/piper_description/share/piper_description//meshes
+[1.491s] -- Installing: /home/dali/ros2_ws/install/piper_description/share/piper_description//meshes/right_finger.dae
+[1.494s] -- Installing: /home/dali/ros2_ws/install/piper_description/share/piper_description//meshes/gripper_base_link.dae
+[1.494s] -- Installing: /home/dali/ros2_ws/install/piper_description/share/piper_description//meshes/link5.dae
+[1.494s] -- Installing: /home/dali/ros2_ws/install/piper_description/share/piper_description//meshes/link2.dae
+[1.499s] -- Installing: /home/dali/ros2_ws/install/piper_description/share/piper_description//meshes/link3.dae
+[1.506s] -- Installing: /home/dali/ros2_ws/install/piper_description/share/piper_description//meshes/left_finger.dae
+[1.508s] -- Installing: /home/dali/ros2_ws/install/piper_description/share/piper_description//meshes/link4.dae
+[1.510s] -- Installing: /home/dali/ros2_ws/install/piper_description/share/piper_description//meshes/base_link.dae
+[1.514s] -- Installing: /home/dali/ros2_ws/install/piper_description/share/piper_description//meshes/link1.dae
+[1.521s] -- Installing: /home/dali/ros2_ws/install/piper_description/share/piper_description//meshes/MESH_LICENSE
+[1.521s] -- Installing: /home/dali/ros2_ws/install/piper_description/share/piper_description//urdf
+[1.521s] -- Installing: /home/dali/ros2_ws/install/piper_description/share/piper_description//urdf/piper_gripper_macro.xacro
+[1.521s] -- Installing: /home/dali/ros2_ws/install/piper_description/share/piper_description//urdf/piper_arm_macro.xacro
+[1.521s] -- Installing: /home/dali/ros2_ws/install/piper_description/share/piper_description//urdf/piper.ros2_control.xacro
+[1.527s] -- Installing: /home/dali/ros2_ws/install/piper_description/share/piper_description//urdf/piper.gazebo.xacro
+[1.527s] -- Installing: /home/dali/ros2_ws/install/piper_description/share/piper_description//urdf/piper_macro.xacro
+[1.527s] -- Installing: /home/dali/ros2_ws/install/piper_description/share/piper_description//urdf/piper.urdf.xacro
+[1.527s] -- Installing: /home/dali/ros2_ws/install/piper_description/share/piper_description//rviz
+[1.527s] -- Installing: /home/dali/ros2_ws/install/piper_description/share/piper_description//rviz/robot_urdf.rviz
+[1.528s] -- Installing: /home/dali/ros2_ws/install/piper_description/share/ament_index/resource_index/package_run_dependencies/piper_description
+[1.539s] -- Installing: /home/dali/ros2_ws/install/piper_description/share/ament_index/resource_index/parent_prefix_path/piper_description
+[1.539s] -- Installing: /home/dali/ros2_ws/install/piper_description/share/piper_description/environment/ament_prefix_path.sh
+[1.539s] -- Installing: /home/dali/ros2_ws/install/piper_description/share/piper_description/environment/ament_prefix_path.dsv
+[1.539s] -- Installing: /home/dali/ros2_ws/install/piper_description/share/piper_description/environment/path.sh
+[1.539s] -- Installing: /home/dali/ros2_ws/install/piper_description/share/piper_description/environment/path.dsv
+[1.540s] -- Installing: /home/dali/ros2_ws/install/piper_description/share/piper_description/local_setup.bash
+[1.540s] -- Installing: /home/dali/ros2_ws/install/piper_description/share/piper_description/local_setup.sh
+[1.540s] -- Installing: /home/dali/ros2_ws/install/piper_description/share/piper_description/local_setup.zsh
+[1.540s] -- Installing: /home/dali/ros2_ws/install/piper_description/share/piper_description/local_setup.dsv
+[1.540s] -- Installing: /home/dali/ros2_ws/install/piper_description/share/piper_description/package.dsv
+[1.540s] -- Installing: /home/dali/ros2_ws/install/piper_description/share/ament_index/resource_index/packages/piper_description
+[1.540s] -- Installing: /home/dali/ros2_ws/install/piper_description/share/piper_description/cmake/piper_descriptionConfig.cmake
+[1.540s] -- Installing: /home/dali/ros2_ws/install/piper_description/share/piper_description/cmake/piper_descriptionConfig-version.cmake
+[1.540s] -- Installing: /home/dali/ros2_ws/install/piper_description/share/piper_description/package.xml
+[1.542s] Invoked command in '/home/dali/ros2_ws/build/piper_description' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --install /home/dali/ros2_ws/build/piper_description

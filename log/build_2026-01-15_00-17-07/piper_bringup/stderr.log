@@ -1,0 +1,11 @@
+[01m[K/home/dali/ros2_ws/src/piper_ros2/piper_bringup/src/moveit_pick_and_place.cpp:[m[K In member function ‘[01m[Kvoid PiperLogicEngine::[01;32m[Kexecute_intelligent_pipeline[m[K(std::shared_ptr<moveit::planning_interface::MoveGroupInterface>)[m[K’:
+[01m[K/home/dali/ros2_ws/src/piper_ros2/piper_bringup/src/moveit_pick_and_place.cpp:94:21:[m[K [01;31m[Kerror: [m[K‘[01m[Kusing std::__shared_ptr_access<moveit::planning_interface::MoveGroupInterface, __gnu_cxx::_S_atomic, false, false>::element_type = class moveit::planning_interface::MoveGroupInterface[m[K’ {aka ‘[01m[Kclass moveit::planning_interface::MoveGroupInterface[m[K’} has no member named ‘[01m[Kpick[m[K’
+   94 |         move_group->[01;31m[Kpick[m[K(latest_name_, grasps);
+      |                     [01;31m[K^~~~[m[K
+[01m[K/home/dali/ros2_ws/src/piper_ros2/piper_bringup/src/moveit_pick_and_place.cpp:[m[K In lambda function:
+[01m[K/home/dali/ros2_ws/src/piper_ros2/piper_bringup/src/moveit_pick_and_place.cpp:130:21:[m[K [01;31m[Kerror: [m[K‘[01m[Kusing std::__shared_ptr_access<moveit::planning_interface::MoveGroupInterface, __gnu_cxx::_S_atomic, false, false>::element_type = class moveit::planning_interface::MoveGroupInterface[m[K’ {aka ‘[01m[Kclass moveit::planning_interface::MoveGroupInterface[m[K’} has no member named ‘[01m[KsetSupportSurfaceName[m[K’
+  130 |         move_group->[01;31m[KsetSupportSurfaceName[m[K("table");
+      |                     [01;31m[K^~~~~~~~~~~~~~~~~~~~~[m[K
+gmake[2]: *** [CMakeFiles/moveit_pick_and_place_cpp.dir/build.make:76: CMakeFiles/moveit_pick_and_place_cpp.dir/src/moveit_pick_and_place.cpp.o] Error 1
+gmake[1]: *** [CMakeFiles/Makefile2:137: CMakeFiles/moveit_pick_and_place_cpp.dir/all] Error 2
+gmake: *** [Makefile:146: all] Error 2

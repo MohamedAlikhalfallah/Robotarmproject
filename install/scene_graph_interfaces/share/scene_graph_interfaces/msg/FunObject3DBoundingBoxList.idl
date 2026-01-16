@@ -1,0 +1,16 @@
+// generated from rosidl_adapter/resource/msg.idl.em
+// with input from scene_graph_interfaces/msg/FunObject3DBoundingBoxList.msg
+// generated code does not contain a copyright notice
+
+#include "scene_graph_interfaces/msg/FunObject3DBoundingBox.idl"
+#include "std_msgs/msg/Header.idl"
+
+module scene_graph_interfaces {
+  module msg {
+    struct FunObject3DBoundingBoxList {
+      std_msgs::msg::Header header;
+
+      sequence<scene_graph_interfaces::msg::FunObject3DBoundingBox> bbox;
+    };
+  };
+};

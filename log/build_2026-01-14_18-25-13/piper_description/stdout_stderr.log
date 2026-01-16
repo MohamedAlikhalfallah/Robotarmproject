@@ -1,0 +1,59 @@
+-- The C compiler identification is GNU 13.3.0
+-- The CXX compiler identification is GNU 13.3.0
+-- Detecting C compiler ABI info
+-- Detecting C compiler ABI info - done
+-- Check for working C compiler: /usr/bin/cc - skipped
+-- Detecting C compile features
+-- Detecting C compile features - done
+-- Detecting CXX compiler ABI info
+-- Detecting CXX compiler ABI info - done
+-- Check for working CXX compiler: /usr/bin/c++ - skipped
+-- Detecting CXX compile features
+-- Detecting CXX compile features - done
+-- Found ament_cmake: 2.5.4 (/opt/ros/jazzy/share/ament_cmake/cmake)
+-- Found Python3: /usr/bin/python3 (found version "3.12.3") found components: Interpreter 
+-- Configuring done (1.3s)
+-- Generating done (0.0s)
+-- Build files have been written to: /home/dali/ros2_ws/build/piper_description
+-- Install configuration: ""
+-- Installing: /home/dali/ros2_ws/install/piper_description/share/piper_description//config
+-- Installing: /home/dali/ros2_ws/install/piper_description/share/piper_description//config/mock_controllers.yaml
+-- Installing: /home/dali/ros2_ws/install/piper_description/share/piper_description//config/initial_positions.yaml
+-- Installing: /home/dali/ros2_ws/install/piper_description/share/piper_description//config/gz_controllers.yaml
+-- Installing: /home/dali/ros2_ws/install/piper_description/share/piper_description//launch
+-- Installing: /home/dali/ros2_ws/install/piper_description/share/piper_description//launch/view_urdf.launch.xml
+-- Installing: /home/dali/ros2_ws/install/piper_description/share/piper_description//meshes
+-- Installing: /home/dali/ros2_ws/install/piper_description/share/piper_description//meshes/right_finger.dae
+-- Installing: /home/dali/ros2_ws/install/piper_description/share/piper_description//meshes/gripper_base_link.dae
+-- Installing: /home/dali/ros2_ws/install/piper_description/share/piper_description//meshes/link5.dae
+-- Installing: /home/dali/ros2_ws/install/piper_description/share/piper_description//meshes/link2.dae
+-- Installing: /home/dali/ros2_ws/install/piper_description/share/piper_description//meshes/link3.dae
+-- Installing: /home/dali/ros2_ws/install/piper_description/share/piper_description//meshes/left_finger.dae
+-- Installing: /home/dali/ros2_ws/install/piper_description/share/piper_description//meshes/link4.dae
+-- Installing: /home/dali/ros2_ws/install/piper_description/share/piper_description//meshes/base_link.dae
+-- Installing: /home/dali/ros2_ws/install/piper_description/share/piper_description//meshes/link1.dae
+-- Installing: /home/dali/ros2_ws/install/piper_description/share/piper_description//meshes/MESH_LICENSE
+-- Installing: /home/dali/ros2_ws/install/piper_description/share/piper_description//urdf
+-- Installing: /home/dali/ros2_ws/install/piper_description/share/piper_description//urdf/piper_gripper_macro.xacro
+-- Installing: /home/dali/ros2_ws/install/piper_description/share/piper_description//urdf/piper_arm_macro.xacro
+-- Installing: /home/dali/ros2_ws/install/piper_description/share/piper_description//urdf/piper.ros2_control.xacro
+-- Installing: /home/dali/ros2_ws/install/piper_description/share/piper_description//urdf/piper.gazebo.xacro
+-- Installing: /home/dali/ros2_ws/install/piper_description/share/piper_description//urdf/piper_macro.xacro
+-- Installing: /home/dali/ros2_ws/install/piper_description/share/piper_description//urdf/piper.urdf.xacro
+-- Installing: /home/dali/ros2_ws/install/piper_description/share/piper_description//rviz
+-- Installing: /home/dali/ros2_ws/install/piper_description/share/piper_description//rviz/robot_urdf.rviz
+-- Installing: /home/dali/ros2_ws/install/piper_description/share/ament_index/resource_index/package_run_dependencies/piper_description
+-- Installing: /home/dali/ros2_ws/install/piper_description/share/ament_index/resource_index/parent_prefix_path/piper_description
+-- Installing: /home/dali/ros2_ws/install/piper_description/share/piper_description/environment/ament_prefix_path.sh
+-- Installing: /home/dali/ros2_ws/install/piper_description/share/piper_description/environment/ament_prefix_path.dsv
+-- Installing: /home/dali/ros2_ws/install/piper_description/share/piper_description/environment/path.sh
+-- Installing: /home/dali/ros2_ws/install/piper_description/share/piper_description/environment/path.dsv
+-- Installing: /home/dali/ros2_ws/install/piper_description/share/piper_description/local_setup.bash
+-- Installing: /home/dali/ros2_ws/install/piper_description/share/piper_description/local_setup.sh
+-- Installing: /home/dali/ros2_ws/install/piper_description/share/piper_description/local_setup.zsh
+-- Installing: /home/dali/ros2_ws/install/piper_description/share/piper_description/local_setup.dsv
+-- Installing: /home/dali/ros2_ws/install/piper_description/share/piper_description/package.dsv
+-- Installing: /home/dali/ros2_ws/install/piper_description/share/ament_index/resource_index/packages/piper_description
+-- Installing: /home/dali/ros2_ws/install/piper_description/share/piper_description/cmake/piper_descriptionConfig.cmake
+-- Installing: /home/dali/ros2_ws/install/piper_description/share/piper_description/cmake/piper_descriptionConfig-version.cmake
+-- Installing: /home/dali/ros2_ws/install/piper_description/share/piper_description/package.xml

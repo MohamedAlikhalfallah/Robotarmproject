@@ -1,0 +1,153 @@
+[0.048s] Invoking command in '/home/dali/ros2_ws/build/piper_bringup': CMAKE_PREFIX_PATH=/home/dali/ros2_ws/install/scene_graph_interfaces:/home/dali/ros2_ws/install/piper_bringup:/home/dali/ros2_ws/install/piper_moveit_config:/home/dali/ros2_ws/install/piper_description:/opt/ros/jazzy/opt/gz_sim_vendor:/opt/ros/jazzy/opt/gz_sensors_vendor:/opt/ros/jazzy/opt/gz_physics_vendor:/opt/ros/jazzy/opt/sdformat_vendor:/opt/ros/jazzy/opt/gz_gui_vendor:/opt/ros/jazzy/opt/gz_transport_vendor:/opt/ros/jazzy/opt/gz_rendering_vendor:/opt/ros/jazzy/opt/gz_plugin_vendor:/opt/ros/jazzy/opt/gz_fuel_tools_vendor:/opt/ros/jazzy/opt/gz_msgs_vendor:/opt/ros/jazzy/opt/gz_common_vendor:/opt/ros/jazzy/opt/gz_math_vendor:/opt/ros/jazzy/opt/gz_utils_vendor:/opt/ros/jazzy/opt/gz_tools_vendor:/opt/ros/jazzy/opt/gz_ogre_next_vendor:/opt/ros/jazzy/opt/gz_dartsim_vendor:/opt/ros/jazzy/opt/gz_cmake_vendor:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --build /home/dali/ros2_ws/build/piper_bringup -- -j4 -l4
+[0.187s] [ 50%] [32mBuilding CXX object CMakeFiles/moveit_pick_and_place_cpp.dir/src/moveit_pick_and_place.cpp.o[0m
+[7.701s] [01m[K/home/dali/ros2_ws/src/piper_ros2/piper_bringup/src/moveit_pick_and_place.cpp:41:72:[m[K [01;31m[Kerror: [m[K‘[01m[KGraspType[m[K’ has not been declared
+[7.701s]    41 | y_msgs::msg::Pose create_pose(double x, double y, double z, [01;31m[KGraspType[m[K type, double obj_x = 0, double obj_y = 0) {
+[7.701s]       |                                                             [01;31m[K^~~~~~~~~[m[K
+[7.701s] 
+[7.702s] [01m[K/home/dali/ros2_ws/src/piper_ros2/piper_bringup/src/moveit_pick_and_place.cpp:63:42:[m[K [01;31m[Kerror: [m[K‘[01m[KDetectedObject[m[K’ does not name a type
+[7.702s]    63 |                                    const [01;31m[KDetectedObject[m[K& obj) {
+[7.702s]       |                                          [01;31m[K^~~~~~~~~~~~~~[m[K
+[7.703s] [01m[K/home/dali/ros2_ws/src/piper_ros2/piper_bringup/src/moveit_pick_and_place.cpp:[m[K In constructor ‘[01m[KPiperDynamicNode::[01;32m[KPiperDynamicNode[m[K()[m[K’:
+[7.703s] [01m[K/home/dali/ros2_ws/src/piper_ros2/piper_bringup/src/moveit_pick_and_place.cpp:25:15:[m[K [01;31m[Kerror: [m[K‘[01m[Kclass PiperDynamicNode[m[K’ has no member named ‘[01m[Karm_pub_[m[K’
+[7.703s]    25 |         this->[01;31m[Karm_pub_[m[K = this->create_publisher<trajectory_msgs::msg::JointTrajectory>(
+[7.703s]       |               [01;31m[K^~~~~~~~[m[K
+[7.705s] [01m[K/home/dali/ros2_ws/src/piper_ros2/piper_bringup/src/moveit_pick_and_place.cpp:27:15:[m[K [01;31m[Kerror: [m[K‘[01m[Kclass PiperDynamicNode[m[K’ has no member named ‘[01m[Kgripper_client_[m[K’; did you mean ‘[01m[KGripperAction[m[K’?
+[7.705s]    27 |         this->[01;31m[Kgripper_client_[m[K = rclcpp_action::create_client<GripperAction>(
+[7.705s]       |               [01;31m[K^~~~~~~~~~~~~~~[m[K
+[7.705s]       |               [32m[KGripperAction[m[K
+[7.715s] [01m[K/home/dali/ros2_ws/src/piper_ros2/piper_bringup/src/moveit_pick_and_place.cpp:29:15:[m[K [01;31m[Kerror: [m[K‘[01m[Kclass PiperDynamicNode[m[K’ has no member named ‘[01m[Kobj_sub_[m[K’
+[7.715s]    29 |         this->[01;31m[Kobj_sub_[m[K = this->create_subscription<BBoxList>(
+[7.715s]       |               [01;31m[K^~~~~~~~[m[K
+[7.715s] [01m[K/home/dali/ros2_ws/src/piper_ros2/piper_bringup/src/moveit_pick_and_place.cpp:31:42:[m[K [01;31m[Kerror: [m[K‘[01m[Kvision_callback[m[K’ is not a member of ‘[01m[KPiperDynamicNode[m[K’
+[7.715s]    31 |             std::bind(&PiperDynamicNode::[01;31m[Kvision_callback[m[K, this, std::placeholders::_1));
+[7.715s]       |                                          [01;31m[K^~~~~~~~~~~~~~~[m[K
+[7.735s] [01m[K/home/dali/ros2_ws/src/piper_ros2/piper_bringup/src/moveit_pick_and_place.cpp:33:9:[m[K [01;31m[Kerror: [m[K‘[01m[Kinitialize_affordances[m[K’ was not declared in this scope
+[7.735s]    33 |         [01;31m[Kinitialize_affordances[m[K();
+[7.736s]       |         [01;31m[K^~~~~~~~~~~~~~~~~~~~~~[m[K
+[7.771s] [01m[K/home/dali/ros2_ws/src/piper_ros2/piper_bringup/src/moveit_pick_and_place.cpp:34:9:[m[K [01;31m[Kerror: [m[K‘[01m[Kinitialize_grasp_configs[m[K’ was not declared in this scope
+[7.771s]    34 |         [01;31m[Kinitialize_grasp_configs[m[K();
+[7.771s]       |         [01;31m[K^~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[7.771s] [01m[K/home/dali/ros2_ws/src/piper_ros2/piper_bringup/src/moveit_pick_and_place.cpp:[m[K In member function ‘[01m[Kgeometry_msgs::msg::Pose PiperDynamicNode::[01;32m[Kcreate_pose[m[K(double, double, double, int, double, double)[m[K’:
+[7.771s] [01m[K/home/dali/ros2_ws/src/piper_ros2/piper_bringup/src/moveit_pick_and_place.cpp:48:21:[m[K [01;31m[Kerror: [m[K‘[01m[KGraspType[m[K’ has not been declared
+[7.771s]    48 |         if (type == [01;31m[KGraspType[m[K::SIDE) {
+[7.771s]       |                     [01;31m[K^~~~~~~~~[m[K
+[7.810s] [01m[K/home/dali/ros2_ws/src/piper_ros2/piper_bringup/src/moveit_pick_and_place.cpp:[m[K In member function ‘[01m[Kvoid PiperDynamicNode::[01;32m[Kexecute_intelligent_grasp[m[K(std::shared_ptr<moveit::planning_interface::MoveGroupInterface>, const int&)[m[K’:
+[7.810s] [01m[K/home/dali/ros2_ws/src/piper_ros2/piper_bringup/src/moveit_pick_and_place.cpp:64:9:[m[K [01;31m[Kerror: [m[K‘[01m[KInteractionStrategy[m[K’ was not declared in this scope
+[7.810s]    64 |         [01;31m[KInteractionStrategy[m[K strategy = select_strategy(obj);
+[7.810s]       |         [01;31m[K^~~~~~~~~~~~~~~~~~~[m[K
+[7.848s] [01m[K/home/dali/ros2_ws/src/piper_ros2/piper_bringup/src/moveit_pick_and_place.cpp:67:9:[m[K [01;31m[Kerror: [m[K‘[01m[Ksend_gripper_command[m[K’ was not declared in this scope
+[7.848s]    67 |         [01;31m[Ksend_gripper_command[m[K(0.038);
+[7.848s]       |         [01;31m[K^~~~~~~~~~~~~~~~~~~~[m[K
+[7.904s] [01m[K/home/dali/ros2_ws/src/piper_ros2/piper_bringup/src/moveit_pick_and_place.cpp:70:13:[m[K [01;31m[Kerror: [m[K‘[01m[Kstrategy[m[K’ was not declared in this scope
+[7.904s]    70 |         if ([01;31m[Kstrategy[m[K.grasp_type == GraspType::SIDE) {
+[7.904s]       |             [01;31m[K^~~~~~~~[m[K
+[7.904s] [01m[K/home/dali/ros2_ws/src/piper_ros2/piper_bringup/src/moveit_pick_and_place.cpp:70:36:[m[K [01;31m[Kerror: [m[K‘[01m[KGraspType[m[K’ has not been declared
+[7.904s]    70 |         if (strategy.grasp_type == [01;31m[KGraspType[m[K::SIDE) {
+[7.904s]       |                                    [01;31m[K^~~~~~~~~[m[K
+[7.904s] [01m[K/home/dali/ros2_ws/src/piper_ros2/piper_bringup/src/moveit_pick_and_place.cpp:73:39:[m[K [01;31m[Kerror: [m[Krequest for member ‘[01m[Kz[m[K’ in ‘[01m[Kobj[m[K’, which is of non-class type ‘[01m[Kconst int[m[K’
+[7.904s]    73 |             double grasp_height = obj.[01;31m[Kz[m[K; // Middle of object
+[7.904s]       |                                       [01;31m[K^[m[K
+[7.904s] [01m[K/home/dali/ros2_ws/src/piper_ros2/piper_bringup/src/moveit_pick_and_place.cpp:74:43:[m[K [01;31m[Kerror: [m[Krequest for member ‘[01m[Ky[m[K’ in ‘[01m[Kobj[m[K’, which is of non-class type ‘[01m[Kconst int[m[K’
+[7.904s]    74 |             double angle = std::atan2(obj.[01;31m[Ky[m[K, obj.x);
+[7.904s]       |                                           [01;31m[K^[m[K
+[7.904s] [01m[K/home/dali/ros2_ws/src/piper_ros2/piper_bringup/src/moveit_pick_and_place.cpp:74:50:[m[K [01;31m[Kerror: [m[Krequest for member ‘[01m[Kx[m[K’ in ‘[01m[Kobj[m[K’, which is of non-class type ‘[01m[Kconst int[m[K’
+[7.904s]    74 |             double angle = std::atan2(obj.y, obj.[01;31m[Kx[m[K);
+[7.904s]       |                                                  [01;31m[K^[m[K
+[7.904s] [01m[K/home/dali/ros2_ws/src/piper_ros2/piper_bringup/src/moveit_pick_and_place.cpp:78:32:[m[K [01;31m[Kerror: [m[Krequest for member ‘[01m[Kx[m[K’ in ‘[01m[Kobj[m[K’, which is of non-class type ‘[01m[Kconst int[m[K’
+[7.904s]    78 |             double pre_x = obj.[01;31m[Kx[m[K - approach_dist * std::cos(angle);
+[7.904s]       |                                [01;31m[K^[m[K
+[7.905s] [01m[K/home/dali/ros2_ws/src/piper_ros2/piper_bringup/src/moveit_pick_and_place.cpp:79:32:[m[K [01;31m[Kerror: [m[Krequest for member ‘[01m[Ky[m[K’ in ‘[01m[Kobj[m[K’, which is of non-class type ‘[01m[Kconst int[m[K’
+[7.905s]    79 |             double pre_y = obj.[01;31m[Ky[m[K - approach_dist * std::sin(angle);
+[7.905s]       |                                [01;31m[K^[m[K
+[7.905s] [01m[K/home/dali/ros2_ws/src/piper_ros2/piper_bringup/src/moveit_pick_and_place.cpp:82:74:[m[K [01;31m[Kerror: [m[K‘[01m[KGraspType[m[K’ has not been declared
+[7.905s]    82 | roup->setPoseTarget(create_pose(pre_x, pre_y, grasp_height, [01;31m[KGraspType[m[K::SIDE, obj.x, obj.y));
+[7.905s]       |                                                             [01;31m[K^~~~~~~~~[m[K
+[7.905s] 
+[7.905s] [01m[K/home/dali/ros2_ws/src/piper_ros2/piper_bringup/src/moveit_pick_and_place.cpp:82:95:[m[K [01;31m[Kerror: [m[Krequest for member ‘[01m[Kx[m[K’ in ‘[01m[Kobj[m[K’, which is of non-class type ‘[01m[Kconst int[m[K’
+[7.905s]    82 | reate_pose(pre_x, pre_y, grasp_height, GraspType::SIDE, obj.[01;31m[Kx[m[K, obj.y));
+[7.905s]       |                                                             [01;31m[K^[m[K
+[7.905s] 
+[7.905s] [01m[K/home/dali/ros2_ws/src/piper_ros2/piper_bringup/src/moveit_pick_and_place.cpp:82:102:[m[K [01;31m[Kerror: [m[Krequest for member ‘[01m[Ky[m[K’ in ‘[01m[Kobj[m[K’, which is of non-class type ‘[01m[Kconst int[m[K’
+[7.905s]    82 | reate_pose(pre_x, pre_y, grasp_height, GraspType::SIDE, obj.x, obj.[01;31m[Ky[m[K));
+[7.905s]       |                                                                    [01;31m[K^[m[K
+[7.905s] 
+[7.921s] [01m[K/home/dali/ros2_ws/src/piper_ros2/piper_bringup/src/moveit_pick_and_place.cpp:85:17:[m[K [01;31m[Kerror: [m[K‘[01m[Kpublish_trajectory[m[K’ was not declared in this scope
+[7.921s]    85 |                 [01;31m[Kpublish_trajectory[m[K(plan.trajectory.joint_trajectory);
+[7.921s]       |                 [01;31m[K^~~~~~~~~~~~~~~~~~[m[K
+[7.922s] [01m[K/home/dali/ros2_ws/src/piper_ros2/piper_bringup/src/moveit_pick_and_place.cpp:89:53:[m[K [01;31m[Kerror: [m[Krequest for member ‘[01m[Kx[m[K’ in ‘[01m[Kobj[m[K’, which is of non-class type ‘[01m[Kconst int[m[K’
+[7.922s]    89 |                 waypoints.push_back(create_pose(obj.[01;31m[Kx[m[K, obj.y, grasp_height, GraspType::SIDE, obj.x, obj.y));
+[7.922s]       |                                                     [01;31m[K^[m[K
+[7.922s] [01m[K/home/dali/ros2_ws/src/piper_ros2/piper_bringup/src/moveit_pick_and_place.cpp:89:60:[m[K [01;31m[Kerror: [m[Krequest for member ‘[01m[Ky[m[K’ in ‘[01m[Kobj[m[K’, which is of non-class type ‘[01m[Kconst int[m[K’
+[7.922s]    89 |                 waypoints.push_back(create_pose(obj.x, obj.[01;31m[Ky[m[K, grasp_height, GraspType::SIDE, obj.x, obj.y));
+[7.922s]       |                                                            [01;31m[K^[m[K
+[7.922s] [01m[K/home/dali/ros2_ws/src/piper_ros2/piper_bringup/src/moveit_pick_and_place.cpp:89:77:[m[K [01;31m[Kerror: [m[K‘[01m[KGraspType[m[K’ has not been declared
+[7.922s]    89 | waypoints.push_back(create_pose(obj.x, obj.y, grasp_height, [01;31m[KGraspType[m[K::SIDE, obj.x, obj.y));
+[7.922s]       |                                                             [01;31m[K^~~~~~~~~[m[K
+[7.922s] 
+[7.922s] [01m[K/home/dali/ros2_ws/src/piper_ros2/piper_bringup/src/moveit_pick_and_place.cpp:89:98:[m[K [01;31m[Kerror: [m[Krequest for member ‘[01m[Kx[m[K’ in ‘[01m[Kobj[m[K’, which is of non-class type ‘[01m[Kconst int[m[K’
+[7.922s]    89 | reate_pose(obj.x, obj.y, grasp_height, GraspType::SIDE, obj.[01;31m[Kx[m[K, obj.y));
+[7.922s]       |                                                             [01;31m[K^[m[K
+[7.922s] 
+[7.922s] [01m[K/home/dali/ros2_ws/src/piper_ros2/piper_bringup/src/moveit_pick_and_place.cpp:89:105:[m[K [01;31m[Kerror: [m[Krequest for member ‘[01m[Ky[m[K’ in ‘[01m[Kobj[m[K’, which is of non-class type ‘[01m[Kconst int[m[K’
+[7.922s]    89 | reate_pose(obj.x, obj.y, grasp_height, GraspType::SIDE, obj.x, obj.[01;31m[Ky[m[K));
+[7.922s]       |                                                                    [01;31m[K^[m[K
+[7.922s] 
+[7.923s] [01m[K/home/dali/ros2_ws/src/piper_ros2/piper_bringup/src/moveit_pick_and_place.cpp:99:49:[m[K [01;31m[Kerror: [m[Krequest for member ‘[01m[Kx[m[K’ in ‘[01m[Kobj[m[K’, which is of non-class type ‘[01m[Kconst int[m[K’
+[7.923s]    99 |                 perform_linear_move(*group, obj.[01;31m[Kx[m[K, obj.y, obj.z + 0.15, "SIDE_RETREAT");
+[7.923s]       |                                                 [01;31m[K^[m[K
+[7.924s] [01m[K/home/dali/ros2_ws/src/piper_ros2/piper_bringup/src/moveit_pick_and_place.cpp:99:56:[m[K [01;31m[Kerror: [m[Krequest for member ‘[01m[Ky[m[K’ in ‘[01m[Kobj[m[K’, which is of non-class type ‘[01m[Kconst int[m[K’
+[7.924s]    99 |                 perform_linear_move(*group, obj.x, obj.[01;31m[Ky[m[K, obj.z + 0.15, "SIDE_RETREAT");
+[7.924s]       |                                                        [01;31m[K^[m[K
+[7.924s] [01m[K/home/dali/ros2_ws/src/piper_ros2/piper_bringup/src/moveit_pick_and_place.cpp:99:63:[m[K [01;31m[Kerror: [m[Krequest for member ‘[01m[Kz[m[K’ in ‘[01m[Kobj[m[K’, which is of non-class type ‘[01m[Kconst int[m[K’
+[7.925s]    99 |               perform_linear_move(*group, obj.x, obj.y, obj.[01;31m[Kz[m[K + 0.15, "SIDE_RETREAT");
+[7.925s]       |                                                             [01;31m[K^[m[K
+[7.925s] 
+[7.963s] [01m[K/home/dali/ros2_ws/src/piper_ros2/piper_bringup/src/moveit_pick_and_place.cpp:99:17:[m[K [01;31m[Kerror: [m[K‘[01m[Kperform_linear_move[m[K’ was not declared in this scope
+[7.965s]    99 |                 [01;31m[Kperform_linear_move[m[K(*group, obj.x, obj.y, obj.z + 0.15, "SIDE_RETREAT");
+[7.965s]       |                 [01;31m[K^~~~~~~~~~~~~~~~~~~[m[K
+[7.966s] [01m[K/home/dali/ros2_ws/src/piper_ros2/piper_bringup/src/moveit_pick_and_place.cpp:103:51:[m[K [01;31m[Kerror: [m[Krequest for member ‘[01m[Kx[m[K’ in ‘[01m[Kobj[m[K’, which is of non-class type ‘[01m[Kconst int[m[K’
+[7.966s]   103 |             plan_and_execute_standard(*group, obj.[01;31m[Kx[m[K, obj.y, obj.z + 0.15, "TOP_PRE");
+[7.966s]       |                                                   [01;31m[K^[m[K
+[7.966s] [01m[K/home/dali/ros2_ws/src/piper_ros2/piper_bringup/src/moveit_pick_and_place.cpp:103:58:[m[K [01;31m[Kerror: [m[Krequest for member ‘[01m[Ky[m[K’ in ‘[01m[Kobj[m[K’, which is of non-class type ‘[01m[Kconst int[m[K’
+[7.966s]   103 |             plan_and_execute_standard(*group, obj.x, obj.[01;31m[Ky[m[K, obj.z + 0.15, "TOP_PRE");
+[7.967s]       |                                                          [01;31m[K^[m[K
+[7.967s] [01m[K/home/dali/ros2_ws/src/piper_ros2/piper_bringup/src/moveit_pick_and_place.cpp:103:65:[m[K [01;31m[Kerror: [m[Krequest for member ‘[01m[Kz[m[K’ in ‘[01m[Kobj[m[K’, which is of non-class type ‘[01m[Kconst int[m[K’
+[7.967s]   103 |         plan_and_execute_standard(*group, obj.x, obj.y, obj.[01;31m[Kz[m[K + 0.15, "TOP_PRE");
+[7.968s]       |                                                             [01;31m[K^[m[K
+[7.968s] 
+[7.968s] [01m[K/home/dali/ros2_ws/src/piper_ros2/piper_bringup/src/moveit_pick_and_place.cpp:104:45:[m[K [01;31m[Kerror: [m[Krequest for member ‘[01m[Kx[m[K’ in ‘[01m[Kobj[m[K’, which is of non-class type ‘[01m[Kconst int[m[K’
+[7.968s]   104 |             perform_linear_move(*group, obj.[01;31m[Kx[m[K, obj.y, obj.z, "TOP_DOWN");
+[7.969s]       |                                             [01;31m[K^[m[K
+[7.969s] [01m[K/home/dali/ros2_ws/src/piper_ros2/piper_bringup/src/moveit_pick_and_place.cpp:104:52:[m[K [01;31m[Kerror: [m[Krequest for member ‘[01m[Ky[m[K’ in ‘[01m[Kobj[m[K’, which is of non-class type ‘[01m[Kconst int[m[K’
+[7.969s]   104 |             perform_linear_move(*group, obj.x, obj.[01;31m[Ky[m[K, obj.z, "TOP_DOWN");
+[7.972s]       |                                                    [01;31m[K^[m[K
+[7.972s] [01m[K/home/dali/ros2_ws/src/piper_ros2/piper_bringup/src/moveit_pick_and_place.cpp:104:59:[m[K [01;31m[Kerror: [m[Krequest for member ‘[01m[Kz[m[K’ in ‘[01m[Kobj[m[K’, which is of non-class type ‘[01m[Kconst int[m[K’
+[7.972s]   104 |             perform_linear_move(*group, obj.x, obj.y, obj.[01;31m[Kz[m[K, "TOP_DOWN");
+[7.972s]       |                                                           [01;31m[K^[m[K
+[8.054s] [01m[K/home/dali/ros2_ws/src/piper_ros2/piper_bringup/src/moveit_pick_and_place.cpp:104:13:[m[K [01;31m[Kerror: [m[K‘[01m[Kperform_linear_move[m[K’ was not declared in this scope
+[8.055s]   104 |             [01;31m[Kperform_linear_move[m[K(*group, obj.x, obj.y, obj.z, "TOP_DOWN");
+[8.055s]       |             [01;31m[K^~~~~~~~~~~~~~~~~~~[m[K
+[8.059s] [01m[K/home/dali/ros2_ws/src/piper_ros2/piper_bringup/src/moveit_pick_and_place.cpp:107:45:[m[K [01;31m[Kerror: [m[Krequest for member ‘[01m[Kx[m[K’ in ‘[01m[Kobj[m[K’, which is of non-class type ‘[01m[Kconst int[m[K’
+[8.060s]   107 |             perform_linear_move(*group, obj.[01;31m[Kx[m[K, obj.y, obj.z + 0.15, "TOP_LIFT");
+[8.060s]       |                                             [01;31m[K^[m[K
+[8.060s] [01m[K/home/dali/ros2_ws/src/piper_ros2/piper_bringup/src/moveit_pick_and_place.cpp:107:52:[m[K [01;31m[Kerror: [m[Krequest for member ‘[01m[Ky[m[K’ in ‘[01m[Kobj[m[K’, which is of non-class type ‘[01m[Kconst int[m[K’
+[8.060s]   107 |             perform_linear_move(*group, obj.x, obj.[01;31m[Ky[m[K, obj.z + 0.15, "TOP_LIFT");
+[8.060s]       |                                                    [01;31m[K^[m[K
+[8.060s] [01m[K/home/dali/ros2_ws/src/piper_ros2/piper_bringup/src/moveit_pick_and_place.cpp:107:59:[m[K [01;31m[Kerror: [m[Krequest for member ‘[01m[Kz[m[K’ in ‘[01m[Kobj[m[K’, which is of non-class type ‘[01m[Kconst int[m[K’
+[8.060s]   107 |             perform_linear_move(*group, obj.x, obj.y, obj.[01;31m[Kz[m[K + 0.15, "TOP_LIFT");
+[8.060s]       |                                                           [01;31m[K^[m[K
+[8.062s] [01m[K/home/dali/ros2_ws/src/piper_ros2/piper_bringup/src/moveit_pick_and_place.cpp:[m[K In member function ‘[01m[Kbool PiperDynamicNode::[01;32m[Kplan_and_execute_standard[m[K(moveit::planning_interface::MoveGroupInterface&, double, double, double, std::string)[m[K’:
+[8.062s] [01m[K/home/dali/ros2_ws/src/piper_ros2/piper_bringup/src/moveit_pick_and_place.cpp:115:50:[m[K [01;31m[Kerror: [m[K‘[01m[KGraspType[m[K’ has not been declared
+[8.062s]   115 |         group.setPoseTarget(create_pose(x, y, z, [01;31m[KGraspType[m[K::TOP_DOWN));
+[8.062s]       |                                                  [01;31m[K^~~~~~~~~[m[K
+[8.107s] [01m[K/home/dali/ros2_ws/src/piper_ros2/piper_bringup/src/moveit_pick_and_place.cpp:118:13:[m[K [01;31m[Kerror: [m[K‘[01m[Kpublish_trajectory[m[K’ was not declared in this scope
+[8.107s]   118 |             [01;31m[Kpublish_trajectory[m[K(plan.trajectory.joint_trajectory);
+[8.107s]       |             [01;31m[K^~~~~~~~~~~~~~~~~~[m[K
+[8.107s] [01m[K/home/dali/ros2_ws/src/piper_ros2/piper_bringup/src/moveit_pick_and_place.cpp:113:78:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Klabel[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-parameter-Wunused-parameter]8;;[m[K]
+[8.107s]   113 |                      double x, double y, double z, [01;35m[Kstd::string label[m[K) {
+[8.107s]       |                                                    [01;35m[K~~~~~~~~~~~~^~~~~[m[K
+[8.107s] 
+[13.221s] gmake[2]: *** [CMakeFiles/moveit_pick_and_place_cpp.dir/build.make:76: CMakeFiles/moveit_pick_and_place_cpp.dir/src/moveit_pick_and_place.cpp.o] Error 1
+[13.221s] gmake[1]: *** [CMakeFiles/Makefile2:137: CMakeFiles/moveit_pick_and_place_cpp.dir/all] Error 2
+[13.221s] gmake: *** [Makefile:146: all] Error 2
+[13.221s] Invoked command in '/home/dali/ros2_ws/build/piper_bringup' returned '2': CMAKE_PREFIX_PATH=/home/dali/ros2_ws/install/scene_graph_interfaces:/home/dali/ros2_ws/install/piper_bringup:/home/dali/ros2_ws/install/piper_moveit_config:/home/dali/ros2_ws/install/piper_description:/opt/ros/jazzy/opt/gz_sim_vendor:/opt/ros/jazzy/opt/gz_sensors_vendor:/opt/ros/jazzy/opt/gz_physics_vendor:/opt/ros/jazzy/opt/sdformat_vendor:/opt/ros/jazzy/opt/gz_gui_vendor:/opt/ros/jazzy/opt/gz_transport_vendor:/opt/ros/jazzy/opt/gz_rendering_vendor:/opt/ros/jazzy/opt/gz_plugin_vendor:/opt/ros/jazzy/opt/gz_fuel_tools_vendor:/opt/ros/jazzy/opt/gz_msgs_vendor:/opt/ros/jazzy/opt/gz_common_vendor:/opt/ros/jazzy/opt/gz_math_vendor:/opt/ros/jazzy/opt/gz_utils_vendor:/opt/ros/jazzy/opt/gz_tools_vendor:/opt/ros/jazzy/opt/gz_ogre_next_vendor:/opt/ros/jazzy/opt/gz_dartsim_vendor:/opt/ros/jazzy/opt/gz_cmake_vendor:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --build /home/dali/ros2_ws/build/piper_bringup -- -j4 -l4

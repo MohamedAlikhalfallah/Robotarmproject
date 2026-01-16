@@ -1,0 +1,17 @@
+file(REMOVE_RECURSE
+  "CMakeFiles/scene_graph_interfaces__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/scene_graph_interfaces/msg/detail/fun_object3_d_bounding_box__type_support_c.cpp.o"
+  "CMakeFiles/scene_graph_interfaces__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/scene_graph_interfaces/msg/detail/fun_object3_d_bounding_box__type_support_c.cpp.o.d"
+  "CMakeFiles/scene_graph_interfaces__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/scene_graph_interfaces/msg/detail/fun_object3_d_bounding_box_list__type_support_c.cpp.o"
+  "CMakeFiles/scene_graph_interfaces__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/scene_graph_interfaces/msg/detail/fun_object3_d_bounding_box_list__type_support_c.cpp.o.d"
+  "libscene_graph_interfaces__rosidl_typesupport_fastrtps_c.pdb"
+  "libscene_graph_interfaces__rosidl_typesupport_fastrtps_c.so"
+  "rosidl_typesupport_fastrtps_c/scene_graph_interfaces/msg/detail/fun_object3_d_bounding_box__rosidl_typesupport_fastrtps_c.h"
+  "rosidl_typesupport_fastrtps_c/scene_graph_interfaces/msg/detail/fun_object3_d_bounding_box__type_support_c.cpp"
+  "rosidl_typesupport_fastrtps_c/scene_graph_interfaces/msg/detail/fun_object3_d_bounding_box_list__rosidl_typesupport_fastrtps_c.h"
+  "rosidl_typesupport_fastrtps_c/scene_graph_interfaces/msg/detail/fun_object3_d_bounding_box_list__type_support_c.cpp"
+)
+
+# Per-language clean rules from dependency scanning.
+foreach(lang CXX)
+  include(CMakeFiles/scene_graph_interfaces__rosidl_typesupport_fastrtps_c.dir/cmake_clean_${lang}.cmake OPTIONAL)
+endforeach()

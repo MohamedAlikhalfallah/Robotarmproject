@@ -1,0 +1,7 @@
+{
+  "package_name": "scene_graph_interfaces",
+  "non_idl_tuples": [
+    "/home/dali/ros2_ws/src/scene_graph_interfaces:msg/FunObject3DBoundingBox.msg",
+    "/home/dali/ros2_ws/src/scene_graph_interfaces:msg/FunObject3DBoundingBoxList.msg"
+  ]
+}

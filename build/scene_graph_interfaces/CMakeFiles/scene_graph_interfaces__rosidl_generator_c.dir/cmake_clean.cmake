@@ -1,0 +1,35 @@
+file(REMOVE_RECURSE
+  "CMakeFiles/scene_graph_interfaces__rosidl_generator_c.dir/rosidl_generator_c/scene_graph_interfaces/msg/detail/fun_object3_d_bounding_box__description.c.o"
+  "CMakeFiles/scene_graph_interfaces__rosidl_generator_c.dir/rosidl_generator_c/scene_graph_interfaces/msg/detail/fun_object3_d_bounding_box__description.c.o.d"
+  "CMakeFiles/scene_graph_interfaces__rosidl_generator_c.dir/rosidl_generator_c/scene_graph_interfaces/msg/detail/fun_object3_d_bounding_box__functions.c.o"
+  "CMakeFiles/scene_graph_interfaces__rosidl_generator_c.dir/rosidl_generator_c/scene_graph_interfaces/msg/detail/fun_object3_d_bounding_box__functions.c.o.d"
+  "CMakeFiles/scene_graph_interfaces__rosidl_generator_c.dir/rosidl_generator_c/scene_graph_interfaces/msg/detail/fun_object3_d_bounding_box__type_support.c.o"
+  "CMakeFiles/scene_graph_interfaces__rosidl_generator_c.dir/rosidl_generator_c/scene_graph_interfaces/msg/detail/fun_object3_d_bounding_box__type_support.c.o.d"
+  "CMakeFiles/scene_graph_interfaces__rosidl_generator_c.dir/rosidl_generator_c/scene_graph_interfaces/msg/detail/fun_object3_d_bounding_box_list__description.c.o"
+  "CMakeFiles/scene_graph_interfaces__rosidl_generator_c.dir/rosidl_generator_c/scene_graph_interfaces/msg/detail/fun_object3_d_bounding_box_list__description.c.o.d"
+  "CMakeFiles/scene_graph_interfaces__rosidl_generator_c.dir/rosidl_generator_c/scene_graph_interfaces/msg/detail/fun_object3_d_bounding_box_list__functions.c.o"
+  "CMakeFiles/scene_graph_interfaces__rosidl_generator_c.dir/rosidl_generator_c/scene_graph_interfaces/msg/detail/fun_object3_d_bounding_box_list__functions.c.o.d"
+  "CMakeFiles/scene_graph_interfaces__rosidl_generator_c.dir/rosidl_generator_c/scene_graph_interfaces/msg/detail/fun_object3_d_bounding_box_list__type_support.c.o"
+  "CMakeFiles/scene_graph_interfaces__rosidl_generator_c.dir/rosidl_generator_c/scene_graph_interfaces/msg/detail/fun_object3_d_bounding_box_list__type_support.c.o.d"
+  "libscene_graph_interfaces__rosidl_generator_c.pdb"
+  "libscene_graph_interfaces__rosidl_generator_c.so"
+  "rosidl_generator_c/scene_graph_interfaces/msg/detail/fun_object3_d_bounding_box__description.c"
+  "rosidl_generator_c/scene_graph_interfaces/msg/detail/fun_object3_d_bounding_box__functions.c"
+  "rosidl_generator_c/scene_graph_interfaces/msg/detail/fun_object3_d_bounding_box__functions.h"
+  "rosidl_generator_c/scene_graph_interfaces/msg/detail/fun_object3_d_bounding_box__struct.h"
+  "rosidl_generator_c/scene_graph_interfaces/msg/detail/fun_object3_d_bounding_box__type_support.c"
+  "rosidl_generator_c/scene_graph_interfaces/msg/detail/fun_object3_d_bounding_box__type_support.h"
+  "rosidl_generator_c/scene_graph_interfaces/msg/detail/fun_object3_d_bounding_box_list__description.c"
+  "rosidl_generator_c/scene_graph_interfaces/msg/detail/fun_object3_d_bounding_box_list__functions.c"
+  "rosidl_generator_c/scene_graph_interfaces/msg/detail/fun_object3_d_bounding_box_list__functions.h"
+  "rosidl_generator_c/scene_graph_interfaces/msg/detail/fun_object3_d_bounding_box_list__struct.h"
+  "rosidl_generator_c/scene_graph_interfaces/msg/detail/fun_object3_d_bounding_box_list__type_support.c"
+  "rosidl_generator_c/scene_graph_interfaces/msg/detail/fun_object3_d_bounding_box_list__type_support.h"
+  "rosidl_generator_c/scene_graph_interfaces/msg/fun_object3_d_bounding_box.h"
+  "rosidl_generator_c/scene_graph_interfaces/msg/fun_object3_d_bounding_box_list.h"
+)
+
+# Per-language clean rules from dependency scanning.
+foreach(lang C)
+  include(CMakeFiles/scene_graph_interfaces__rosidl_generator_c.dir/cmake_clean_${lang}.cmake OPTIONAL)
+endforeach()

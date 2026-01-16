@@ -1,0 +1,20 @@
+// generated from rosidl_adapter/resource/msg.idl.em
+// with input from scene_graph_interfaces/msg/FunObject3DBoundingBox.msg
+// generated code does not contain a copyright notice
+
+#include "geometry_msgs/msg/Point.idl"
+#include "std_msgs/msg/String.idl"
+
+module scene_graph_interfaces {
+  module msg {
+    typedef geometry_msgs::msg::Point geometry_msgs__msg__Point;
+    typedef geometry_msgs__msg__Point geometry_msgs__msg__Point__2[2];
+    struct FunObject3DBoundingBox {
+      std_msgs::msg::String name;
+
+      geometry_msgs__msg__Point__2 bounding_box;
+
+      boolean graspable;
+    };
+  };
+};

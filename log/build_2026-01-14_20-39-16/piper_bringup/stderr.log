@@ -1,0 +1,18 @@
+[01m[K/home/dali/ros2_ws/src/piper_ros2/piper_bringup/src/moveit_pick_and_place.cpp:[m[K In member function ‘[01m[Kvoid PiperDynamicNode::[01;32m[Kexecute_push_action[m[K(std::shared_ptr<moveit::planning_interface::MoveGroupInterface>, const DetectedObject&)[m[K’:
+[01m[K/home/dali/ros2_ws/src/piper_ros2/piper_bringup/src/moveit_pick_and_place.cpp:229:94:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Kgroup[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-parameter-Wunused-parameter]8;;[m[K]
+  229 | [01;35m[K:shared_ptr<moveit::planning_interface::MoveGroupInterface> group[m[K, const DetectedObject& obj) { /* logic */ }
+      | [01;35m[K~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~[m[K
+
+[01m[K/home/dali/ros2_ws/src/piper_ros2/piper_bringup/src/moveit_pick_and_place.cpp:229:123:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Kobj[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-parameter-Wunused-parameter]8;;[m[K]
+  229 | interface::MoveGroupInterface> group, [01;35m[Kconst DetectedObject& obj[m[K) { /* logic */ }
+      |                                       [01;35m[K~~~~~~~~~~~~~~~~~~~~~~^~~[m[K
+
+[01m[K/home/dali/ros2_ws/src/piper_ros2/piper_bringup/src/moveit_pick_and_place.cpp:[m[K In member function ‘[01m[Kvoid PiperDynamicNode::[01;32m[Kexecute_pull_action[m[K(std::shared_ptr<moveit::planning_interface::MoveGroupInterface>, const DetectedObject&)[m[K’:
+[01m[K/home/dali/ros2_ws/src/piper_ros2/piper_bringup/src/moveit_pick_and_place.cpp:230:94:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Kgroup[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-parameter-Wunused-parameter]8;;[m[K]
+  230 | [01;35m[K:shared_ptr<moveit::planning_interface::MoveGroupInterface> group[m[K, const DetectedObject& obj) { /* logic */ }
+      | [01;35m[K~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~[m[K
+
+[01m[K/home/dali/ros2_ws/src/piper_ros2/piper_bringup/src/moveit_pick_and_place.cpp:230:123:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Kobj[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-parameter-Wunused-parameter]8;;[m[K]
+  230 | interface::MoveGroupInterface> group, [01;35m[Kconst DetectedObject& obj[m[K) { /* logic */ }
+      |                                       [01;35m[K~~~~~~~~~~~~~~~~~~~~~~^~~[m[K
+
