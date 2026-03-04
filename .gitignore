@@ -1,10 +1,25 @@
+# Build artifacts
 build/
 install/
 log/
 
-__pycache__/
+# Python
 *.pyc
+__pycache__/
+*.egg-info/
 
+# IDE
 .vscode/
 .idea/
+*.swp
+*.swo
+*~
+
+# OS
 .DS_Store
+Thumbs.db
+
+# Compiled
+*.o
+*.so
+*.a
