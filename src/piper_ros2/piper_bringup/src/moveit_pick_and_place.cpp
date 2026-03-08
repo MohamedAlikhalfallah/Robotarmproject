@@ -17,38 +17,15 @@
 
 using namespace std::chrono_literals;
 
-enum class Affordance {
-    GRASPABLE,
-    PUSHABLE,
-    PULLABLE,
-    NONE
-};
-
-enum class GraspType {
-    TOP_DOWN,
-    SIDE,
-    ANGLED
-};
-
+enum class Affordance { GRASPABLE, PUSHABLE, PULLABLE, NONE };
+enum class GraspType { TOP_DOWN, SIDE, ANGLED };
 enum class TaskState {
-    IDLE,
-    WAITING_FOR_OBJECT_REACHED,
-    EXECUTING_ACTION,
-    HOLDING_OBJECT,
-    WAITING_FOR_GOAL_REACHED,
-    PLACING
+    IDLE, WAITING_FOR_OBJECT_REACHED, EXECUTING_ACTION,
+    HOLDING_OBJECT, WAITING_FOR_GOAL_REACHED, PLACING
 };
 
-struct ObjectAffordance {
-    Affordance primary;
-    Affordance secondary;
-};
-
-struct ObjectGraspConfig {
-    GraspType grasp_type;
-    std::string description;
-};
-
+struct ObjectAffordance { Affordance primary; Affordance secondary; };
+struct ObjectGraspConfig { GraspType grasp_type; std::string description; };
 struct DetectedObject {
     std::string class_name;
     double x, y, z;
@@ -63,59 +40,31 @@ public:
 
     PiperGraspingModule() : Node("grasping_module") {
         this->set_parameter(rclcpp::Parameter("use_sim_time", true));
-        
         this->declare_parameter<std::string>("camera_frame", "camera_link");
         this->declare_parameter<std::string>("robot_base_frame", "base_link");
-        
         camera_frame_ = this->get_parameter("camera_frame").as_string();
         robot_base_frame_ = this->get_parameter("robot_base_frame").as_string();
-        
+
         tf_buffer_ = std::make_shared<tf2_ros::Buffer>(this->get_clock());
         tf_listener_ = std::make_shared<tf2_ros::TransformListener>(*tf_buffer_);
-        
-        // Publishers
-        this->arm_pub_ = this->create_publisher<trajectory_msgs::msg::JointTrajectory>(
+
+        arm_pub_ = this->create_publisher<trajectory_msgs::msg::JointTrajectory>(
             "/joint_trajectory_controller/joint_trajectory", 10);
-        
-        this->task_state_pub_ = this->create_publisher<std_msgs::msg::String>(
-            "/task_state", 10);
-        
-        this->object_position_pub_ = this->create_publisher<geometry_msgs::msg::Point>(
-            "/object_position", 10);
-        
-        // Action clients
-        this->gripper_client_ = rclcpp_action::create_client<GripperAction>(
-            this, "/gripper_controller/gripper_cmd");
-        
-        // Subscribers
-        this->obj_sub_ = this->create_subscription<BBoxList>(
+        task_state_pub_ = this->create_publisher<std_msgs::msg::String>("/task_state", 10);
+        object_position_pub_ = this->create_publisher<geometry_msgs::msg::Point>("/object_position", 10);
+
+        gripper_client_ = rclcpp_action::create_client<GripperAction>(this, "/gripper_controller/gripper_cmd");
+
+        obj_sub_ = this->create_subscription<BBoxList>(
             "/bounding_boxes_3d/rtdetr", 10,
             std::bind(&PiperGraspingModule::vision_callback, this, std::placeholders::_1));
-        
-        this->task_state_sub_ = this->create_subscription<std_msgs::msg::String>(
+        task_state_sub_ = this->create_subscription<std_msgs::msg::String>(
             "/task_state", 10,
             std::bind(&PiperGraspingModule::task_state_callback, this, std::placeholders::_1));
-        
+
         initialize_affordances();
         initialize_grasp_configs();
-        
         current_state_ = TaskState::IDLE;
-        
-        RCLCPP_INFO(this->get_logger(), "");
-        RCLCPP_INFO(this->get_logger(), "╔════════════════════════════════════════════════╗");
-        RCLCPP_INFO(this->get_logger(), "║        🤖 PIPER GRASPING MODULE READY          ║");
-        RCLCPP_INFO(this->get_logger(), "╚════════════════════════════════════════════════╝");
-        RCLCPP_INFO(this->get_logger(), "");
-        RCLCPP_INFO(this->get_logger(), "📡 SUBSCRIBED TO:");
-        RCLCPP_INFO(this->get_logger(), "   • /bounding_boxes_3d/rtdetr (from Graph Module)");
-        RCLCPP_INFO(this->get_logger(), "   • /task_state (from Navigation Module)");
-        RCLCPP_INFO(this->get_logger(), "");
-        RCLCPP_INFO(this->get_logger(), "📤 PUBLISHING TO:");
-        RCLCPP_INFO(this->get_logger(), "   • /task_state (to Navigation Module)");
-        RCLCPP_INFO(this->get_logger(), "   • /object_position (to Navigation Module)");
-        RCLCPP_INFO(this->get_logger(), "");
-        RCLCPP_INFO(this->get_logger(), "✅ Affordances: GRASP, PUSH, PULL");
-        RCLCPP_INFO(this->get_logger(), "");
     }
 
     void run() {
@@ -123,139 +72,99 @@ public:
             shared_from_this(), "manipulator");
         move_group->setPlanningTime(20.0);
         move_group->setMaxVelocityScalingFactor(0.15);
-        move_group->setGoalPositionTolerance(0.005); 
+        move_group->setGoalPositionTolerance(0.005);
 
         while (rclcpp::ok()) {
-            
             switch (current_state_) {
                 case TaskState::IDLE:
-                    break;
-                    
                 case TaskState::WAITING_FOR_OBJECT_REACHED:
-                    RCLCPP_INFO_THROTTLE(this->get_logger(), *this->get_clock(), 5000,
-                                        "⏳ Waiting for 'Object Reached' from Navigation...");
+                case TaskState::HOLDING_OBJECT:
+                case TaskState::WAITING_FOR_GOAL_REACHED:
                     break;
-                    
+
                 case TaskState::EXECUTING_ACTION:
-                    RCLCPP_INFO(this->get_logger(), "");
-                    RCLCPP_INFO(this->get_logger(), "╔═══════════════════════════════════════════════╗");
-                    RCLCPP_INFO(this->get_logger(), "║  ACTION: %-37s║", latest_target_.class_name.c_str());
-                    RCLCPP_INFO(this->get_logger(), "╚═══════════════════════════════════════════════╝");
-                    
                     plan_and_execute_standard(*move_group, "home");
-                    
+
                     if (latest_target_.affordance == Affordance::GRASPABLE) {
-                        // GRASP action
                         publish_task_state("Grasp Object");
                         execute_intelligent_grasp(move_group, latest_target_);
                         move_group->attachObject("target_object");
-                        
                         current_state_ = TaskState::HOLDING_OBJECT;
-                        RCLCPP_WARN(this->get_logger(), "🔒 Object grasped! HOLDING until 'Goal Reached'...");
-                        
                         publish_object_position(latest_place_.x, latest_place_.y, latest_place_.z);
                         publish_task_state("Navigate to Goal");
-                        
                         current_state_ = TaskState::WAITING_FOR_GOAL_REACHED;
-                        
+
                     } else if (latest_target_.affordance == Affordance::PUSHABLE) {
-                        // PUSH action
                         publish_task_state("Push Object");
                         execute_push_action(move_group, latest_target_);
-                        
                         plan_and_execute_standard(*move_group, "home");
                         publish_task_state("Task Finished");
-                        
-                        RCLCPP_INFO(this->get_logger(), "✅ PUSH Complete!");
                         current_state_ = TaskState::IDLE;
-                        
+
                     } else if (latest_target_.affordance == Affordance::PULLABLE) {
-                        // PULL action
                         publish_task_state("Pull Object");
                         execute_pull_action(move_group, latest_target_);
-                        
                         plan_and_execute_standard(*move_group, "home");
                         publish_task_state("Task Finished");
-                        
-                        RCLCPP_INFO(this->get_logger(), "✅ PULL Complete!");
                         current_state_ = TaskState::IDLE;
                     }
                     break;
-                    
-                case TaskState::HOLDING_OBJECT:
-                    break;
-                    
-                case TaskState::WAITING_FOR_GOAL_REACHED:
-                    RCLCPP_INFO_THROTTLE(this->get_logger(), *this->get_clock(), 5000,
-                                        "⏳ Holding object... Waiting for 'Goal Reached'...");
-                    break;
-                    
+
                 case TaskState::PLACING:
-                    RCLCPP_INFO(this->get_logger(), "");
-                    RCLCPP_INFO(this->get_logger(), "╔═══════════════════════════════════════════════╗");
-                    RCLCPP_INFO(this->get_logger(), "║  PLACING OBJECT                               ║");
-                    RCLCPP_INFO(this->get_logger(), "╚═══════════════════════════════════════════════╝");
-                    
                     execute_intelligent_place(move_group, latest_place_, latest_target_);
                     move_group->detachObject("target_object");
-                    
                     publish_task_state("Leave Object");
                     rclcpp::sleep_for(1s);
-                    
                     plan_and_execute_standard(*move_group, "home");
-                    
                     publish_task_state("Task Finished");
-                    
-                    RCLCPP_INFO(this->get_logger(), "✅ Task Complete! Ready for next object...");
                     current_state_ = TaskState::IDLE;
                     break;
             }
-            
             rclcpp::sleep_for(100ms);
         }
     }
 
 private:
     void initialize_affordances() {
-        affordance_map_["keyboard"] = {Affordance::GRASPABLE, Affordance::NONE};
-        affordance_map_["mouse"] = {Affordance::GRASPABLE, Affordance::NONE};
-        affordance_map_["trash can"] = {Affordance::GRASPABLE, Affordance::NONE};
-        affordance_map_["book"] = {Affordance::GRASPABLE, Affordance::NONE};
-        affordance_map_["vase"] = {Affordance::GRASPABLE, Affordance::NONE};
-        affordance_map_["plant"] = {Affordance::GRASPABLE, Affordance::NONE};
-        affordance_map_["clock"] = {Affordance::GRASPABLE, Affordance::NONE};
-        affordance_map_["dish"] = {Affordance::GRASPABLE, Affordance::NONE};
-        affordance_map_["cup"] = {Affordance::GRASPABLE, Affordance::NONE};
-        affordance_map_["bottle"] = {Affordance::GRASPABLE, Affordance::NONE};
-        affordance_map_["box"] = {Affordance::GRASPABLE, Affordance::NONE};
-        affordance_map_["bag"] = {Affordance::GRASPABLE, Affordance::NONE};
-        affordance_map_["shoe"] = {Affordance::GRASPABLE, Affordance::NONE};
-        affordance_map_["backpack"] = {Affordance::GRASPABLE, Affordance::NONE};
-        affordance_map_["cylinder"] = {Affordance::GRASPABLE, Affordance::NONE};
+        affordance_map_["keyboard"]   = {Affordance::GRASPABLE, Affordance::NONE};
+        affordance_map_["mouse"]      = {Affordance::GRASPABLE, Affordance::NONE};
+        affordance_map_["trash can"]  = {Affordance::GRASPABLE, Affordance::NONE};
+        affordance_map_["book"]       = {Affordance::GRASPABLE, Affordance::NONE};
+        affordance_map_["vase"]       = {Affordance::GRASPABLE, Affordance::NONE};
+        affordance_map_["plant"]      = {Affordance::GRASPABLE, Affordance::NONE};
+        affordance_map_["clock"]      = {Affordance::GRASPABLE, Affordance::NONE};
+        affordance_map_["dish"]       = {Affordance::GRASPABLE, Affordance::NONE};
+        affordance_map_["cup"]        = {Affordance::GRASPABLE, Affordance::NONE};
+        affordance_map_["bottle"]     = {Affordance::GRASPABLE, Affordance::NONE};
+        affordance_map_["box"]        = {Affordance::GRASPABLE, Affordance::NONE};
+        affordance_map_["bag"]        = {Affordance::GRASPABLE, Affordance::NONE};
+        affordance_map_["shoe"]       = {Affordance::GRASPABLE, Affordance::NONE};
+        affordance_map_["backpack"]   = {Affordance::GRASPABLE, Affordance::NONE};
+        affordance_map_["cylinder"]   = {Affordance::GRASPABLE, Affordance::NONE};
         affordance_map_["television"] = {Affordance::GRASPABLE, Affordance::NONE};
-        affordance_map_["door"] = {Affordance::PUSHABLE, Affordance::PULLABLE};
-        affordance_map_["drawer"] = {Affordance::PULLABLE, Affordance::PUSHABLE};
-        affordance_map_["cabinet"] = {Affordance::PUSHABLE, Affordance::PULLABLE};
-        affordance_map_["cupboard"] = {Affordance::PUSHABLE, Affordance::PULLABLE};
+        affordance_map_["door"]       = {Affordance::PUSHABLE,  Affordance::PULLABLE};
+        affordance_map_["drawer"]     = {Affordance::PULLABLE,  Affordance::PUSHABLE};
+        affordance_map_["cabinet"]    = {Affordance::PUSHABLE,  Affordance::PULLABLE};
+        affordance_map_["cupboard"]   = {Affordance::PUSHABLE,  Affordance::PULLABLE};
     }
 
     void initialize_grasp_configs() {
-        grasp_config_map_["cylinder"] = {GraspType::SIDE, "Cylinder - SIDE"};
-        grasp_config_map_["bottle"] = {GraspType::SIDE, "Bottle - SIDE"};
-        grasp_config_map_["cup"] = {GraspType::SIDE, "Cup - SIDE"};
-        grasp_config_map_["vase"] = {GraspType::SIDE, "Vase - SIDE"};
-        grasp_config_map_["plant"] = {GraspType::SIDE, "Plant - SIDE"};
-        grasp_config_map_["trash can"] = {GraspType::SIDE, "Trash can - SIDE"};
-        grasp_config_map_["box"] = {GraspType::TOP_DOWN, "Box - TOP"};
-        grasp_config_map_["cube"] = {GraspType::TOP_DOWN, "Cube - TOP"};
-        grasp_config_map_["book"] = {GraspType::TOP_DOWN, "Book - TOP"};
-        grasp_config_map_["keyboard"] = {GraspType::TOP_DOWN, "Keyboard - TOP"};
-        grasp_config_map_["mouse"] = {GraspType::TOP_DOWN, "Mouse - TOP"};
-        grasp_config_map_["dish"] = {GraspType::TOP_DOWN, "Dish - TOP"};
-        grasp_config_map_["clock"] = {GraspType::TOP_DOWN, "Clock - TOP"};
-        grasp_config_map_["shoe"] = {GraspType::TOP_DOWN, "Shoe - TOP"};
-        grasp_config_map_["bag"] = {GraspType::TOP_DOWN, "Bag - TOP"};
-        grasp_config_map_["backpack"] = {GraspType::TOP_DOWN, "Backpack - TOP"};
+        grasp_config_map_["cylinder"]   = {GraspType::SIDE,     "Cylinder - SIDE"};
+        grasp_config_map_["bottle"]     = {GraspType::SIDE,     "Bottle - SIDE"};
+        grasp_config_map_["cup"]        = {GraspType::SIDE,     "Cup - SIDE"};
+        grasp_config_map_["vase"]       = {GraspType::SIDE,     "Vase - SIDE"};
+        grasp_config_map_["plant"]      = {GraspType::SIDE,     "Plant - SIDE"};
+        grasp_config_map_["trash can"]  = {GraspType::SIDE,     "Trash can - SIDE"};
+        grasp_config_map_["box"]        = {GraspType::TOP_DOWN, "Box - TOP"};
+        grasp_config_map_["cube"]       = {GraspType::TOP_DOWN, "Cube - TOP"};
+        grasp_config_map_["book"]       = {GraspType::TOP_DOWN, "Book - TOP"};
+        grasp_config_map_["keyboard"]   = {GraspType::TOP_DOWN, "Keyboard - TOP"};
+        grasp_config_map_["mouse"]      = {GraspType::TOP_DOWN, "Mouse - TOP"};
+        grasp_config_map_["dish"]       = {GraspType::TOP_DOWN, "Dish - TOP"};
+        grasp_config_map_["clock"]      = {GraspType::TOP_DOWN, "Clock - TOP"};
+        grasp_config_map_["shoe"]       = {GraspType::TOP_DOWN, "Shoe - TOP"};
+        grasp_config_map_["bag"]        = {GraspType::TOP_DOWN, "Bag - TOP"};
+        grasp_config_map_["backpack"]   = {GraspType::TOP_DOWN, "Backpack - TOP"};
         grasp_config_map_["television"] = {GraspType::TOP_DOWN, "Television - TOP"};
     }
 
@@ -267,50 +176,29 @@ private:
 
     GraspType get_grasp_type(const std::string& class_name, const DetectedObject& obj) {
         auto it = grasp_config_map_.find(class_name);
-        if (it != grasp_config_map_.end()) {
-            RCLCPP_INFO(this->get_logger(), "🎯 %s", it->second.description.c_str());
-            return it->second.grasp_type;
-        }
-        
+        if (it != grasp_config_map_.end()) return it->second.grasp_type;
         double max_base = std::max(obj.width, obj.depth);
         double aspect_ratio = obj.height / max_base;
-        
-        if (aspect_ratio > 1.5) {
-            RCLCPP_INFO(this->get_logger(), "🎯 Auto: SIDE (ratio=%.2f)", aspect_ratio);
-            return GraspType::SIDE;
-        } else {
-            RCLCPP_INFO(this->get_logger(), "🎯 Auto: TOP (ratio=%.2f)", aspect_ratio);
-            return GraspType::TOP_DOWN;
-        }
+        return (aspect_ratio > 1.5) ? GraspType::SIDE : GraspType::TOP_DOWN;
     }
 
     void task_state_callback(const std_msgs::msg::String::SharedPtr msg) {
-        RCLCPP_INFO(this->get_logger(), "📥 Received: '%s'", msg->data.c_str());
-        
-        if (msg->data == "Object Reached" && current_state_ == TaskState::WAITING_FOR_OBJECT_REACHED) {
-            RCLCPP_WARN(this->get_logger(), "✅ Object Reached! Starting action...");
+        if (msg->data == "Object Reached" && current_state_ == TaskState::WAITING_FOR_OBJECT_REACHED)
             current_state_ = TaskState::EXECUTING_ACTION;
-            
-        } else if (msg->data == "Goal Reached" && current_state_ == TaskState::WAITING_FOR_GOAL_REACHED) {
-            RCLCPP_WARN(this->get_logger(), "✅ Goal Reached! Placing object...");
+        else if (msg->data == "Goal Reached" && current_state_ == TaskState::WAITING_FOR_GOAL_REACHED)
             current_state_ = TaskState::PLACING;
-        }
     }
 
     void publish_task_state(const std::string& state) {
         auto msg = std_msgs::msg::String();
         msg.data = state;
         task_state_pub_->publish(msg);
-        RCLCPP_INFO(this->get_logger(), "📤 Published: '%s'", state.c_str());
     }
 
     void publish_object_position(double x, double y, double z) {
         auto msg = geometry_msgs::msg::Point();
-        msg.x = x;
-        msg.y = y;
-        msg.z = z;
+        msg.x = x; msg.y = y; msg.z = z;
         object_position_pub_->publish(msg);
-        RCLCPP_INFO(this->get_logger(), "📤 Published position: [%.3f, %.3f, %.3f]", x, y, z);
     }
 
     void vision_callback(const BBoxList::SharedPtr msg) {
@@ -318,273 +206,141 @@ private:
 
         for (const auto& obj : msg->bbox) {
             ObjectAffordance aff = get_affordance(obj.name.data);
-            
-            if (aff.primary != Affordance::NONE || obj.graspable) {
+            if (aff.primary == Affordance::NONE && !obj.graspable) continue;
+
+            try {
+                double cam_x = (obj.bounding_box[0].x + obj.bounding_box[1].x) / 2.0;
+                double cam_y = (obj.bounding_box[0].y + obj.bounding_box[1].y) / 2.0;
+                double cam_z = (obj.bounding_box[0].z + obj.bounding_box[1].z) / 2.0;
+                double width  = std::abs(obj.bounding_box[1].x - obj.bounding_box[0].x);
+                double depth  = std::abs(obj.bounding_box[1].y - obj.bounding_box[0].y);
+                double height = std::abs(obj.bounding_box[1].z - obj.bounding_box[0].z);
+
+                geometry_msgs::msg::PoseStamped object_in_camera;
+                object_in_camera.header.frame_id = camera_frame_;
+                object_in_camera.header.stamp = this->now();
+                object_in_camera.pose.position.x = cam_x;
+                object_in_camera.pose.position.y = cam_y;
+                object_in_camera.pose.position.z = cam_z;
+                object_in_camera.pose.orientation.w = 1.0;
+
+                geometry_msgs::msg::PoseStamped object_in_base;
                 try {
-                    double cam_x = (obj.bounding_box[0].x + obj.bounding_box[1].x) / 2.0;
-                    double cam_y = (obj.bounding_box[0].y + obj.bounding_box[1].y) / 2.0;
-                    double cam_z = (obj.bounding_box[0].z + obj.bounding_box[1].z) / 2.0;
-                    
-                    double width = std::abs(obj.bounding_box[1].x - obj.bounding_box[0].x);
-                    double depth = std::abs(obj.bounding_box[1].y - obj.bounding_box[0].y);
-                    double height = std::abs(obj.bounding_box[1].z - obj.bounding_box[0].z);
-                    
-                    RCLCPP_INFO(this->get_logger(), "");
-                    RCLCPP_INFO(this->get_logger(), "📷 Camera: [%.3f, %.3f, %.3f]", cam_x, cam_y, cam_z);
-                    
-                    geometry_msgs::msg::PoseStamped object_in_camera;
-                    object_in_camera.header.frame_id = camera_frame_;
-                    object_in_camera.header.stamp = this->now();
-                    object_in_camera.pose.position.x = cam_x;
-                    object_in_camera.pose.position.y = cam_y;
-                    object_in_camera.pose.position.z = cam_z;
-                    object_in_camera.pose.orientation.w = 1.0;
-                    
-                    geometry_msgs::msg::PoseStamped object_in_base;
-                    try {
-                        object_in_base = tf_buffer_->transform(
-                            object_in_camera, 
-                            robot_base_frame_, 
-                            tf2::durationFromSec(1.0)
-                        );
-                    } catch (tf2::TransformException &ex) {
-                        RCLCPP_ERROR(this->get_logger(), "⚠️  TF2 failed: %s", ex.what());
-                        return;
-                    }
-                    
-                    RCLCPP_INFO(this->get_logger(), "🤖 Robot: [%.3f, %.3f, %.3f]",
-                               object_in_base.pose.position.x,
-                               object_in_base.pose.position.y,
-                               object_in_base.pose.position.z);
-                    
-                    latest_target_.class_name = obj.name.data;
-                    latest_target_.x = object_in_base.pose.position.x;
-                    latest_target_.y = object_in_base.pose.position.y;
-                    latest_target_.z = cam_z;
-                    latest_target_.width = width;
-                    latest_target_.height = height;
-                    latest_target_.depth = depth;
-                    
-                    if (obj.graspable || aff.primary == Affordance::GRASPABLE) {
-                        latest_target_.affordance = Affordance::GRASPABLE;
-                    } else {
-                        latest_target_.affordance = aff.primary;
-                    }
-                    
-                    latest_place_.class_name = obj.name.data;
-                    latest_place_.x = -object_in_base.pose.position.x;
-                    latest_place_.y = -object_in_base.pose.position.y;
-                    latest_place_.z = cam_z;
-                    latest_place_.width = 0;
-                    latest_place_.height = height;
-                    latest_place_.depth = 0;
-                    latest_place_.affordance = Affordance::NONE;
-                    
-                    RCLCPP_INFO(this->get_logger(), "📍 Target: [%.3f, %.3f, %.3f]",
-                               latest_target_.x, latest_target_.y, latest_target_.z);
-                    RCLCPP_INFO(this->get_logger(), "🎯 Affordance: %s", 
-                               affordance_to_string(latest_target_.affordance).c_str());
-                    
-                    publish_object_position(latest_target_.x, latest_target_.y, latest_target_.z);
-                    publish_task_state("Navigate");
-                    
-                    current_state_ = TaskState::WAITING_FOR_OBJECT_REACHED;
-                    RCLCPP_WARN(this->get_logger(), "⏳ Waiting for Navigation...");
-                    
-                    break;
-                    
-                } catch (const std::exception& e) {
-                    RCLCPP_ERROR(this->get_logger(), "❌ Error: %s", e.what());
+                    object_in_base = tf_buffer_->transform(object_in_camera, robot_base_frame_, tf2::durationFromSec(1.0));
+                } catch (tf2::TransformException &ex) {
+                    RCLCPP_ERROR(this->get_logger(), "TF2 failed: %s", ex.what());
+                    return;
                 }
+
+                latest_target_.class_name = obj.name.data;
+                latest_target_.x = object_in_base.pose.position.x;
+                latest_target_.y = object_in_base.pose.position.y;
+                latest_target_.z = cam_z;
+                latest_target_.width = width;
+                latest_target_.height = height;
+                latest_target_.depth = depth;
+                latest_target_.affordance = (obj.graspable || aff.primary == Affordance::GRASPABLE)
+                    ? Affordance::GRASPABLE : aff.primary;
+
+                latest_place_.class_name = obj.name.data;
+                latest_place_.x = -object_in_base.pose.position.x;
+                latest_place_.y = -object_in_base.pose.position.y;
+                latest_place_.z = cam_z;
+                latest_place_.width = 0;
+                latest_place_.height = height;
+                latest_place_.depth = 0;
+                latest_place_.affordance = Affordance::NONE;
+
+                publish_object_position(latest_target_.x, latest_target_.y, latest_target_.z);
+                publish_task_state("Navigate");
+                current_state_ = TaskState::WAITING_FOR_OBJECT_REACHED;
+                break;
+
+            } catch (const std::exception& e) {
+                RCLCPP_ERROR(this->get_logger(), "Error: %s", e.what());
             }
         }
     }
 
-    std::string affordance_to_string(Affordance aff) {
-        switch(aff) {
-            case Affordance::GRASPABLE: return "GRASPABLE";
-            case Affordance::PUSHABLE: return "PUSHABLE";
-            case Affordance::PULLABLE: return "PULLABLE";
-            default: return "NONE";
-        }
-    }
-
-    void execute_intelligent_grasp(std::shared_ptr<moveit::planning_interface::MoveGroupInterface> group, 
+    void execute_intelligent_grasp(std::shared_ptr<moveit::planning_interface::MoveGroupInterface> group,
                                    const DetectedObject& obj) {
         GraspType grasp_type = get_grasp_type(obj.class_name, obj);
-        
         send_gripper_command(0.038);
         rclcpp::sleep_for(1500ms);
 
+        double high_z = obj.z + 0.25;
+
         if (grasp_type == GraspType::SIDE) {
-            RCLCPP_WARN(this->get_logger(), "═══ SIDE GRASP ═══");
-            
             double object_bottom = obj.z - (obj.height / 2.0);
             double grasp_height = object_bottom + (obj.height * 0.5) + 0.2;
-            double high_z = obj.z + 0.25;
-            
-            RCLCPP_INFO(this->get_logger(), "Step 1: Above [%.3f, %.3f, %.3f]", obj.x, obj.y, high_z);
+
             plan_and_execute_standard(*group, obj.x, obj.y, high_z);
             rclcpp::sleep_for(1s);
-            
-            RCLCPP_WARN(this->get_logger(), "Step 2: ⬇️  Dive to Z=%.3f", grasp_height);
             perform_linear_move(*group, obj.x, obj.y, grasp_height);
             rclcpp::sleep_for(1s);
-            
-            RCLCPP_WARN(this->get_logger(), "Step 3: 🤏 Grasp");
             send_gripper_command(0.0);
             rclcpp::sleep_for(2000ms);
-            
-            RCLCPP_INFO(this->get_logger(), "Step 4: ⬆️  Lift");
             perform_linear_move(*group, obj.x, obj.y, high_z);
-            
         } else {
-            RCLCPP_INFO(this->get_logger(), "═══ TOP GRASP ═══");
-            
-            double high_z = obj.z + 0.25;
             double grasp_z = obj.z;
-            
             plan_and_execute_standard(*group, obj.x, obj.y, high_z);
             rclcpp::sleep_for(1s);
-            
             perform_linear_move(*group, obj.x, obj.y, grasp_z);
             rclcpp::sleep_for(1s);
-            
             send_gripper_command(0.0);
             rclcpp::sleep_for(2000ms);
-            
             perform_linear_move(*group, obj.x, obj.y, high_z);
         }
     }
 
-void execute_intelligent_place(std::shared_ptr<moveit::planning_interface::MoveGroupInterface> group, 
-                               const DetectedObject& loc,
-                               const DetectedObject& obj) {
-    RCLCPP_INFO(this->get_logger(), "");
-    RCLCPP_INFO(this->get_logger(), "═══ PLACE SEQUENCE ═══");
-    
-    double half_object_height = obj.height / 2.0;
-    double place_dive_z = (loc.z - (obj.height / 2.0)) + ((obj.height * 0.5) + 0.2);
-    double high_z = loc.z + 0.26;
-    
-    // Step 1: Move above place location
-    RCLCPP_INFO(this->get_logger(), "Step 1: 📍 Above place [%.3f, %.3f, %.3f]", loc.x, loc.y, high_z);
-    plan_and_execute_standard(*group, loc.x, loc.y, high_z);
-    rclcpp::sleep_for(1s);
-    
-    // Step 2: Dive down to place height
-    RCLCPP_WARN(this->get_logger(), "Step 2: ⬇️  Diving to Z=%.3f", place_dive_z);
-    perform_linear_move(*group, loc.x, loc.y, place_dive_z);
-    rclcpp::sleep_for(1s);
-    
-    // Step 3: Release object
-    RCLCPP_WARN(this->get_logger(), "Step 3: 🖐️  Releasing gripper");
-    send_gripper_command(0.038);
-    rclcpp::sleep_for(2000ms);
-    
-// Step 4: Lift up
-    RCLCPP_INFO(this->get_logger(), "Step 4: ⬆️ Lifting to Z=%.3f", high_z);
-    perform_linear_move(*group, loc.x, loc.y, high_z);
-    rclcpp::sleep_for(500ms);
-    
-// Step 5: ✅ DIRECTIONAL RETRACT on X-axis
-    double retract_distance = 0.15; // 15cm
-    double retract_x;
+    void execute_intelligent_place(std::shared_ptr<moveit::planning_interface::MoveGroupInterface> group,
+                                   const DetectedObject& loc, const DetectedObject& obj) {
+        double place_dive_z = (loc.z - (obj.height / 2.0)) + ((obj.height * 0.5) + 0.2);
+        double high_z = loc.z + 0.26;
 
-    // If the object is in front (positive X), move closer to the base (subtract)
-    // If the object is behind (negative X), move closer to the base (add)
-    if (loc.x >= 0) {
-        retract_x = loc.x - retract_distance;
-    } else {
-        retract_x = loc.x + retract_distance;
+        plan_and_execute_standard(*group, loc.x, loc.y, high_z);
+        rclcpp::sleep_for(1s);
+        perform_linear_move(*group, loc.x, loc.y, place_dive_z);
+        rclcpp::sleep_for(1s);
+        send_gripper_command(0.038);
+        rclcpp::sleep_for(2000ms);
+        perform_linear_move(*group, loc.x, loc.y, high_z);
+        rclcpp::sleep_for(500ms);
+
+        double retract_x = (loc.x >= 0) ? loc.x - 0.15 : loc.x + 0.15;
+        perform_linear_move(*group, retract_x, loc.y, high_z);
+        rclcpp::sleep_for(500ms);
     }
 
-    RCLCPP_WARN(this->get_logger(), "Step 5: ⬅️ Retracting on X-axis (X: %.3f → %.3f)", 
-                loc.x, retract_x);
-    
-    // Perform the linear retraction while keeping Y and Z stable
-    perform_linear_move(*group, retract_x, loc.y, high_z);
-    rclcpp::sleep_for(500ms);
-    
-    RCLCPP_INFO(this->get_logger(), "✅ Place complete - safe to return home");
-}
-
     void execute_push_action(std::shared_ptr<moveit::planning_interface::MoveGroupInterface> group,
-                            const DetectedObject& obj) {
-        RCLCPP_INFO(this->get_logger(), "");
-        RCLCPP_INFO(this->get_logger(), "╔═══════════════════════════════════════════════╗");
-        RCLCPP_INFO(this->get_logger(), "║           PUSH ACTION                         ║");
-        RCLCPP_INFO(this->get_logger(), "╚═══════════════════════════════════════════════╝");
-        RCLCPP_INFO(this->get_logger(), "");
-        
-        // Open gripper
-        RCLCPP_INFO(this->get_logger(), "🖐️  Opening gripper...");
+                             const DetectedObject& obj) {
         send_gripper_command(0.038);
         rclcpp::sleep_for(1000ms);
-        
-        // Position before push (10cm before object)
         double pre_push_x = obj.x - 0.10;
-        RCLCPP_INFO(this->get_logger(), "Step 1: Position before push [%.3f, %.3f, %.3f]", 
-                   pre_push_x, obj.y, obj.z);
         plan_and_execute_standard(*group, pre_push_x, obj.y, obj.z);
         rclcpp::sleep_for(1s);
-        
-        // Push forward (15cm through object)
-        double post_push_x = obj.x + 0.15;
-        RCLCPP_WARN(this->get_logger(), "Step 2: ➡️  PUSHING forward to X=%.3f", post_push_x);
-        perform_linear_move(*group, post_push_x, obj.y, obj.z);
+        perform_linear_move(*group, obj.x + 0.15, obj.y, obj.z);
         rclcpp::sleep_for(1s);
-        
-        // Retract back to start position
-        RCLCPP_INFO(this->get_logger(), "Step 3: ⬅️  Retracting to X=%.3f", pre_push_x);
         perform_linear_move(*group, pre_push_x, obj.y, obj.z);
         rclcpp::sleep_for(500ms);
-        
-        RCLCPP_INFO(this->get_logger(), "");
-        RCLCPP_WARN(this->get_logger(), "✅ PUSH Complete!");
     }
 
     void execute_pull_action(std::shared_ptr<moveit::planning_interface::MoveGroupInterface> group,
-                            const DetectedObject& obj) {
-        RCLCPP_INFO(this->get_logger(), "");
-        RCLCPP_INFO(this->get_logger(), "╔═══════════════════════════════════════════════╗");
-        RCLCPP_INFO(this->get_logger(), "║           PULL ACTION                         ║");
-        RCLCPP_INFO(this->get_logger(), "╚═══════════════════════════════════════════════╝");
-        RCLCPP_INFO(this->get_logger(), "");
-        
-        // Open gripper
-        RCLCPP_INFO(this->get_logger(), "🖐️  Opening gripper...");
+                             const DetectedObject& obj) {
         send_gripper_command(0.038);
         rclcpp::sleep_for(1000ms);
-        
-        // Approach handle/grip point
-        RCLCPP_INFO(this->get_logger(), "Step 1: Approaching handle at [%.3f, %.3f, %.3f]", 
-                   obj.x, obj.y, obj.z);
         plan_and_execute_standard(*group, obj.x, obj.y, obj.z);
         rclcpp::sleep_for(1s);
-        
-        // Grasp handle
-        RCLCPP_WARN(this->get_logger(), "Step 2: 🤏 GRASPING handle");
         send_gripper_command(0.0);
         rclcpp::sleep_for(2000ms);
-        
-        // Pull backward (15cm)
-        double pull_x = obj.x - 0.15;
-        RCLCPP_WARN(this->get_logger(), "Step 3: ⬅️  PULLING backward to X=%.3f", pull_x);
-        perform_linear_move(*group, pull_x, obj.y, obj.z);
+        perform_linear_move(*group, obj.x - 0.15, obj.y, obj.z);
         rclcpp::sleep_for(1s);
-        
-        // Release handle
-        RCLCPP_INFO(this->get_logger(), "Step 4: 🖐️  RELEASING handle");
         send_gripper_command(0.038);
         rclcpp::sleep_for(1000ms);
-        
-        RCLCPP_INFO(this->get_logger(), "");
-        RCLCPP_WARN(this->get_logger(), "✅ PULL Complete!");
     }
 
-    void perform_linear_move(moveit::planning_interface::MoveGroupInterface& group, 
-                            double x, double y, double z) {
+    void perform_linear_move(moveit::planning_interface::MoveGroupInterface& group,
+                             double x, double y, double z) {
         std::vector<geometry_msgs::msg::Pose> waypoints;
         waypoints.push_back(create_pose(x, y, z));
         moveit_msgs::msg::RobotTrajectory trajectory;
@@ -592,7 +348,7 @@ void execute_intelligent_place(std::shared_ptr<moveit::planning_interface::MoveG
         publish_trajectory(trajectory.joint_trajectory);
     }
 
-    bool plan_and_execute_standard(moveit::planning_interface::MoveGroupInterface& group, 
+    bool plan_and_execute_standard(moveit::planning_interface::MoveGroupInterface& group,
                                    double x, double y, double z) {
         group.setPoseTarget(create_pose(x, y, z));
         moveit::planning_interface::MoveGroupInterface::Plan plan;
@@ -603,19 +359,17 @@ void execute_intelligent_place(std::shared_ptr<moveit::planning_interface::MoveG
         return false;
     }
 
-    void plan_and_execute_standard(moveit::planning_interface::MoveGroupInterface& group, 
+    void plan_and_execute_standard(moveit::planning_interface::MoveGroupInterface& group,
                                    std::string named_target) {
         group.setNamedTarget(named_target);
         moveit::planning_interface::MoveGroupInterface::Plan plan;
-        if (group.plan(plan) == moveit::core::MoveItErrorCode::SUCCESS) 
+        if (group.plan(plan) == moveit::core::MoveItErrorCode::SUCCESS)
             publish_trajectory(plan.trajectory.joint_trajectory);
     }
 
     geometry_msgs::msg::Pose create_pose(double x, double y, double z) {
         geometry_msgs::msg::Pose p;
-        p.position.x = x; 
-        p.position.y = y; 
-        p.position.z = z;
+        p.position.x = x; p.position.y = y; p.position.z = z;
         tf2::Quaternion q;
         q.setRPY(0.0, M_PI, 0.0);
         p.orientation = tf2::toMsg(q);
@@ -626,7 +380,7 @@ void execute_intelligent_place(std::shared_ptr<moveit::planning_interface::MoveG
         arm_pub_->publish(traj);
         if (!traj.points.empty()) {
             auto& last = traj.points.back();
-            int wait_ms = static_cast<int>((last.time_from_start.sec + 
+            int wait_ms = static_cast<int>((last.time_from_start.sec +
                          (last.time_from_start.nanosec * 1e-9) + 1.5) * 1000);
             rclcpp::sleep_for(std::chrono::milliseconds(wait_ms));
         }
@@ -643,22 +397,16 @@ void execute_intelligent_place(std::shared_ptr<moveit::planning_interface::MoveG
     rclcpp::Publisher<trajectory_msgs::msg::JointTrajectory>::SharedPtr arm_pub_;
     rclcpp::Publisher<std_msgs::msg::String>::SharedPtr task_state_pub_;
     rclcpp::Publisher<geometry_msgs::msg::Point>::SharedPtr object_position_pub_;
-    
     rclcpp_action::Client<GripperAction>::SharedPtr gripper_client_;
-    
     rclcpp::Subscription<BBoxList>::SharedPtr obj_sub_;
     rclcpp::Subscription<std_msgs::msg::String>::SharedPtr task_state_sub_;
-    
     std::shared_ptr<tf2_ros::Buffer> tf_buffer_;
     std::shared_ptr<tf2_ros::TransformListener> tf_listener_;
-    
     std::string camera_frame_;
     std::string robot_base_frame_;
     TaskState current_state_;
-    
     std::map<std::string, ObjectAffordance> affordance_map_;
     std::map<std::string, ObjectGraspConfig> grasp_config_map_;
-    
     DetectedObject latest_target_;
     DetectedObject latest_place_;
 };
